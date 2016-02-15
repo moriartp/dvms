@@ -4,11 +4,16 @@ library(gcookbook)
 
 #################################################################
 
+
+xset <- read.csv("https://raw.githubusercontent.com/moriartp/dvms/master/project01/311XMAS.csv")
+
+#################################################################
+
 xset$Complaint <- "Other"
-xset$Complaint[xset$Complaint.Type=="Rodent"] <- "Animal"
-xset$Complaint[xset$Complaint.Type=="Unsanitary Animal Pvt Property"] <- "Animal"
-xset$Complaint[xset$Complaint.Type=="Animal Abuse"] <- "Animal"
-xset$Complaint[xset$Complaint.Type=="Animal in a Park"] <- "Animal"
+xset$Complaint[xset$Complaint.Type=="Rodent"] <- "Environmental Issue"
+xset$Complaint[xset$Complaint.Type=="Unsanitary Animal Pvt Property"] <- "Other"
+xset$Complaint[xset$Complaint.Type=="Animal Abuse"] <- "Other"
+xset$Complaint[xset$Complaint.Type=="Animal in a Park"] <- "Other"
 xset$Complaint[xset$Complaint.Type=="Air Quality"] <- "Environmental Issue"
 xset$Complaint[xset$Complaint.Type=="Industrial Waste"] <- "Environmental Issue"
 xset$Complaint[xset$Complaint.Type=="Noise - Street/Sidewalk"] <- "Environmental Issue"
@@ -98,8 +103,6 @@ xset$Complaint[xset$Complaint.Type=="Highway Sign - Damaged"] <- "Unsafe Traffic
 
 #################################################################
 
-xset <- read.csv("https://raw.githubusercontent.com/moriartp/dvms/master/project01/311XMAS.csv")
-
 xset.sub<-na.omit(xset)
 complaint.Count <- data.frame(table(xset.sub$Complaint.Type))
 
@@ -117,16 +120,36 @@ xset.sub$Date.obj <- as.POSIXct(xset.sub$Date.byhour, format = "%m/%d/%Y %H", tz
 frequency.table = table(xset.sub$Date.obj, xset.sub$Complaint)
 complaintFreq<- data.frame(frequency.table)
 
-ggplot(complaintFreq, aes(x=Var1, y=Freq, fill = Var2)) +
-  geom_line() +
-  geom_point() +
-  theme(axis.text.x=element_text(angle=-90,hjust=1,vjust=0.5))
+#ggplot(complaintFreq, aes(x=Var1, y=Freq, fill = Var2)) +
+#  geom_line() +
+#  geom_point() +
+#  theme(axis.text.x=element_text(angle=-90,hjust=1,vjust=0.5))
 
 ###Area
 complaintFreq$time<- as.integer(complaintFreq$Var1)
 
 p <- ggplot(complaintFreq, aes(x=time, y=Freq, fill=Var2)) + geom_area()
 myColors <- c("#465362", "#ED254E", "#F9DC5C", "#F4FFFD", "#011936", "#005362")
-p + scale_fill_manual(values = myColors)
+qualColors <- c("#005362", "#011936", "#F9DC5C", "#ED254E", "#465362")
+p + scale_fill_manual(values = qualColors)
 
 max(complaintFreq$Freq)
+
+###Borough
+#xset.borough <- subset(xset, Borough!="Unspecified")
+xset.borough<-na.omit(xset)
+vdate.borough = as.vector(xset.borough$Created.Date)
+xset.borough$Date.byhour <- ifelse( nchar(vdate.borough)==16, substring(vdate.borough, 1, 13), substring(vdate.borough, 1, 12) )
+
+xset.borough$Date.obj <- as.POSIXct(xset.borough$Date.byhour, format = "%m/%d/%Y %H", tz = "EST")
+# you had xset.sub$Date.recode as the first col, but you want xset.sub$Date.obj 
+frequency.table.borough = table(xset.borough$Date.obj, xset.borough$Borough)
+complaintFreqBorough<- data.frame(frequency.table.borough)
+
+complaintFreqBorough$time<- as.integer(complaintFreqBorough$Var1)
+
+p.borough <- ggplot(complaintFreqBorough, aes(x=time, y=Freq, fill=Var2)) + geom_area()
+myColors <- c("#465362", "#ED254E", "#F9DC5C", "#F4FFFD", "#011936", "#005362")
+qualColors <- c("#005362", "#011936", "#F9DC5C", "#ED254E", "#465362", "#465000")
+p.borough + scale_fill_manual(values = qualColors)
+
