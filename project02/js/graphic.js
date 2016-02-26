@@ -31,7 +31,7 @@ function afterLoad(data){
       .enter()
       .append('li')
       .text(function(d, i){
-        return d3.values(d).join(' | ')
+        return " persons at age approximate " + d.midpointAge
       })
 
   sort1()
@@ -59,7 +59,7 @@ function sort1(){
       .enter()
       .append('li')
       .text(function(d, i){
-        return d.n +': '+ d.lifePhase 
+        return d.n +': '+ d.lifePhase + " persons at age " + d.midpointAge
       })
 }
 
@@ -76,7 +76,7 @@ function sort2(){
       .enter()
       .append('li')
       .text(function(d, i){
-        return d.methUse * d.n 
+        return d.methUse * d.n + ' meth users among ' + d.midpointAge + ' respondents.' 
       })
 }
 
@@ -85,7 +85,7 @@ function map1(){
   
   //// Use array.map to return a new array of objects that contain rounded values
   var rounded = languages.map(function(d){
-    return {area: d.area, speakers: Math.round(d.speakers_millions * 100) / 100 }
+    return {area: d.life, speakers: Math.round(d.speakers_millions * 100) / 100 }
   })
 
     var li = d3.select('#map1').selectAll('li')
