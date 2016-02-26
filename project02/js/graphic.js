@@ -1,6 +1,6 @@
 var languages;
 
-d3.csv('data/language-distribution-by-origin.csv', function(error, loaded_data) {
+d3.csv('data/drugs.csv', function(error, loaded_data) {
 
     if (error) {
         console.log("Error on load:", error);
@@ -59,7 +59,7 @@ function sort1(){
       .enter()
       .append('li')
       .text(function(d, i){
-        return d.area +': '+ d.lang_count 
+        return d.n +': '+ d.lifePhase 
       })
 }
 
@@ -76,7 +76,7 @@ function sort2(){
       .enter()
       .append('li')
       .text(function(d, i){
-        return d.area +': '+ d.speakers_count 
+        return d.methUse * d.n 
       })
 }
 
