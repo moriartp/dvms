@@ -8,7 +8,7 @@ myColorsA <- c("#F6511D", "#FFB400", "#00A6ED", "#7FB800", "#0D2C54")
 qualColors <- c("#005362", "#011936", "#F9DC5C", "#ED254E", "#465362", "#465000")
 
 
-### Get dataset, then recode and subset for high School students
+### Get dataset, then recode and subset for high School students age 15-18
 all <- read.csv("https://raw.githubusercontent.com/fivethirtyeight/data/master/drug-use-by-age/drug-use-by-age.csv")
 all$class <- all$age
 all$class <- as.character(all$class)
