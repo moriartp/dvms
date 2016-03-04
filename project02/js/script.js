@@ -15,7 +15,7 @@ function renderChart(dataset){
 
   var margin = {top: 20, right: 30, bottom: 40, left: 60};
 
-  var width = 600 - margin.left - margin.right,
+  var width = 999 - margin.left - margin.right,
       height = 400 - margin.top - margin.bottom,
       radius = 6 
 
