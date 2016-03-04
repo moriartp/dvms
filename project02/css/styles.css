@@ -24,6 +24,11 @@ body div.intro {
 	padding-left:55px;
 }
 
+section p{
+	font-size: 12px;
+	font-family: 'Droid Sans', sans-serif;
+}
+
 
 
 body, html{
@@ -86,52 +91,32 @@ svg.block{
 .circlegroup{
 	font-size: 28px;
 	font-weight: bolder;
-}
-
-.circlegroup.catA{
-	fill: coral;
-}
-.circlegroup.catB{
-	fill: lightpink;
-}
-.circlegroup.catC{
-	fill: cyan;
-}
-.circlegroup.catD{
-	fill: teal;
-}
-.circlegroup.catE{
-	fill: orange;
-}
-
-.circlegroup.catAsia{
-    fill: coral;
-  }
-.circlegroup.catAfrica{
-    fill: fuchsia;
-  }
-.circlegroup.catAmericas{
-    fill: teal;
-  }
-.circlegroup.catEurope{
-    fill: orange;
- }
-.circlegroup.catPacific{
-	fill: purple;
+	font-family: 'Droid Sans', sans-serif;
 }
 
 .circlegroup.catmiddleSchool{
-	fill: coral;
+	fill: red;
+	font-family: 'Droid Sans', sans-serif;
 }
 .circlegroup.cathighSchool{
-	fill: lightpink;
-}
-.circlegroup.catearlyAdulthood{
-	fill: cyan;
-}
-.circlegroup.catmiddleage{
-	fill: teal;
-}
-.circlegroup.catmatureAdulthood{
 	fill: orange;
+	font-family: 'Droid Sans', sans-serif;
+}
+.circlegroup.catcollege{
+	fill: gold;
+	font-family: 'Droid Sans', sans-serif;
+}
+.circlegroup.catmidlife{
+	fill: green;
+	font-family: 'Droid Sans', sans-serif;
+}
+
+.circlegroup.catearlyAdulthood{
+	fill: blue;
+	font-family: 'Droid Sans', sans-serif;
+}
+
+.circlegroup.catmatureAdulthood{
+	fill: purple;
+	font-family: 'Droid Sans', sans-serif;
 }
