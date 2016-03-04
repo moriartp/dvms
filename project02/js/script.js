@@ -1,5 +1,5 @@
 // JavaScript Document     if (error) throw error
-d3.csv("https://raw.githubusercontent.com/moriartp/dvms/master/project02/data/drugs.csv", function(error, dataset) {
+d3.csv("https://raw.githubusercontent.com/moriartp/dvms/master/project02/data/data.csv", function(error, dataset) {
 	console.log(dataset)	
 	dataset.forEach(function(d) {
 		d.alcoholuse = +d.alcoholuse;
