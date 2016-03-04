@@ -17,7 +17,7 @@ function renderChart(dataset){
 
   var width = 999 - margin.left - margin.right,
       height = 400 - margin.top - margin.bottom,
-      radius = 6 
+      radius = function(d){ return d.ageMidpoint * 1.25 }
 
   //// make scales with d3.extent()
 
