@@ -10,18 +10,18 @@ body {
 }
 
 body div.intro {
-	width: 1000;
+	width: 666;
 	height: 400;
 	background-color: white;
 	opacity: 0.99;
-	max-width: 1220px;
+	max-width: 1000px;
 	width: 88%;
 	margin: 10px auto 80px;
 	border-style:groove;
 	border-width:thin;
 	font-size:36px;
-	padding: 15px;
-	padding-left:55px;
+	padding: 5px;
+	padding-left:25px;
 }
 
 section p{
@@ -29,15 +29,13 @@ section p{
 	font-family: 'Droid Sans', sans-serif;
 }
 
-
-
 body, html{
 	margin:0;padding:0;
 	font-size: 1.2em;
 }
 
 section{
-	max-width: 1220px;
+	max-width: 1222px;
 	width: 88%;
 	margin: 10px auto 80px;
 }
@@ -51,10 +49,6 @@ ul{
 	margin: 6px 0;
 	font-size: 0.8em;
 	padding: 0;
-}
-
-.svg-wrapper{
-
 }
 
 svg{
