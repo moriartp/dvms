@@ -1,4 +1,4 @@
-// JavaScript Document     if (error) throw error
+22// JavaScript Document     if (error) throw error
 d3.csv("https://raw.githubusercontent.com/moriartp/dvms/master/project02/data/data.csv", function(error, dataset) {
 	console.log(dataset)	
 	dataset.forEach(function(d) {
@@ -15,7 +15,7 @@ function renderChart(dataset){
 
   var margin = {top: 20, right: 30, bottom: 40, left: 60};
 
-  var width = 999 - margin.left - margin.right,
+  var width = 855 - margin.left - margin.right,
       height = 400 - margin.top - margin.bottom,
       radius = function(d){ return d.ageMidpoint * 1.25 }
 
