@@ -1,15 +1,8 @@
 // JavaScript Document     if (error) throw error
 d3.csv("https://raw.githubusercontent.com/moriartp/dvms/master/project02/data/data.csv", function(error, dataset) {
 	console.log(dataset)	
-	dataset.forEach(function(d) {
-		d.alcoholuse = +d.alcoholuse;
-		d.ageMidpoint = +d.ageMidpoint;
-	});
   renderChart(dataset)
-  console.log(dataset)
 })
-
-
 
 function renderChart(dataset){
 
@@ -17,12 +10,15 @@ function renderChart(dataset){
 
   var width = 855 - margin.left - margin.right,
       height = 400 - margin.top - margin.bottom,
-      radius = function(d){ return d.ageMidpoint * 1.25 }
+      radius = function(d){ return Math.sqrt(d.methfrequency)*3 }
+
 
   //// make scales with d3.extent()
 
   var xExtent = d3.extent( dataset.map( function(d){ return parseInt(d.ageMidpoint) }) )
-  var yExtent = d3.extent( dataset.map( function(d){ return parseInt(d.alcoholuse) }) )
+  var yExtent = d3.extent( dataset.map( function(d){ console.log(d.methuse);
+    return parseFloat(d.methuse) }) )
+
 
   //// Create padding for the min and max 
   xExtent[0] = xExtent[0] - ( xExtent[0]*0.2 )
@@ -60,7 +56,7 @@ function renderChart(dataset){
       .tickPadding(10)
       .outerTickSize(1)
       .orient('left')
-      .tickFormat(function(d,i){ return commaFormat( Math.round(d) ) })
+
 
   var svg = d3.select('#svg-wrapper-1').append('svg')
     .attr('id', 'svg')
@@ -83,7 +79,7 @@ function renderChart(dataset){
   var circleGroup = marginedgroup.selectAll('.circlegroup').data(dataset)
       .enter().append('g')
       .attr('class', function(d){ return 'circlegroup cat'+d.lifePhase })
-      .attr('transform', function(d){ return 'translate('+ scale_x(d.ageMidpoint) +','+ scale_y(d.alcoholuse) +')'; })
+      .attr('transform', function(d){ return 'translate('+ scale_x(d.ageMidpoint) +','+ scale_y(d.methuse) +')'; })
 
   console.log(circleGroup)
 
@@ -99,3 +95,5 @@ function renderChart(dataset){
       .attr('font-size', 12)
 
 }
+
+// A SECOND VISUALIZATION????????????

@@ -80,12 +80,19 @@ svg.block{
 	stroke: #777;
 }
 
-.one.two.three.fourth.fives .inner
+.circlegroup circle{
+	transition: all 0.7s ease-out;
+}
 
 .circlegroup{
 	font-size: 28px;
 	font-weight: bolder;
 	font-family: 'Droid Sans', sans-serif;
+	transition: all 0.7s ease-out;
+}
+
+.circlegroup:hover circle{
+	fill-opacity: 1;
 }
 
 .circlegroup.catmiddleSchool{
@@ -114,3 +121,5 @@ svg.block{
 	fill: purple;
 	font-family: 'Droid Sans', sans-serif;
 }
+
+
