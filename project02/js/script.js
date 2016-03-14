@@ -79,6 +79,7 @@ function renderChart(dataset){
   var circleGroup = marginedgroup.selectAll('.circlegroup').data(dataset)
       .enter().append('g')
       .attr('class', function(d){ return 'circlegroup cat'+d.lifePhase })
+      //.attr('class', function(d){ return 'circlegroup cat'+d.grade })      
       .attr('transform', function(d){ return 'translate('+ scale_x(d.ageMidpoint) +','+ scale_y(d.methuse) +')'; })
 
   console.log(circleGroup)
@@ -86,13 +87,14 @@ function renderChart(dataset){
   circleGroup.append('circle')
     .attr({
       r: radius,
-      'fill-opacity': 0.5
+      'fill-opacity': 0.15
     }) 
 
   circleGroup.append('text')
-      .text(function(d){ return d.lifePhase })
+      .text(function(d){ return d.grade })
       .attr('dx', radius)
-      .attr('font-size', 12)
+      .attr('font-size', 112)
+      .attr({'fill-opacity': 0.9})
 
 }
 

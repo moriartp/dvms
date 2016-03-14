@@ -84,6 +84,10 @@ svg.block{
 	transition: all 0.7s ease-out;
 }
 
+.circlegroup text{
+	transition: all 0.5s ease-out;
+}
+
 .circlegroup{
 	font-size: 28px;
 	font-weight: bolder;
