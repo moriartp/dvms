@@ -84,9 +84,13 @@ svg.block{
 	transition: all 0.7s ease-out;
 }
 
+.circlegroup text{
+	transition: all 0.7s ease-out;
+}
+
+
 .circlegroup{
 	font-size: 28px;
-	font-weight: bolder;
 	font-family: 'Droid Sans', sans-serif;
 	transition: all 0.7s ease-out;
 }
@@ -94,6 +98,11 @@ svg.block{
 .circlegroup:hover circle{
 	fill-opacity: 1;
 }
+
+.circlegroup:hover text{
+	fill-opacity: 1;
+}
+
 
 .circlegroup.catmiddleSchool{
 	fill: red;

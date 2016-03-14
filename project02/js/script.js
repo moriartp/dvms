@@ -90,9 +90,10 @@ function renderChart(dataset){
     }) 
 
   circleGroup.append('text')
-      .text(function(d){ return d.lifePhase })
+      .text(function(d){ return d.grade })
       .attr('dx', radius)
       .attr('font-size', 12)
+      .attr({'fill-opacity': 0.00})
 
 }
 
