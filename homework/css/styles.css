@@ -1,0 +1,27 @@
+/*MY START
+@charset "utf-8";
+
+/* CSS Document */
+
+
+body {
+	padding:55px;
+}
+
+path {
+  fill: none;
+  stroke: #000;
+  stroke-width: 2px;
+  transition: all 0.7s ease-out;
+}
+
+circle {
+  fill: #E94F37;
+  stroke: #fff;
+  stroke-width: 1px;
+  transition: all 0.7s ease-out;
+}
+
+path:hover {
+  stroke-width: 5px;
+}
