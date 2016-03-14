@@ -34,6 +34,7 @@ d3.csv("data/data.csv", function(error, dataset) {
   renderChart(dataset)
   renderChartB(dataset)
   renderChartC(dataset)
+  renderChartD(dataset)
 })
 
 
