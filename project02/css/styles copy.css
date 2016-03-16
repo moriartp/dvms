@@ -85,16 +85,10 @@ svg.block{
 }
 
 .circlegroup text{
-<<<<<<< HEAD
-	transition: all 0.5s ease-out;
-}
-
-=======
 	transition: all 0.7s ease-out;
 }
 
 
->>>>>>> 31d32aa863bfe783d470f5fcad85b43dd387a07e
 .circlegroup{
 	font-size: 28px;
 	font-family: 'Droid Sans', sans-serif;

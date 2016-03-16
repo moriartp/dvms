@@ -93,8 +93,13 @@ function renderChart(dataset){
   circleGroup.append('text')
       .text(function(d){ return d.grade })
       .attr('dx', radius)
+<<<<<<< HEAD
       .attr('font-size', 112)
       .attr({'fill-opacity': 0.9})
+=======
+      .attr('font-size', 12)
+      .attr({'fill-opacity': 0.00})
+>>>>>>> 31d32aa863bfe783d470f5fcad85b43dd387a07e
 
 }
 
