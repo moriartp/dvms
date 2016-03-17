@@ -6,7 +6,7 @@
 
 body {
 	padding-top:25px;
-	font-family: 'Amatic SC', cursive;
+	font-family: 'Arial', bold;
 }
 
 body div.intro {
@@ -26,7 +26,7 @@ body div.intro {
 
 section p{
 	font-size: 12px;
-	font-family: 'Droid Sans', sans-serif;
+	font-family: 'Arial';
 }
 
 body, html{
@@ -92,7 +92,7 @@ svg.block{
 >>>>>>> 31d32aa863bfe783d470f5fcad85b43dd387a07e
 .circlegroup{
 	font-size: 28px;
-	font-family: 'Droid Sans', sans-serif;
+	font-family: 'Arial', sans-serif;
 	transition: all 0.7s ease-out;
 }
 
@@ -106,29 +106,29 @@ svg.block{
 
 .circlegroup.catPlanning{
 	fill: #3F88C5;/*BLUE*/
-	font-family: 'Droid Sans', sans-serif;
+	font-family: 'Arial', sans-serif;
 }
 .circlegroup.catHold{
 	fill: #E94F37;/*RED*/
-	font-family: 'Droid Sans', sans-serif;
+	font-family: 'Arial', sans-serif;
 }
 .circlegroup.catInProgress{
 	fill: #44BBA4;/*GREEN*/
-	font-family: 'Droid Sans', sans-serif;
+	font-family: 'Arial', sans-serif;
 }
 .circlegroup.catArchived{
 	fill: #393E41;/*BLACK*/
-	font-family: 'Droid Sans', sans-serif;
+	font-family: 'Arial', sans-serif;
 }
 
 .circlegroup.catearlyAdulthood{
 	fill: green;
-	font-family: 'Droid Sans', sans-serif;
+	font-family: 'Arial', sans-serif;
 }
 
 .circlegroup.catmatureAdulthood{
 	fill: purple;
-	font-family: 'Droid Sans', sans-serif;
+	font-family: 'Arial', sans-serif;
 }
 
 .bar {

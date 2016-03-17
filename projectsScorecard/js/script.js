@@ -9,7 +9,7 @@ function renderChart(dataset){
   var margin = {top: 20, right: 30, bottom: 40, left: 60};
 
   var width = 855 - margin.left - margin.right,
-      height = 400 - margin.top - margin.bottom,
+      height = 700 - margin.top - margin.bottom,
       radius = function(d){ return Math.sqrt(d.TierWeight)*5 }
 
 
@@ -25,7 +25,7 @@ function renderChart(dataset){
   xExtent[1] = 100//xExtent[1] + ( xExtent[1]*0.2 )
 
   yExtent[0] = 0 //- ( yExtent[0] )
-  yExtent[1] = 100//yExtent[1] + ( yExtent[1]*0.2 )
+  yExtent[1] = yExtent[1] + ( yExtent[1]*0.2 )
 
   console.log(xExtent, yExtent)
 
