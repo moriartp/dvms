@@ -1,5 +1,5 @@
 // JavaScript Document     if (error) throw error
-d3.csv("https://raw.githubusercontent.com/moriartp/dvms/master/projectsScorecard/data/pipeline.csv", function(error, dataset) {
+d3.csv("https://raw.githubusercontent.com/moriartp/dvms/master/projectsScorecard/data/scorecard.csv", function(error, dataset) {
 	console.log(dataset)	
   renderChart(dataset)
 })
@@ -78,7 +78,7 @@ function renderChart(dataset){
       
   var circleGroup = marginedgroup.selectAll('.circlegroup').data(dataset)
       .enter().append('g')
-      .attr('class', function(d){ return 'circlegroup cat'+d.State })
+      .attr('class', function(d){ return 'circlegroup cat'+d.Priority })
       //.attr('class', function(d){ return 'circlegroup cat'+d.grade })      
       .attr('transform', function(d){ return 'translate('+ scale_x(d.AggregatedAchievability) +','+ scale_y(d.AggregatedValue) +')'; })
 
