@@ -85,11 +85,6 @@ svg.block{
 }
 
 .circlegroup text{
-<<<<<<< HEAD
-	transition: all 0.5s ease-out;
-}
-
-=======
 	transition: all 0.7s ease-out;
 }
 
@@ -108,7 +103,6 @@ svg.block{
 .circlegroup:hover text{
 	fill-opacity: 1;
 }
-
 
 .circlegroup.catmiddleSchool{
 	fill: red;
@@ -138,7 +132,15 @@ svg.block{
 }
 
 .bar {
-	fill: #E8110F;
+	fill: #E94F37;
+}
+
+.domain {
+	fill: none;
+}
+
+.axis {
+	font-family: Arial;
 }
 
 
