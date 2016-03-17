@@ -88,8 +88,6 @@ svg.block{
 	transition: all 0.7s ease-out;
 }
 
-
->>>>>>> 31d32aa863bfe783d470f5fcad85b43dd387a07e
 .circlegroup{
 	font-size: 28px;
 	font-family: 'Arial', sans-serif;
@@ -102,6 +100,7 @@ svg.block{
 
 .circlegroup:hover text{
 	fill-opacity: 1;
+	font-size: 14px;
 }
 
 .circlegroup.catVeryLow{

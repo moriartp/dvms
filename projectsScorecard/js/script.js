@@ -10,7 +10,8 @@ function renderChart(dataset){
 
   var width = 855 - margin.left - margin.right,
       height = 700 - margin.top - margin.bottom,
-      radius = function(d){ return Math.sqrt(d.TierWeight)*5 }
+      //radius = function(d){ return Math.sqrt(d.TierWeight)*5 }
+      radius = function(d){ return d.ProjectTier * 20 }
 
 
   //// make scales with d3.extent()
@@ -93,6 +94,6 @@ function renderChart(dataset){
   circleGroup.append('text')
       .text(function(d){ return d.Summary + ' Overall Score: ' + d.Score })
       .attr('dx', radius)
-      .attr('font-size', 12)
+      .attr('font-size', 5)
       .attr({'fill-opacity': 0.00})
 }
