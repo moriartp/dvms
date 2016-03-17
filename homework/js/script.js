@@ -39,7 +39,7 @@ transition();
 
 function transition() {
   circle.transition()
-      .duration(15000)
+      .duration(2500)
       .attrTween("transform", translateAlong(path.node()))
       .each("end", transition);
 }
