@@ -104,19 +104,19 @@ svg.block{
 	fill-opacity: 1;
 }
 
-.circlegroup.catmiddleSchool{
+.circlegroup.catPlanning{
 	fill: red;
 	font-family: 'Droid Sans', sans-serif;
 }
-.circlegroup.cathighSchool{
+.circlegroup.catHold{
 	fill: orange;
 	font-family: 'Droid Sans', sans-serif;
 }
-.circlegroup.catcollege{
+.circlegroup.catInProgress{
 	fill: gold;
 	font-family: 'Droid Sans', sans-serif;
 }
-.circlegroup.catmidlife{
+.circlegroup.catArchived{
 	fill: blue;
 	font-family: 'Droid Sans', sans-serif;
 }

@@ -1,5 +1,5 @@
 // JavaScript Document     if (error) throw error
-d3.csv("https://raw.githubusercontent.com/moriartp/dvms/master/projects/data/pipeline.csv", function(error, dataset) {
+d3.csv("https://raw.githubusercontent.com/moriartp/dvms/master/projectsScorecard/data/pipeline.csv", function(error, dataset) {
 	console.log(dataset)	
   renderChart(dataset)
 })
@@ -21,11 +21,11 @@ function renderChart(dataset){
 
 
   //// Create padding for the min and max 
-  xExtent[0] = xExtent[0] - ( xExtent[0]*0.2 )
-  xExtent[1] = xExtent[1] + ( xExtent[1]*0.2 )
+  xExtent[0] = 0//xExtent[0] - ( xExtent[0]*0.2 )
+  xExtent[1] = 100//xExtent[1] + ( xExtent[1]*0.2 )
 
-  yExtent[0] = 0 - ( yExtent[0] )
-  yExtent[1] = yExtent[1] + ( yExtent[1]*0.2 )
+  yExtent[0] = 0 //- ( yExtent[0] )
+  yExtent[1] = 100//yExtent[1] + ( yExtent[1]*0.2 )
 
   console.log(xExtent, yExtent)
 
@@ -91,7 +91,7 @@ function renderChart(dataset){
     }) 
 
   circleGroup.append('text')
-      .text(function(d){ return d.Summary })
+      .text(function(d){ return d.Summary + ' overall score: ' + d.Score })
       .attr('dx', radius)
       .attr('font-size', 12)
       .attr({'fill-opacity': 0.00})
