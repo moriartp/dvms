@@ -1,39 +1,24 @@
-// JavaScript Document
-d3.csv("https://raw.githubusercontent.com/JSDiamond/Dataviz101/master/js/session3/data/language-distribution-by-origin.csv", function(error, dataset) {
-  if (error) throw error
+// JavaScript Document     if (error) throw error
+d3.csv("https://raw.githubusercontent.com/moriartp/dvms/master/project02/data/data.csv", function(error, dataset) {
+	console.log(dataset)	
   renderChart(dataset)
 })
-
-
 
 function renderChart(dataset){
 
   var margin = {top: 20, right: 30, bottom: 40, left: 60};
 
-  var width = 600 - margin.left - margin.right,
+  var width = 855 - margin.left - margin.right,
       height = 400 - margin.top - margin.bottom,
-      radius = 6
+      radius = function(d){ return Math.sqrt(d.methfrequency)*3 }
 
 
-  ////////////////////////////////////////////////////////////////////////////////////////////
-  //// First way to make scales with d3.extent()
+  //// make scales with d3.extent()
 
-  // var scale_x = d3.scale.linear()
-  //     .range([0, width])
-  //     .domain( d3.extent(dataset, function(d){ return parseInt(d.lang_count) }) )
+  var xExtent = d3.extent( dataset.map( function(d){ return parseInt(d.ageMidpoint) }) )
+  var yExtent = d3.extent( dataset.map( function(d){ console.log(d.methuse);
+    return parseFloat(d.methuse) }) )
 
-  // var scale_y = d3.scale.linear()
-  //     .range([height, 0])
-  //     .domain(  d3.extent(dataset, function(d){ return parseInt(d.speakers_count) }) )
-
-  ////////////////////////////////////////////////////////////////////////////////////////////
-
-
-  ////////////////////////////////////////////////////////////////////////////////////////////
-  //// Second way to make scales with d3.extent()
-
-  var xExtent = d3.extent( dataset.map( function(d){ return parseInt(d.lang_count) }) )
-  var yExtent = d3.extent( dataset.map( function(d){ return parseInt(d.speakers_count) }) )
 
   //// Create padding for the min and max 
   xExtent[0] = xExtent[0] - ( xExtent[0]*0.2 )
@@ -71,7 +56,7 @@ function renderChart(dataset){
       .tickPadding(10)
       .outerTickSize(1)
       .orient('left')
-      .tickFormat(function(d,i){ return commaFormat( Math.round(d*0.000001) ) })
+
 
   var svg = d3.select('#svg-wrapper-1').append('svg')
     .attr('id', 'svg')
@@ -93,20 +78,21 @@ function renderChart(dataset){
       
   var circleGroup = marginedgroup.selectAll('.circlegroup').data(dataset)
       .enter().append('g')
-      .attr('class', function(d){ return 'circlegroup cat'+d.area })
-      .attr('transform', function(d){ return 'translate('+ scale_x(d.lang_count) +','+ scale_y(d.speakers_count) +')'; })
+      .attr('class', function(d){ return 'circlegroup cat'+d.lifePhase })
+      //.attr('class', function(d){ return 'circlegroup cat'+d.grade })      
+      .attr('transform', function(d){ return 'translate('+ scale_x(d.ageMidpoint) +','+ scale_y(d.methuse) +')'; })
 
   console.log(circleGroup)
 
   circleGroup.append('circle')
     .attr({
       r: radius,
-      'fill-opacity': 0.5
+      'fill-opacity': 0.15
     }) 
 
   circleGroup.append('text')
-      .text(function(d){ return d.area })
+      .text(function(d){ return d.grade })
       .attr('dx', radius)
       .attr('font-size', 12)
-
+      .attr({'fill-opacity': 0.00})
 }

@@ -89,6 +89,7 @@ svg.block{
 }
 
 
+>>>>>>> 31d32aa863bfe783d470f5fcad85b43dd387a07e
 .circlegroup{
 	font-size: 28px;
 	font-family: 'Droid Sans', sans-serif;
@@ -102,7 +103,6 @@ svg.block{
 .circlegroup:hover text{
 	fill-opacity: 1;
 }
-
 
 .circlegroup.catmiddleSchool{
 	fill: red;
@@ -132,7 +132,15 @@ svg.block{
 }
 
 .bar {
-	fill: #E8110F;
+	fill: #E94F37;
+}
+
+.domain {
+	fill: none;
+}
+
+.axis {
+	font-family: Arial;
 }
 
 
