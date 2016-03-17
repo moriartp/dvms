@@ -1,5 +1,5 @@
 // JavaScript Document     if (error) throw error
-d3.csv("https://raw.githubusercontent.com/moriartp/dvms/master/project02/data/data.csv", function(error, dataset) {
+d3.csv("https://raw.githubusercontent.com/moriartp/dvms/master/projects/data/pipeline.csv", function(error, dataset) {
 	console.log(dataset)	
   renderChart(dataset)
 })
@@ -10,14 +10,14 @@ function renderChart(dataset){
 
   var width = 855 - margin.left - margin.right,
       height = 400 - margin.top - margin.bottom,
-      radius = function(d){ return Math.sqrt(d.methfrequency)*3 }
+      radius = function(d){ return Math.sqrt(d.Score)*3 }
 
 
   //// make scales with d3.extent()
 
-  var xExtent = d3.extent( dataset.map( function(d){ return parseInt(d.ageMidpoint) }) )
-  var yExtent = d3.extent( dataset.map( function(d){ console.log(d.methuse);
-    return parseFloat(d.methuse) }) )
+  var xExtent = d3.extent( dataset.map( function(d){ return parseInt(d.AggregatedAchievability) }) )
+  var yExtent = d3.extent( dataset.map( function(d){ console.log(d.AggregatedValue);
+    return parseFloat(d.AggregatedValue) }) )
 
 
   //// Create padding for the min and max 
@@ -78,9 +78,9 @@ function renderChart(dataset){
       
   var circleGroup = marginedgroup.selectAll('.circlegroup').data(dataset)
       .enter().append('g')
-      .attr('class', function(d){ return 'circlegroup cat'+d.lifePhase })
+      .attr('class', function(d){ return 'circlegroup cat'+d.State })
       //.attr('class', function(d){ return 'circlegroup cat'+d.grade })      
-      .attr('transform', function(d){ return 'translate('+ scale_x(d.ageMidpoint) +','+ scale_y(d.methuse) +')'; })
+      .attr('transform', function(d){ return 'translate('+ scale_x(d.AggregatedAchievability) +','+ scale_y(d.AggregatedValue) +')'; })
 
   console.log(circleGroup)
 
@@ -91,7 +91,7 @@ function renderChart(dataset){
     }) 
 
   circleGroup.append('text')
-      .text(function(d){ return d.grade })
+      .text(function(d){ return d.Summary })
       .attr('dx', radius)
       .attr('font-size', 12)
       .attr({'fill-opacity': 0.00})
