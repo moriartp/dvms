@@ -1,5 +1,5 @@
 // JavaScript Document     if (error) throw error
-d3.csv("https://raw.githubusercontent.com/moriartp/dvms/master/projectsScorecard/data/scorecard.csv", function(error, dataset) {
+d3.csv("data/scorecard.csv", function(error, dataset) {
 	console.log(dataset)	
   renderChart(dataset)
 })
@@ -92,7 +92,7 @@ function renderChart(dataset){
     }) 
 
   circleGroup.append('text')
-      .text(function(d){ return d.Summary + ' Overall Score: ' + d.Score })
+      .text(function(d){ return d.Summary + ' Score: ' + d.Score })
       .attr('dx', radius)
       .attr('font-size', 5)
       .attr({'fill-opacity': 0.00})
