@@ -91,7 +91,7 @@ function renderChart(dataset){
     }) 
 
   circleGroup.append('text')
-      .text(function(d){ return d.Summary + ' overall score: ' + d.Score })
+      .text(function(d){ return d.Summary + ' Overall Score: ' + d.Score })
       .attr('dx', radius)
       .attr('font-size', 12)
       .attr({'fill-opacity': 0.00})

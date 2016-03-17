@@ -105,24 +105,24 @@ svg.block{
 }
 
 .circlegroup.catVeryLow{
-	fill: #3F88C5;/*BLUE*/
+	fill: #30CF90;/*EXTRA GREEN*/
 	font-family: 'Arial', sans-serif;
 }
 .circlegroup.catLow{
-	fill: #E94F37;/*RED*/
-	font-family: 'Arial', sans-serif;
-}
-.circlegroup.catNormal{
 	fill: #44BBA4;/*GREEN*/
 	font-family: 'Arial', sans-serif;
 }
+.circlegroup.catNormal{
+	fill: #3F88B7;/*BLUE*/
+	font-family: 'Arial', sans-serif;
+}
 .circlegroup.catHigh{
-	fill: #393E41;/*BLACK*/
+	fill: #E94F37;/*RED*/
 	font-family: 'Arial', sans-serif;
 }
 
-.circlegroup.catearlyVeryHigh{
-	fill: green;
+.circlegroup.catVeryHigh{
+	fill: #FC3B23;/*VERY RED*/
 	font-family: 'Arial', sans-serif;
 }
 
