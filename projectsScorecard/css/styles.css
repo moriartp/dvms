@@ -105,19 +105,19 @@ svg.block{
 }
 
 .circlegroup.catPlanning{
-	fill: red;
+	fill: #3F88C5;/*BLUE*/
 	font-family: 'Droid Sans', sans-serif;
 }
 .circlegroup.catHold{
-	fill: orange;
+	fill: #E94F37;/*RED*/
 	font-family: 'Droid Sans', sans-serif;
 }
 .circlegroup.catInProgress{
-	fill: gold;
+	fill: #44BBA4;/*GREEN*/
 	font-family: 'Droid Sans', sans-serif;
 }
 .circlegroup.catArchived{
-	fill: blue;
+	fill: #393E41;/*BLACK*/
 	font-family: 'Droid Sans', sans-serif;
 }
 

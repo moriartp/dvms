@@ -10,7 +10,7 @@ function renderChart(dataset){
 
   var width = 855 - margin.left - margin.right,
       height = 400 - margin.top - margin.bottom,
-      radius = function(d){ return Math.sqrt(d.Score)*3 }
+      radius = function(d){ return Math.sqrt(d.TierWeight)*5 }
 
 
   //// make scales with d3.extent()
@@ -21,7 +21,7 @@ function renderChart(dataset){
 
 
   //// Create padding for the min and max 
-  xExtent[0] = 0//xExtent[0] - ( xExtent[0]*0.2 )
+  xExtent[0] = xExtent[0] - ( xExtent[0]*0.2 )
   xExtent[1] = 100//xExtent[1] + ( xExtent[1]*0.2 )
 
   yExtent[0] = 0 //- ( yExtent[0] )

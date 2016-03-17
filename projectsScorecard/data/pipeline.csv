@@ -1,6 +1,6 @@
 Summary,State,Score,TierWeight,AggregatedValue,AggregatedAchievability,RiskMitigated,StakeholderSupportNeeds,ImplementationRisk,SkillsAlignment,ResourceAffordances
 Rack Upgrade,Hold,48,50,47,44,40,50,75,100,0
-Server Migration,Planning,20,10,13,100,0,0,0,100,100
+Server Migration,Planning,20,10,13,73,0,0,0,100,100
 Software Implementation,Planning,47,50,40,56,60,50,50,75,50
 Business Process Change,Planning,26,10,33,81,40,25,0,50,100
 Network Access Point Installations,Archived,41,40,40,50,0,75,25,60,75
@@ -9,7 +9,7 @@ Video Conferencing Software,InProgress,47,30,60,81,20,50,25,100,100
 System Upgrade,Hold,58,75,57,54,60,75,100,75,25
 Server Decommissioning,Planning,40,0,3,80,20,20,10,80,90
 Hardware Implementation,Planning,57,60,50,66,70,60,60,85,60
-Service Deployment,Planning,36,20,43,91,50,35,10,60,90
+Service Deployment,Planning,36,20,43,71,50,35,10,60,90
 Router Configurations,Archived,31,30,30,40,10,65,15,50,65
 Web Service Development,InProgress,55,50,63,46,30,15,40,40,40
 Video Software,InProgress,37,20,50,71,10,40,15,90,90
