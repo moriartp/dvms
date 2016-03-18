@@ -1,5 +1,5 @@
 // JavaScript Document     if (error) throw error
-d3.csv("https://raw.githubusercontent.com/moriartp/dvms/master/projectsScorecard/data/scorecard.csv", function(error, dataset) {
+d3.csv("data/scorecard.csv", function(error, dataset) {
 	console.log(dataset)	
   renderChart(dataset)
 })
