@@ -58,7 +58,6 @@ function renderChart(dataset){
       .outerTickSize(1)
       .orient('left')
 
-
   var svg = d3.select('#svg-wrapper-1').append('svg')
     .attr('id', 'svg')
     .attr('width', width + margin.left + margin.right)
