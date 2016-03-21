@@ -10,14 +10,14 @@ function renderChart(dataset){
 
   var width = 855 - margin.left - margin.right,
       height = 400 - margin.top - margin.bottom,
-      radius = 10//function(d){ return Math.sqrt(d.methfrequency)*3 }
+      radius = 20//function(d){ return Math.sqrt(d.methfrequency)*3 }
 
 
   //// make scales with d3.extent()
 
-  var xExtent = d3.extent( dataset.map( function(d){ return parseInt(d.Frequency) }) )
-  var yExtent = d3.extent( dataset.map( function(d){ console.log(d.Use);
-    return parseFloat(d.methuse) }) )
+  var xExtent = d3.extent( dataset.map( function(d){ return parseInt(d.freq) }) )
+  var yExtent = d3.extent( dataset.map( function(d){ console.log(d.use);
+    return parseFloat(d.use) }) )
 
 
   //// Create padding for the min and max 
@@ -80,7 +80,7 @@ function renderChart(dataset){
       .enter().append('g')
       .attr('class', function(d){ return 'circlegroup cat'+d.drug })
       //.attr('class', function(d){ return 'circlegroup cat'+d.grade })      
-      .attr('transform', function(d){ return 'translate('+ scale_x(d.Frequency) +','+ scale_y(d.methuse) +')'; })
+      .attr('transform', function(d){ return 'translate('+ scale_x(d.freq) +','+ scale_y(d.use) +')'; })
 
   console.log(circleGroup)
 
