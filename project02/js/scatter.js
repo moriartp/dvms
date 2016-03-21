@@ -24,7 +24,7 @@ function renderChart(dataset){
   xExtent[0] = xExtent[0] - ( xExtent[0]*0.2 )
   xExtent[1] = xExtent[1] + ( xExtent[1]*0.2 )
 
-  yExtent[0] = 0 - ( yExtent[0] )
+  yExtent[0] = 0 //- ( yExtent[0] )
   yExtent[1] = yExtent[1] + ( yExtent[1]*0.2 )
 
   console.log(xExtent, yExtent)
@@ -87,7 +87,7 @@ function renderChart(dataset){
   circleGroup.append('circle')
     .attr({
       r: radius,
-      'fill-opacity': 0.15
+      'fill-opacity': 0.25
     }) 
 
   circleGroup.append('text')
