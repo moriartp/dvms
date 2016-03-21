@@ -33,7 +33,7 @@ d3.csv("data/barUse.csv", function(error, dataset) {
 ///// CHART ONE //////////////////////
 function renderChart(dataset){
   var margin = {top: 20, right: 20, bottom: 30, left: 40},
-    width = 800 - margin.left - margin.right,
+    width = 1100 - margin.left - margin.right,
     height = 400 - margin.top - margin.bottom
 
   var xScale = d3.scale.ordinal()
