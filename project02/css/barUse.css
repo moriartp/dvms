@@ -19,6 +19,7 @@ p{
 
 h1{
 	margin: 1px 0;
+	padding: 0px;
 	font-size: 144px;
 	font-family: 'Amatic SC', cursive;
 
@@ -64,21 +65,20 @@ svg{
 
 .bar {
   fill: #E94F37;
-  transition: all 0.3s ease-out;
+  transition: all 0.93s ease-out;
   transform: translate(0px, 0px);
 }
 
-/*#barchart .bar:hover {
-  fill: lightskyblue;
-  transform: translate(0px, -40px);
-}*/
+#barchart .bar:hover {
+  fill: #3F88C5;
+  transform: translate(0px, -10px);
+}
 
 .axis {
   font: 10px sans-serif;
 }
 
-.axis path,
-.axis line {
+.axis path, .axis line {
   fill: none;
   stroke: #000;
   shape-rendering: crispEdges;
@@ -93,11 +93,6 @@ svg{
 	font-size: 14px;
 	text-anchor: middle;
 }
-
-/*section {
-	margin-left: 20px;
-	padding: 120px;
-}*/
 
 
 

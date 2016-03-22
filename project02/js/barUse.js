@@ -86,5 +86,5 @@ function renderChart(dataset){
       .attr("x", function(d,i) { return xScale(i) })
       .attr("width", xScale.rangeBand())
       .attr("y", function(d) { return yScale(d.Use) })
-      .attr("height", function(d) { return height - yScale(d.Use) })
+      .attr("height", function(d) { return height - yScale(d.Use) })    
 }
