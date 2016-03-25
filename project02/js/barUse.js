@@ -11,7 +11,7 @@ function convert(d) {
   d3.select('#stringdata').append('li').text( d.Use )
   
   //// Easy syntax for turning a javascript String to a Float
-  d.Use = +d.aUse
+  d.Use = +d.Use
   //// Alternately, you could use 
   //d.frequency = parseFloat(d.frequency)
 
@@ -79,12 +79,15 @@ function renderChart(dataset){
       .style("text-anchor", "left")
       .text("Percent")
 
-
   svg.selectAll(".bar").data(dataset)
     .enter().append("rect")
       .attr("class", "bar")
       .attr("x", function(d,i) { return xScale(i) })
       .attr("width", xScale.rangeBand())
       .attr("y", function(d) { return yScale(d.Use) })
-      .attr("height", function(d) { return height - yScale(d.Use) })    
+      .attr("height", function(d) { return height - yScale(d.Use) })
+
+  svg.selectAll(".bar").data(dataset)
+    .enter().append("text")
+      .attr("text", function(d) { return d.Use })  
 }
