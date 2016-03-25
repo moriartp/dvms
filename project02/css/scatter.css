@@ -101,6 +101,7 @@ svg.block{
 
 .circlegroup:hover text{
 	fill-opacity: 1;
+	font-size: 26px;
 }
 
 .circlegroup.catAlcohol{
