@@ -172,7 +172,8 @@ svg.block{
 
 .bar:hover {
   fill: #3F88C5;
-/*  transform: translate(0px, -10px);*/
+/*  fill: #44BBA4;*/
+/*  transform: translate(10px, 0px)*/
 }
 
 .axis {
