@@ -17,7 +17,7 @@ d3.csv("data/barUse.csv", convert, function(error, dataset) {
 
 function renderChart(dataset){
   var margin = {top: 20, right: 20, bottom: 30, left: 40},
-    width = 600 - margin.left - margin.right,
+    width = 1200 - margin.left - margin.right,
     height = 400 - margin.top - margin.bottom
 
   var xScale = d3.scale.ordinal()
@@ -29,12 +29,13 @@ function renderChart(dataset){
   var xAxis = d3.svg.axis()
       .scale(xScale)
       .orient("bottom")
+      .tickFormat(function(d,i){ return dataset[d].Drug })
 
 
   var yAxis = d3.svg.axis()
       .scale(yScale)
       .orient("left")
-      .ticks(10, "%")
+      .ticks(10)
 
   var svg = d3.select("#bars").append("svg")
       .attr("width", width + margin.left + margin.right)
@@ -45,6 +46,7 @@ function renderChart(dataset){
   xScale.domain( d3.range(dataset.length) )
   yScale.domain([0, 40])//d3.max(dataset, function(d) { return d.Use })])
 
+  console.log('DOMAIN == '+xScale.domain())
 
   svg.append("g")
       .attr("class", "x axis")
@@ -56,10 +58,11 @@ function renderChart(dataset){
       .call(yAxis)
     .append("text")
       .attr("transform", "rotate(-90)")
-      .attr("y", 6)
-      .attr("dy", ".71em")
-      .style("text-anchor", "end")
-      .text("Use")
+      .attr("y", 0)
+      .attr("dy", -6)
+      .attr("transform", "translate(-16,"+height*0.5+") rotate(-90)")
+      .style("text-anchor", "left")
+      .text("Percent")
 
 
   var bars = svg.selectAll(".bar").data(dataset)
@@ -84,7 +87,7 @@ function renderChart(dataset){
     //console.log(d)
 
     tooltip.classed('show', true)
-    tooltip.html('Drug: '+d.Drug+'<br>'+d.Use)
+    tooltip.html(d.Drug+'<br>Use: '+d.Use + '%')
 
     ////getBoundingClientRect() will return an object that has the
     ////width, height, and distance from the top, left, and bottom of the page

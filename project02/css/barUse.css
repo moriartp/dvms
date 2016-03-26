@@ -11,25 +11,23 @@ section{
 	padding: 100px;
 	background-color: white;
 }
+
 p{
 	font-size: 12px;
 	font-family: 'Arial';
 }
-
 
 h1{
 	margin: 1px 0;
 	padding: 0px;
 	font-size: 144px;
 	font-family: 'Amatic SC', cursive;
-
 }
 
 
 h3{
 	margin: 6px 0;
 	font-family: 'Amatic SC', cursive;
-
 }
 
 ul{
@@ -40,7 +38,7 @@ ul{
 }
 
 
-.lefty{
+/*.lefty{
 	float: left;
 }
 
@@ -54,7 +52,7 @@ ul{
 
 #tsvoutput ul:first-child{
 	margin-right: 30px;
-}
+}*/
 
 svg{
 	border: 2px solid #333;

@@ -1,37 +1,27 @@
 ////////////////////////////////////////////////
-//// Percent Population Drug Use Bar Chart
+//// Session 4 bar chart
 ////////////////////////////////////////////////
 
-function convert(d) {
-  //// Append the data as a String
-  d3.select('#stringdata').append('li').text( d.Use )
-  
-  //// Turning a javascript String to a Float
-  d.Use = +d.Use
 
-  //// Append data to list asconverted Float
-  d3.select('#numdata').append('li').text( d.Use )
-  
-  return d //// Make sure you return the data that you altered
+function convert(d) {
+  d.Use = +d.Use
+  return d 
 }
 
 
-//// Request the data file 
 d3.csv("data/barUse.csv", convert, function(error, dataset) {
   if (error) throw error
-
   renderChart(dataset)
 })
 
 
-///// CHART ONE //////////////////////
 function renderChart(dataset){
   var margin = {top: 20, right: 20, bottom: 30, left: 40},
     width = 900 - margin.left - margin.right,
     height = 400 - margin.top - margin.bottom
 
   var xScale = d3.scale.ordinal()
-      .rangeRoundBands([0, width], .05)
+      .rangeRoundBands([0, width], .1)
 
   var yScale = d3.scale.linear()
       .range([height, 0])
@@ -41,20 +31,20 @@ function renderChart(dataset){
       .orient("bottom")
       .tickFormat(function(d,i){ return dataset[d].Drug })
 
+
   var yAxis = d3.svg.axis()
       .scale(yScale)
       .orient("left")
       .ticks(10)
 
-  var svg = d3.select("#barchart").append("svg")
+  var svg = d3.select("#bars").append("svg")
       .attr("width", width + margin.left + margin.right)
       .attr("height", height + margin.top + margin.bottom)
       .append("g")
         .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
 
-  //xScale.domain( dataset.map(function(d) { return d.letter }) )
   xScale.domain( d3.range(dataset.length) )
-  yScale.domain([0, 40])//d3.max(dataset, function(d) { return d.Use * 0.01})])
+  yScale.domain([0, d3.max(dataset, function(d) { return d.Use })])
 
   console.log('DOMAIN == '+xScale.domain())
 
@@ -67,11 +57,13 @@ function renderChart(dataset){
       .attr("class", "y axis")
       .call(yAxis)
     .append("text")
-      .attr("y", 0)
+      .attr("transform", "rotate(-90)")
+      .attr("y", -12)
       .attr("dy", -6)
       .attr("transform", "translate(-16,"+height*0.5+") rotate(-90)")
       .style("text-anchor", "left")
       .text("Percent")
+
 
   var bars = svg.selectAll(".bar").data(dataset)
     .enter().append("rect")
@@ -80,8 +72,12 @@ function renderChart(dataset){
       .attr("width", xScale.rangeBand())
       .attr("y", function(d) { return yScale(d.Use) })
       .attr("height", function(d) { return height - yScale(d.Use) })
- 
-   ////instead of having groups with text elements that display on hover.
+
+  
+
+  ////Add an element to the body of your HTML to be used as a tooltip.
+  ////This one element can be used for anything you hover over,
+  ////instead of having groups with text elements that display on hover.
   var tooltip = d3.select('body').append('div').attr('class', 'tooltip')
 
   bars.on('mouseenter', showToolTip)
@@ -91,7 +87,7 @@ function renderChart(dataset){
     //console.log(d)
 
     tooltip.classed('show', true)
-    tooltip.html('Drug: '+d.Drug+'<br>'+d.Use)
+    tooltip.html(d.Drug+'<br>Use: '+d.Use + '%')
 
     ////getBoundingClientRect() will return an object that has the
     ////width, height, and distance from the top, left, and bottom of the page
@@ -108,7 +104,7 @@ function renderChart(dataset){
 
     ////Now let's center the tooltip above the bar
     var ttBCR = tooltip.node().getBoundingClientRect()
-    var topPosition = ( rectBCR.top - ttBCR.height + pageYOffset )
+    var topPosition = ( rectBCR.top - ttBCR.height + pageYOffset ) - 15
     var leftPosition = ( rectBCR.left - ttBCR.width*0.5 + rectBCR.width*0.5 )
     
     tooltip
