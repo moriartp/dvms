@@ -1,8 +1,8 @@
 Drug,Use,Frequency,Phase,catTag
-Alcohol1,36.55,23,Adolescence,Adolescence
-Alcohol2,82.11,52,Early Adulthood,EarlyAdulthood
-Alcohol3,75.00,52,Midlife,Midlife
-Alcohol4,60.32,52,Mature Adulthood,MatureAdulthood
+Alcohol,36.55,23,Adolescence,Adolescence
+Alcohol,82.11,52,Early Adulthood,EarlyAdulthood
+Alcohol,75.00,52,Midlife,Midlife
+Alcohol,60.32,52,Mature Adulthood,MatureAdulthood
 Marijuana,19.22,43,Adolescence,Adolescence
 Marijuana,24.92,56,Early Adulthood,EarlyAdulthood
 Marijuana,10.40,48,Midlife,Midlife
