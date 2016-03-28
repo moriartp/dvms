@@ -109,11 +109,11 @@ svg.block{
 }
 
 .axis {
-  font: 10px sans-serif;
+  font: 5px sans-serif;
 }
 
 .axis text{
-	font-size: 10px;
+	font-size: 8px;
 	fill: #000;
 }
 
@@ -195,12 +195,6 @@ svg.block{
 	text-anchor: middle;
 }
 
-
-
-
-
-
-
 .countrygroup .countrylabel{
 	fill: #000;
 	font-size: 10px;
@@ -222,3 +216,89 @@ svg.block{
 	stroke: #000;
 	stroke-dasharray: 4,4;
 }
+
+
+/*CIRCLE GROUP */
+
+.circlegroup circle{
+	transition: all 0.7s ease-out;
+}
+
+.circlegroup text{
+	transition: all 0.7s ease-out;
+}
+
+.circlegroup{
+	font-size: 10px;
+	transition: all 0.7s ease-out;
+}
+
+.circlegroup:hover circle{
+	fill-opacity: 1;
+	radius: 5;
+}
+
+.circlegroup:hover text{
+	fill-opacity: 1;
+	font-size: 15px;
+}
+
+.circlegroup.catAdolescence{
+	fill: red;
+}
+.circlegroup.catEarlyAdulthood{
+	fill: green;
+}
+.circlegroup.catMidlife{
+	fill: blue;
+}
+.circlegroup.catMatureAdulthood{
+	fill: purple;
+}
+/*
+.circlegroup.catTranquilizer{
+	fill: orange;
+	font-family: 'Droid Sans', sans-serif;
+}
+
+.circlegroup.catInhalant{
+	fill: aqua;
+	font-family: 'Droid Sans', sans-serif;
+}
+
+.circlegroup.catStimulant{
+	fill: darkred;
+	font-family: 'Droid Sans', sans-serif;
+}
+
+.circlegroup.catCocaine{
+	fill: gray;
+	font-family: 'Droid Sans', sans-serif;
+}
+
+.circlegroup.catOxycontin{
+	fill: blue;
+	font-family: 'Droid Sans', sans-serif;
+}
+
+.circlegroup.catMeth{
+	fill: cadetblue;
+	font-family: 'Droid Sans', sans-serif;
+}
+
+.circlegroup.catSedative{
+	fill: darkblue;
+	font-family: 'Droid Sans', sans-serif;
+}
+
+.circlegroup.catHeroin{
+	fill: gold;
+	font-family: 'Droid Sans', sans-serif;
+}
+
+.circlegroup.catCrack{
+	fill: black;
+	font-family: 'Droid Sans', sans-serif;
+}
+
+*/

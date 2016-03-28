@@ -1,5 +1,5 @@
 // JavaScript Document     if (error) throw error
-d3.csv("https://raw.githubusercontent.com/moriartp/dvms/master/project02/data/scatter.csv", function(error, dataset) {
+d3.csv("https://raw.githubusercontent.com/moriartp/dvms/master/_project2/data/phaseSet.csv", function(error, dataset) {
 	console.log(dataset)	
   renderChart(dataset)
 })
@@ -10,14 +10,14 @@ function renderChart(dataset){
 
   var width = 855 - margin.left - margin.right,
       height = 400 - margin.top - margin.bottom,
-      radius = 20//function(d){ return Math.sqrt(d.methfrequency)*3 }
+      radius = 5//function(d){ return Math.sqrt(d.methfrequency)*3 }
 
 
   //// make scales with d3.extent()
 
-  var xExtent = d3.extent( dataset.map( function(d){ return parseInt(d.freq) }) )
-  var yExtent = d3.extent( dataset.map( function(d){ console.log(d.use);
-    return parseFloat(d.use) }) )
+  var xExtent = d3.extent( dataset.map( function(d){ return parseInt(d.Frequency) }) )
+  var yExtent = d3.extent( dataset.map( function(d){ console.log(d.Use);
+    return parseFloat(d.Use) }) )
 
 
   //// Create padding for the min and max 
@@ -78,9 +78,9 @@ function renderChart(dataset){
       
   var circleGroup = marginedgroup.selectAll('.circlegroup').data(dataset)
       .enter().append('g')
-      .attr('class', function(d){ return 'circlegroup cat'+d.drug })
+      .attr('class', function(d){ return 'circlegroup cat'+d.catTag })
       //.attr('class', function(d){ return 'circlegroup cat'+d.grade })      
-      .attr('transform', function(d){ return 'translate('+ scale_x(d.freq) +','+ scale_y(d.use) +')'; })
+      .attr('transform', function(d){ return 'translate('+ scale_x(d.Frequency) +','+ scale_y(d.Use) +')'; })
 
   console.log(circleGroup)
 
@@ -91,7 +91,7 @@ function renderChart(dataset){
     }) 
 
   circleGroup.append('text')
-      .text(function(d){ return d.drug })
+      .text(function(d){ return d.Phase + ' persons using ' + d.Drug })
       .attr('dx', radius)
       .attr('font-size', 12)
       .attr({'fill-opacity': 0.00})
