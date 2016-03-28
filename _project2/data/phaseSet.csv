@@ -1,0 +1,53 @@
+Drug,Use,Frequency,Phase,catTag
+Alcohol,36.55,23,Adolescence,Adolescence
+Alcohol,82.11,52,Early Adulthood,EarlyAdulthood
+Alcohol,75.00,52,Midlife,Midlife
+Alcohol,60.32,52,Mature Adulthood,MatureAdulthood
+Marijuana,19.22,43,Adolescence,Adolescence
+Marijuana,24.92,56,Early Adulthood,EarlyAdulthood
+Marijuana,10.40,48,Midlife,Midlife
+Marijuana,4.96,51,Mature Adulthood,MatureAdulthood
+Pain Releivers,6.18,11,Adolescence,Adolescence
+Pain Releivers,8.65,16,Early Adulthood,EarlyAdulthood
+Pain Releivers,4.20,12,Midlife,Midlife
+Pain Releivers,1.77,14,Mature Adulthood,MatureAdulthood
+Hallucinogens,3.74,3,Adolescence,Adolescence
+Hallucinogens,4.29,3,Early Adulthood,EarlyAdulthood
+Hallucinogens,0.60,3,Midlife,Midlife
+Hallucinogens,0.22,37,Mature Adulthood,MatureAdulthood
+Tranquilizers,2.52,9,Adolescence,Adolescence
+Tranquilizers,4.14,10,Early Adulthood,EarlyAdulthood
+Tranquilizers,1.90,6,Midlife,Midlife
+Tranquilizers,0.94,10,Mature Adulthood,MatureAdulthood
+Inhalants,2.14,6,Adolescence,Adolescence
+Inhalants,0.84,3,Early Adulthood,EarlyAdulthood
+Inhalants,0.30,10,Midlife,Midlife
+Inhalants,0.12,14,Mature Adulthood,MatureAdulthood
+Stimulants,1.88,9,Adolescence,Adolescence
+Stimulants,2.83,10,Early Adulthood,EarlyAdulthood
+Stimulants,0.60,24,Midlife,Midlife
+Stimulants,0.18,24,Mature Adulthood,MatureAdulthood
+Cocaine,1.63,6,Adolescence,Adolescence
+Cocaine,3.81,6,Early Adulthood,EarlyAdulthood
+Cocaine,1.50,15,Midlife,Midlife
+Cocaine,0.55,36,Mature Adulthood,MatureAdulthood
+Oxycontin,0.95,7,Adolescence,Adolescence
+Oxycontin,1.33,20,Early Adulthood,EarlyAdulthood
+Oxycontin,0.30,12,Midlife,Midlife
+Oxycontin,0.25,5,Mature Adulthood,MatureAdulthood
+Meth,0.34,32,Adolescence,Adolescence
+Meth,0.59,30,Early Adulthood,EarlyAdulthood
+Meth,0.20,104,Midlife,Midlife
+Meth,0.12,30,Mature Adulthood,MatureAdulthood
+Sedatives,0.31,12,Adolescence,Adolescence
+Sedatives,0.28,18,Early Adulthood,EarlyAdulthood
+Sedatives,0.30,10,Midlife,Midlife
+Sedatives,0.12,104,Mature Adulthood,MatureAdulthood
+Heroin,0.24,66,Adolescence,Adolescence
+Heroin,0.73,62,Early Adulthood,EarlyAdulthood
+Heroin,0.10,280,Midlife,Midlife
+Heroin,0.06,41,Mature Adulthood,MatureAdulthood
+Crack,0.17,7,Adolescence,Adolescence
+Crack,0.48,9,Early Adulthood,EarlyAdulthood
+Crack,0.50,48,Midlife,Midlife
+Crack,0.25,62,Mature Adulthood,MatureAdulthood
