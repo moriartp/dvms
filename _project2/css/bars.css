@@ -33,40 +33,6 @@ h3{
 a {
 	color: #E94F37;
 }
-/*
-ul{
-	list-style: none;
-	margin: 6px 0;
-	font-size: 0.8em;
-	padding: 0;
-}
-
-
-div.button{
-	padding: 6px 14px;
-	background-color: #ddd;
-	font-size: 20px;
-	color: #333;
-	display: inline-block;
-	cursor: pointer;
-}
-
-div.button:hover{
-	background-color: coral;
-}
-
-div.button:hover span{
-	color: #fff;
-}
-
-div.button span:hover{
-	color: yellow;
-}
-
-div.button:active {
-	background-color: #999;
-}
-*/
 
 svg{
 	border: 2px solid #333;
@@ -125,45 +91,6 @@ svg.block{
 	stroke: #bbb;
 }
 
-/*.circlegroup{
-	font-size: 28px;
-	font-weight: bolder;
-}
-
-.circlegroup:hover circle{
-	stroke-width: 3px;
-	stroke: #222;
-}
-
-.circlegroup text{
-	cursor: default;
-	display: none
-}
-.circlegroup.active text{
-	display: block;
-}
-
-.circlegroup.catA{
-	fill: coral;
-}
-.circlegroup.catB{
-	fill: lightpink;
-}
-.circlegroup.catC{
-	fill: cyan;
-}
-.circlegroup.catD{
-	fill: teal;
-}
-.circlegroup.catE{
-	fill: orange;
-}*/
-
-
-
-
-
-
 .bar {
   fill: #E94F37;
   transition: all 0.93s ease-out;
@@ -217,7 +144,6 @@ svg.block{
 	stroke-dasharray: 4,4;
 }
 
-
 /*CIRCLE GROUP */
 
 .circlegroup circle{
@@ -243,6 +169,7 @@ svg.block{
 	font-size: 15px;
 }
 
+/*CIRCLE GROUP CATEGORIES BY LIFE PHASE*/
 .circlegroup.catAdolescence{
 	fill: red;
 }
@@ -255,50 +182,3 @@ svg.block{
 .circlegroup.catMatureAdulthood{
 	fill: purple;
 }
-/*
-.circlegroup.catTranquilizer{
-	fill: orange;
-	font-family: 'Droid Sans', sans-serif;
-}
-
-.circlegroup.catInhalant{
-	fill: aqua;
-	font-family: 'Droid Sans', sans-serif;
-}
-
-.circlegroup.catStimulant{
-	fill: darkred;
-	font-family: 'Droid Sans', sans-serif;
-}
-
-.circlegroup.catCocaine{
-	fill: gray;
-	font-family: 'Droid Sans', sans-serif;
-}
-
-.circlegroup.catOxycontin{
-	fill: blue;
-	font-family: 'Droid Sans', sans-serif;
-}
-
-.circlegroup.catMeth{
-	fill: cadetblue;
-	font-family: 'Droid Sans', sans-serif;
-}
-
-.circlegroup.catSedative{
-	fill: darkblue;
-	font-family: 'Droid Sans', sans-serif;
-}
-
-.circlegroup.catHeroin{
-	fill: gold;
-	font-family: 'Droid Sans', sans-serif;
-}
-
-.circlegroup.catCrack{
-	fill: black;
-	font-family: 'Droid Sans', sans-serif;
-}
-
-*/
