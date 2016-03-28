@@ -15,8 +15,8 @@ function renderChart(dataset){
 
   //// make scales with d3.extent()
 
-  var xExtent = d3.extent( dataset.map( function(d){ return parseInt(d.freq) }) )
-  var yExtent = d3.extent( dataset.map( function(d){ console.log(d.use);
+  var xExtent = d3.extent( dataset.map( function(d){ return parseInt(d.Frequency) }) )
+  var yExtent = d3.extent( dataset.map( function(d){ console.log(d.Use);
     return parseFloat(d.use) }) )
 
 
@@ -78,9 +78,9 @@ function renderChart(dataset){
       
   var circleGroup = marginedgroup.selectAll('.circlegroup').data(dataset)
       .enter().append('g')
-      .attr('class', function(d){ return 'circlegroup cat'+d.drug })
+      .attr('class', function(d){ return 'circlegroup cat'+d.catTag })
       //.attr('class', function(d){ return 'circlegroup cat'+d.grade })      
-      .attr('transform', function(d){ return 'translate('+ scale_x(d.freq) +','+ scale_y(d.use) +')'; })
+      .attr('transform', function(d){ return 'translate('+ scale_x(d.Frequency) +','+ scale_y(d.Use) +')'; })
 
   console.log(circleGroup)
 
@@ -91,7 +91,7 @@ function renderChart(dataset){
     }) 
 
   circleGroup.append('text')
-      .text(function(d){ return d.drug })
+      .text(function(d){ return d.catTag })
       .attr('dx', radius)
       .attr('font-size', 12)
       .attr({'fill-opacity': 0.00})

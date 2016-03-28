@@ -1,0 +1,184 @@
+/*MY START
+@charset "utf-8";
+
+/* CSS Document */
+
+
+body {
+	padding-top:25px;
+	font-family: 'Amatic SC', cursive;
+}
+
+body div.intro {
+	width: 666;
+	height: 400;
+	background-color: white;
+	opacity: 0.99;
+	max-width: 1000px;
+	width: 88%;
+	margin: 10px auto 80px;
+	border-style:groove;
+	border-width:thin;
+	font-size:36px;
+	padding: 5px;
+	padding-left:25px;
+}
+
+section p{
+	font-size: 12px;
+	font-family: 'Droid Sans', sans-serif;
+}
+
+body, html{
+	margin:0;padding:0;
+	font-size: 1.2em;
+}
+
+section{
+	max-width: 1222px;
+	width: 88%;
+	margin: 10px auto 80px;
+}
+
+h3{
+	margin: 6px 0;
+}
+
+ul{
+	list-style: none;
+	margin: 6px 0;
+	font-size: 0.8em;
+	padding: 0;
+}
+
+svg{
+	border: 2px solid #333;
+	margin: 30px auto;
+}
+svg.block{
+	display: block;
+}
+
+.domain{
+	display: none;
+}
+.x.axis .domain{
+	display: block;
+	stroke: #777;
+}
+
+.axis text{
+	font-size: 12px;
+	fill: #444;
+}
+
+.axis .tick line{
+	stroke: #777;
+	stroke-width: 1px;
+}
+.y.axis .tick line{
+	stroke: #777;
+}
+
+.circlegroup circle{
+	transition: all 0.7s ease-out;
+}
+
+.circlegroup text{
+	transition: all 0.7s ease-out;
+}
+
+.circlegroup{
+	font-size: 28px;
+	font-family: 'Droid Sans', sans-serif;
+	transition: all 0.7s ease-out;
+}
+
+.circlegroup:hover circle{
+	fill-opacity: 1;
+	radius: 20;
+}
+
+.circlegroup:hover text{
+	fill-opacity: 1;
+	font-size: 26px;
+}
+
+.circlegroup.catAlcohol{
+	fill: brown;
+	font-family: 'Droid Sans', sans-serif;
+}
+.circlegroup.catMarijuana{
+	fill: green;
+	font-family: 'Droid Sans', sans-serif;
+}
+.circlegroup.catPainReleiver{
+	fill: red;
+	font-family: 'Droid Sans', sans-serif;
+}
+.circlegroup.catHallucinogen{
+	fill: purple;
+	font-family: 'Droid Sans', sans-serif;
+}
+
+.circlegroup.catTranquilizer{
+	fill: orange;
+	font-family: 'Droid Sans', sans-serif;
+}
+
+.circlegroup.catInhalant{
+	fill: aqua;
+	font-family: 'Droid Sans', sans-serif;
+}
+
+.circlegroup.catStimulant{
+	fill: darkred;
+	font-family: 'Droid Sans', sans-serif;
+}
+
+.circlegroup.catCocaine{
+	fill: gray;
+	font-family: 'Droid Sans', sans-serif;
+}
+
+.circlegroup.catOxycontin{
+	fill: blue;
+	font-family: 'Droid Sans', sans-serif;
+}
+
+.circlegroup.catMeth{
+	fill: cadetblue;
+	font-family: 'Droid Sans', sans-serif;
+}
+
+.circlegroup.catSedative{
+	fill: darkblue;
+	font-family: 'Droid Sans', sans-serif;
+}
+
+.circlegroup.catHeroin{
+	fill: gold;
+	font-family: 'Droid Sans', sans-serif;
+}
+
+.circlegroup.catCrack{
+	fill: black;
+	font-family: 'Droid Sans', sans-serif;
+}
+
+
+
+
+/*.bar {
+	fill: #E94F37;
+}
+
+.domain {
+	fill: none;
+}
+*/
+.axis {
+	font-family: Arial;
+}
+
+
