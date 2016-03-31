@@ -14,7 +14,7 @@ section{
 
 p{
 	font-size: 16px;
-	font-family: 'Arial';
+	font-family: 'Lato', sans-serif;
 }
 
 h1{
@@ -33,40 +33,6 @@ h3{
 a {
 	color: #E94F37;
 }
-/*
-ul{
-	list-style: none;
-	margin: 6px 0;
-	font-size: 0.8em;
-	padding: 0;
-}
-
-
-div.button{
-	padding: 6px 14px;
-	background-color: #ddd;
-	font-size: 20px;
-	color: #333;
-	display: inline-block;
-	cursor: pointer;
-}
-
-div.button:hover{
-	background-color: coral;
-}
-
-div.button:hover span{
-	color: #fff;
-}
-
-div.button span:hover{
-	color: yellow;
-}
-
-div.button:active {
-	background-color: #999;
-}
-*/
 
 svg{
 	border: 2px solid #333;
@@ -109,11 +75,11 @@ svg.block{
 }
 
 .axis {
-  font: 10px sans-serif;
+  font: 5px sans-serif;
 }
 
 .axis text{
-	font-size: 10px;
+	font-size: 8px;
 	fill: #000;
 }
 
@@ -125,45 +91,6 @@ svg.block{
 	stroke: #bbb;
 }
 
-/*.circlegroup{
-	font-size: 28px;
-	font-weight: bolder;
-}
-
-.circlegroup:hover circle{
-	stroke-width: 3px;
-	stroke: #222;
-}
-
-.circlegroup text{
-	cursor: default;
-	display: none
-}
-.circlegroup.active text{
-	display: block;
-}
-
-.circlegroup.catA{
-	fill: coral;
-}
-.circlegroup.catB{
-	fill: lightpink;
-}
-.circlegroup.catC{
-	fill: cyan;
-}
-.circlegroup.catD{
-	fill: teal;
-}
-.circlegroup.catE{
-	fill: orange;
-}*/
-
-
-
-
-
-
 .bar {
   fill: #E94F37;
   transition: all 0.93s ease-out;
@@ -172,8 +99,7 @@ svg.block{
 
 .bar:hover {
   fill: #3F88C5;
-/*  fill: #44BBA4;*/
-/*  transform: translate(10px, 0px)*/
+/*  transform: translate(0px, -10px);*/
 }
 
 .axis {
@@ -196,12 +122,6 @@ svg.block{
 	text-anchor: middle;
 }
 
-
-
-
-
-
-
 .countrygroup .countrylabel{
 	fill: #000;
 	font-size: 10px;
@@ -222,4 +142,43 @@ svg.block{
 #lines .axis line{
 	stroke: #000;
 	stroke-dasharray: 4,4;
+}
+
+/*CIRCLE GROUP */
+
+.circlegroup circle{
+	transition: all 0.7s ease-out;
+}
+
+.circlegroup text{
+	transition: all 0.7s ease-out;
+}
+
+.circlegroup{
+	font-size: 10px;
+	transition: all 0.7s ease-out;
+}
+
+.circlegroup:hover circle{
+	fill-opacity: 1;
+	radius: 5;
+}
+
+.circlegroup:hover text{
+	fill-opacity: 1;
+	font-size: 15px;
+}
+
+/*CIRCLE GROUP CATEGORIES BY LIFE PHASE*/
+.circlegroup.catAdolescence{
+	fill: red;
+}
+.circlegroup.catEarlyAdulthood{
+	fill: green;
+}
+.circlegroup.catMidlife{
+	fill: blue;
+}
+.circlegroup.catMatureAdulthood{
+	fill: purple;
 }
