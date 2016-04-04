@@ -1,5 +1,5 @@
 ////////////////////////////////////////////////
-//// Session 4 bar chart
+//// Basic bar chart
 ////////////////////////////////////////////////
 
 
@@ -101,17 +101,8 @@ function renderUseChart(dataset){
     ////getBoundingClientRect() will return an object that has the
     ////width, height, and distance from the top, left, and bottom of the page
     var rectBCR = this.getBoundingClientRect()
-    // console.log(rectBCR)
-    
-    // tooltip
-    //   .style({
-    //     ////pageYOffset is the pixel distance you've scrolled from the top of the screen.
-    //     ////it comes as a global variable, complements of the browser
-    //     top: (rectBCR.top + pageYOffset)+'px',
-    //     left: rectBCR.left+'px'
-    //   })
 
-    ////Now let's center the tooltip above the bar
+    ////Center the tooltip above the bar
     var ttBCR = tooltip.node().getBoundingClientRect()
     var topPosition = ( rectBCR.top - ttBCR.height + pageYOffset ) - 15
     var leftPosition = ( rectBCR.left - ttBCR.width*0.5 + rectBCR.width*0.5 )
@@ -187,36 +178,19 @@ function renderFreqChart(dataset){
       .attr("y", function(d) { return yScale(d.Frequency) })
       .attr("height", function(d) { return height - yScale(d.Frequency) })
 
-  
-
-  ////Add an element to the body of your HTML to be used as a tooltip.
-  ////This one element can be used for anything you hover over,
-  ////instead of having groups with text elements that display on hover.
   var tooltip = d3.select('body').append('div').attr('class', 'tooltip')
 
   bars.on('mouseenter', showToolTip)
     .on('mouseleave', hideToolTip)
 
   function showToolTip(d,i){
-    //console.log(d)
 
     tooltip.classed('show', true)
     tooltip.html(d.Drug+'<br>Frequency: '+d.Frequency + ' days')
 
-    ////getBoundingClientRect() will return an object that has the
-    ////width, height, and distance from the top, left, and bottom of the page
     var rectBCR = this.getBoundingClientRect()
-    // console.log(rectBCR)
-    
-    // tooltip
-    //   .style({
-    //     ////pageYOffset is the pixel distance you've scrolled from the top of the screen.
-    //     ////it comes as a global variable, complements of the browser
-    //     top: (rectBCR.top + pageYOffset)+'px',
-    //     left: rectBCR.left+'px'
-    //   })
 
-    ////Now let's center the tooltip above the bar
+    ////Center the tooltip above the bar
     var ttBCR = tooltip.node().getBoundingClientRect()
     var topPosition = ( rectBCR.top - ttBCR.height + pageYOffset ) - 15
     var leftPosition = ( rectBCR.left - ttBCR.width*0.5 + rectBCR.width*0.5 )

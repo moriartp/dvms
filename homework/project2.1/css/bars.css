@@ -1,0 +1,184 @@
+body, html{
+	margin:0;padding:0;
+	font-family: "Helvetica", sans-serif;
+	font-size: 1.2em;
+}
+
+section{
+	max-width: 1000px;
+	width: 60%;
+	margin: 25px auto 20px;
+	padding: 25px;
+	background-color: white;
+}
+
+p{
+	font-size: 16px;
+	font-family: 'Lato', sans-serif;
+}
+
+h1{
+	margin: 1px 0;
+	padding: 0px;
+	font-size: 100px;
+	font-family: 'Amatic SC', cursive;
+}
+
+h3{
+	margin: 6px 0;
+	font-family: 'Amatic SC', cursive;
+	font-size: 32
+}
+
+a {
+	color: #E94F37;
+}
+
+svg{
+	border: 2px solid #333;
+	margin: 30px auto;
+	padding: 30px;
+	background-color: white;
+}
+
+svg.block{
+	display: block;
+}
+
+.svgbox{
+	position: relative;
+}
+
+.tooltip{
+	position: absolute;
+	padding: 13px 18px;
+	border: none;
+	border-radius: 5px;
+	background-color: #393E41;
+	font-size: 22px;
+	color: #FFF;
+	pointer-events: auto;
+	display: none;
+	top: 0px;
+	left: 0px;
+}
+.tooltip.show{
+	display: block;
+}
+
+.domain{
+	display: none;
+}
+.x.axis .domain{
+	display: block;
+	stroke: #bbb;
+}
+
+.axis {
+  font: 5px sans-serif;
+}
+
+.axis text{
+	font-size: 8px;
+	fill: #000;
+}
+
+.axis .tick line{
+	stroke: #bbb;
+	stroke-width: 1px;
+}
+.y.axis .tick line{
+	stroke: #bbb;
+}
+
+.bar {
+  fill: #E94F37;
+  transition: all 0.93s ease-out;
+/*  transform: translate(0px, 0px);*/
+}
+
+.bar:hover {
+  fill: #3F88C5;
+/*  transform: translate(0px, -10px);*/
+}
+
+.axis {
+  font: 10px sans-serif;
+}
+
+.axis path, .axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.x.axis path {
+  display: none;
+}
+
+.barlabel{
+	fill: #000;
+	font-size: 12px;
+	text-anchor: middle;
+}
+
+.countrygroup .countrylabel{
+	fill: #000;
+	font-size: 10px;
+	font-family: Arial;
+	display: none;
+}
+.countrygroup.active .countrylabel{
+	display: block;
+}
+.countrygroup.active path{
+	stroke: #111;
+	opacity: 1;
+}
+.countrygroup path{
+    fill: none;
+}
+
+#lines .axis line{
+	stroke: #000;
+	stroke-dasharray: 4,4;
+}
+
+/*CIRCLE GROUP */
+
+.circlegroup circle{
+	transition: all 0.7s ease-out;
+}
+
+.circlegroup text{
+	transition: all 0.7s ease-out;
+}
+
+.circlegroup{
+	font-size: 10px;
+	transition: all 0.7s ease-out;
+}
+
+.circlegroup:hover circle{
+	fill-opacity: 1;
+	radius: 5;
+}
+
+.circlegroup:hover text{
+	fill-opacity: 1;
+	font-size: 15px;
+}
+
+/*CIRCLE GROUP CATEGORIES BY LIFE PHASE*/
+.circlegroup.catAdolescence{
+	fill: red;
+}
+.circlegroup.catEarlyAdulthood{
+	fill: green;
+}
+.circlegroup.catMidlife{
+	fill: blue;
+}
+.circlegroup.catMatureAdulthood{
+	fill: purple;
+}

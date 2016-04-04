@@ -1,0 +1,17 @@
+body{
+	background-color: #eee; 
+	color: #393E41;
+	font-family: 'Rock Salt', cursive; 
+	margin: 5%;  
+	border: 1%;
+	padding: 1%;
+}
+
+h1 {
+	font-size: 250%;
+	padding-top: 2px;
+}
+
+/*ol{
+	list-style: none;
+}*/
