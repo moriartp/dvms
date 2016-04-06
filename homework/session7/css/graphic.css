@@ -11,7 +11,7 @@ section{
 }
 
 h2{
-	font-size: 1.3em;
+	font-size: 36px;
 	background-color: white;
 	width:800px;
 }
@@ -223,6 +223,13 @@ svg.block{
 #lines .axis line{
 	stroke: #ddd;
 	stroke-dasharray: 4,4;
+}
+
+section {
+	padding: 20px;
+	width: 800px;
+	background-color: white;
+	font-size: 12px;
 }
 
 
