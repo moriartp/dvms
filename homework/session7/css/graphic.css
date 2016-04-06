@@ -197,17 +197,17 @@ svg.block{
 	display: none;
 }
 
-.countrylabel{
+.typelabel{
 	fill: #333;
 	font-size: 11px;
 	font-family: Helvetica;
 }
 
 
-.countrygroup .countrylabel{
+.countrygroup .typelabel{
 	display: none;
 }
-.countrygroup.active .countrylabel{
+.countrygroup.active .typelabel{
 	display: block;
 }
 .countrygroup.active path{
@@ -222,7 +222,7 @@ svg.block{
 
 #lines .axis line{
 	stroke: #ddd;
-	stroke-dasharray: 4,4;
+	stroke-dasharray: 4,0;
 }
 
 section {
@@ -231,7 +231,6 @@ section {
 	background-color: white;
 	font-size: 12px;
 }
-
 
 
 

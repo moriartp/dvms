@@ -41,9 +41,9 @@ d3.csv("data/complaints.csv", convert, function(error, dataset) {
 })
 
 ////////////////////////////////////////////////////////
-//// Global Vars
+//// Global Variables
 ////////////////////////////////////////////////////////
-var margin = {top: 20, right: 90, bottom: 30, left: 70},
+var margin = {top: 20, right: 130, bottom: 30, left: 70},
     width = 800 - margin.left - margin.right,
     height = 400 - margin.top - margin.bottom
 
@@ -84,7 +84,7 @@ function createSelection(dataset){
     .attr('opacity', 0.9)
 
   highlightext = svg.append('text')
-        .attr('class', 'countrylabel')
+        .attr('class', 'typelabel')
 }
 
 
@@ -173,24 +173,24 @@ function renderAllPaths(dataset){
     .enter().append('g')
     .attr('class', 'countrygroup')
 
-    // groups.append('text')
-    //     .attr('class', 'countrylabel')
-    //     .attr('x', function(d){
-    //       var last_object_in_complaints = d.complaints[d.complaints.length-1] 
-    //       return xScale(last_object_in_complaints.year)
-    //     })
-    //     .attr('y', function(d){
-    //       var last_object_in_complaints = d.complaints[d.complaints.length-1] 
-    //       return yScale(last_object_in_complaints.val)
-    //     })
-    //     .text(function(d){ return d.Country })
+    groups.append('text')
+        .attr('class', 'typelabel')
+        .attr('x', function(d){
+          var last_object_in_complaints = d.complaints[d.complaints.length-1] 
+          return xScale(last_object_in_complaints.year)
+        })
+        .attr('y', function(d){
+          var last_object_in_complaints = d.complaints[d.complaints.length-1] 
+          return yScale(last_object_in_complaints.val)
+        })
+        .text(function(d){ return d.Country })
 
   var lines = groups.append('path').datum(function(d){ 
       // console.log(d); 
       return d.complaints
     })
     .attr('d', line)
-    .attr('stroke', 'cadetblue')
+    // .attr('stroke', 'cadetblue')
     .attr('stroke-width', 3)
     .attr('fill-opacity', '0')
     .attr('opacity', 0.9)
