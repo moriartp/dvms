@@ -2,28 +2,17 @@ body, html{
 	margin:0;padding:0;
 	font-family: "Helvetica", sans-serif;
 	font-size: 1.2em;
-	background-color: black;
+	background-color: gray;
 }
 
-/*section{
-	max-width: 1220px;
+section{
+	max-width: 999px;
 	width: 88%;
-	margin: 10px auto 80px;*/
+	margin: 10px auto 10px;
 }
 
 h2{
-	font-size: 1.3em;
-}
-
-h3{
-	margin: 6px 0;
-}
-
-ul{
-	list-style: none;
-	margin: 6px 0;
-	font-size: 0.8em;
-	padding: 0;
+	font-size: 11px;
 }
 
 .counties {
@@ -39,26 +28,15 @@ ul{
   stroke-linecap: round;
 }
 
-.q0-9 { fill:rgb(247,251,255); }
-.q1-9 { fill:rgb(222,235,247); }
-.q2-9 { fill:rgb(198,219,239); }
-.q3-9 { fill:rgb(158,202,225); }
-.q4-9 { fill:rgb(107,174,214); }
-.q5-9 { fill:rgb(66,146,198); }
-.q6-9 { fill:rgb(33,113,181); }
-.q7-9 { fill:rgb(8,81,156); }
-.q8-9 { fill:rgb(8,48,107); }
-
-
-.stroke {
-  fill: none;
-  stroke: #000;
-  stroke-width: 3px;
-}
-.graticule {
-  stroke: rgba(150,150,150,1);
-  fill: none;
-}
+.q0-9 { fill:#ffffd9; }
+.q1-9 { fill:#edf8b1; }
+.q2-9 { fill:#c7e9b4; }
+.q3-9 { fill:#7fcdbb; }
+.q4-9 { fill:#41b6c4; }
+.q5-9 { fill:#1d91c0; }
+.q6-9 { fill:#225ea8; }
+.q7-9 { fill:#253494; }
+.q8-9 { fill:#081d58; }
 
 
 .tooltip{
@@ -76,4 +54,3 @@ ul{
 .tooltip.show{
 	display: block;
 }
-

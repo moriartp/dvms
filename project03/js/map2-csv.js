@@ -3,15 +3,15 @@
 
   var lookup = {}
 
-  var width = 960,
-      height = 500;
+  var width = 1111,
+      height = 999;
 
   var pro = d3.geo.albersUsa()
 
   var counties, us;
 
   var quantize = d3.scale.quantize()
-      .domain([0, .1])
+      .domain([0, 1])
       .range( d3.range(9).map(function(i) { return "q" + i + "-9"; }) );
 
   var path = d3.geo.path()
@@ -30,27 +30,25 @@
 
     counties = topojson.feature(us, us.objects.counties).features;
 
-    d3.csv('data/vets-fips.csv', function(err, rent){
-    // d3.csv('data/rent.csv', function(err, rent){
-      // console.log(rent)
-      
-      ////make a lookup table
-      rent.forEach(function(d){
+    d3.csv('data/vets-fips.csv', function(err, Veterans){
+
+      //lookup table
+      Veterans.forEach(function(d){
         lookup[d.FIPS] = d
       })
       console.log(lookup['00000'])
 
       ////adding the values into each county's properties data
-      var allRentVals = [] ////and making an array of values to use for domain of quantize 
+      var allVeteransVals = [] ////and making an array of values to use for domain of quantize 
       counties.forEach(function(d){
         // console.log(d.id)
         // console.log(lookup[d.id])
-        d.properties.rent = d.id in lookup ? +lookup[d.id].Rent90 : 0
-        if(lookup[d.id] != undefined) allRentVals.push(d.properties.rent)
+        d.properties.Veterans = d.id in lookup ? +lookup[d.id].VETS : 0
+        if(lookup[d.id] != undefined) allVeteransVals.push(d.properties.Veterans)
         // console.log(d.properties)
       })
       ////setting quantize domain
-      quantize.domain( [d3.quantile(allRentVals, .05), d3.quantile(allRentVals, .95)] )
+      quantize.domain( [d3.quantile(allVeteransVals, .03), d3.quantile(allVeteransVals, .97)] )
 
       renderMap()
 
@@ -68,7 +66,7 @@ function renderMap(){
       .selectAll("path")
         .data(counties)
       .enter().append("path")
-        .attr("class", function(d){ return quantize(d.properties.rent); })
+        .attr("class", function(d){ return quantize(d.properties.Veterans); })
         .attr("d", path)
 
     var borders = svg.append("path")
@@ -78,7 +76,7 @@ function renderMap(){
 
 
     /////////////////////////////
-    //// Adding a tooltip to map1
+    //// Tooltip
     /////////////////////////////
     var tooltip = d3.select('body').append('div').attr('class', 'tooltip')
 
@@ -87,7 +85,7 @@ function renderMap(){
     var decimal = d3.format(".1f")
     function showToolTip(d,i){
       tooltip.classed('show', true)
-      tooltip.html( d.properties.rent+' Veterans' )
+      tooltip.html( d.properties.Veterans+' Veterans' )
       var thisBRC = this.getBoundingClientRect()
 
       var ttBCR = tooltip.node().getBoundingClientRect()
@@ -103,94 +101,6 @@ function renderMap(){
     function hideToolTip(d,i){
       tooltip.classed('show', false)
     }
-    ///////////////////////////
-
-
-    ///////////////////////////
-    //Alt color scheme setup
-    ///////////////////////////
-
-    //Alt color scheme
-
-    // var rates = counties
-    //   .map(function(d){ return d.properties.rate })
-    //   .sort(function(a, b){ return a - b; })
-
-    // var color = d3.scale.log()
-    //   .range(["hsl(12, 100%, 53%)", "hsl(12, 100%, 53%)"]) //"hsl(228,30%,20%)"])
-    //   .interpolate(d3.interpolateHcl)
-    // color.domain([d3.quantile(rates, .2), d3.quantile(rates, .9)])
-
-    // console.log(d3.quantile(rates, .05), d3.quantile(rates, .95))
-
-
-    // var svg = d3.select("#map2b").append("svg")
-    //   .attr("width", width)
-    //   .attr("height", height);
-      
-    // var countypaths = svg.append("g")
-    //     .attr("class", "counties")
-    //   .selectAll("path")
-    //     .data(counties)
-    //   .enter().append("path")
-    //     .style("fill", function(d) { return color(d.properties.rate); })
-    //     .attr("d", path)
-
-    // var borders = svg.append("path")
-    //     .datum(topojson.mesh(us, us.objects.counties, function(a, b){ return a.id / 1000 ^ b.id / 1000 }))
-    //     .attr("class", "state-borders")
-    //     .attr("d", path);
-
-
-
-
-    ///////////////////////////
-
-
-    ////////////////////////////////////////////////////////
-    // Remove county fill color and add centroid bubbles
-    ////////////////////////////////////////////////////////
-    
-    // countypaths
-    //   .each(function(d){
-        
-    //     var centroid = path.centroid(d)
-    //     // console.log(centroid, pro.invert(centroid))
-    //     svg.append('circle').datum(centroid)
-    //       .attr({
-    //         r:  Math.sqrt( d.properties.rate )*10
-    //         , cx: centroid[0]
-    //         , cy: centroid[1]
-    //         , fill: color(d.properties.rate)
-    //         , 'fill-opacity': 0.8
-    //       })
-    //   })
-    //   .style("fill", '#fff')
-    //   .style("stroke", '#ddd')
-    // borders.remove()
-
-    // var circs = svg.selectAll('circle')
-    //   .transition()
-    //   .duration(1500)
-    //   .delay(function(d,i){return (i+1)*1})
-    //   .attr({
-    //         cx: function(d,i){ return Math.random()*width }
-    //         , cy: function(d,i){ return Math.random()*height }
-    //       })
-    //   .transition()
-    //   .duration(1500)
-    //   .delay(function(d,i){return (i+1)*1})
-    //   .attr({
-    //         cx: function(d,i){ return Math.random()*width }
-    //         , cy: function(d,i){ return Math.random()*height }
-    //       })
-
-  
-
-
-    ///////////////////////////
-
-
 }
 
 
