@@ -1,19 +1,42 @@
 body, html{
 	margin:0;padding:0;
+	padding:25px;
 	font-family: "Helvetica", sans-serif;
 	font-size: 1.2em;
-	background-color: gray;
+	background-color: black;
+	font-family: 'Mate SC', serif;
 }
 
 section{
 	max-width: 999px;
-	width: 88%;
-	margin: 10px auto 10px;
+	width: 66%;
+	margin: 15px auto 15px;
+	padding: 35px;
+	background-color: white;
+	border: black;
+/*	display: inline-block;*/
 }
 
 h2{
-	font-size: 11px;
+	font-size: 35px;
+	padding-bottom: none;
 }
+h3{
+	font-size: 22px;
+}
+
+p{
+	font-family: 'Helvetica';
+	font-size: 20px;
+}
+
+.svgbox {
+	background-color: lightgray;
+	border-color: black;
+	border-style: solid;
+	border-width: 1px;
+}
+
 
 .counties {
   fill: none;

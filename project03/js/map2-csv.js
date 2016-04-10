@@ -3,8 +3,8 @@
 
   var lookup = {}
 
-  var width = 1111,
-      height = 999;
+  var width = 888,
+      height = 500;
 
   var pro = d3.geo.albersUsa()
 
@@ -16,10 +16,6 @@
 
   var path = d3.geo.path()
       .projection(null)
-
-  var svg = d3.select("#map2").append("svg")
-      .attr("width", width)
-      .attr("height", height);
 
   d3.json("data/us.json", function(error, usa) {
     if (error) throw error;
@@ -44,6 +40,7 @@
         // console.log(d.id)
         // console.log(lookup[d.id])
         d.properties.Veterans = d.id in lookup ? +lookup[d.id].VETS : 0
+        d.properties.countyName = d.id in lookup ? +lookup[d.id].Area_name : 0        
         if(lookup[d.id] != undefined) allVeteransVals.push(d.properties.Veterans)
         // console.log(d.properties)
       })
@@ -85,7 +82,7 @@ function renderMap(){
     var decimal = d3.format(".1f")
     function showToolTip(d,i){
       tooltip.classed('show', true)
-      tooltip.html( d.properties.Veterans+' Veterans' )
+      tooltip.html( d.properties.countyName + '<br>' + d.properties.Veterans+' Veterans' )
       var thisBRC = this.getBoundingClientRect()
 
       var ttBCR = tooltip.node().getBoundingClientRect()
