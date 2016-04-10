@@ -1,22 +1,29 @@
 
 (function map2(){
 
+  //global variable, object into county properties will be stored
   var lookup = {}
 
+
+  //sets width and height, to be used for svgbox
   var width = 888,
       height = 500;
 
+  //variable used to store the US map projection
   var pro = d3.geo.albersUsa()
 
   var counties, us;
 
+  //compares data range, divides into nine groups and assigns css class
   var quantize = d3.scale.quantize()
       .domain([0, 1])
       .range( d3.range(9).map(function(i) { return "q" + i + "-9"; }) );
 
+  //stores function as a variable to draw the county borders
   var path = d3.geo.path()
       .projection(null)
 
+  //reads, parses map data
   d3.json("data/us.json", function(error, usa) {
     if (error) throw error;
 
@@ -24,8 +31,10 @@
 
     console.log(us)
 
+    //assigns county data to variable
     counties = topojson.feature(us, us.objects.counties).features;
 
+    //reads, imports research data and associates with county data via FIPS code
     d3.csv('data/vets-fips.csv', function(err, Veterans){
 
       //lookup table
@@ -34,17 +43,14 @@
       })
       console.log(lookup['00000'])
 
-      ////adding the values into each county's properties data
-      var allVeteransVals = [] ////and making an array of values to use for domain of quantize 
+      ////adds the values into each county's properties data
+      var allVeteransVals = [] ////and makes an array of values to use for domain of quantize 
       counties.forEach(function(d){
-        // console.log(d.id)
-        // console.log(lookup[d.id])
         d.properties.Veterans = d.id in lookup ? +lookup[d.id].VETS : 0
         d.properties.countyName = d.id in lookup ? +lookup[d.id].Area_name : 0        
         if(lookup[d.id] != undefined) allVeteransVals.push(d.properties.Veterans)
-        // console.log(d.properties)
       })
-      ////setting quantize domain
+      ////sets quantize domain
       quantize.domain( [d3.quantile(allVeteransVals, .03), d3.quantile(allVeteransVals, .97)] )
 
       renderMap()
