@@ -20,7 +20,7 @@ function convert(d) {
 
 
 
-d3.csv("data/complaints.csv", convert, function(error, dataset) {
+d3.csv("data/mydata.csv", convert, function(error, dataset) {
   if (error) throw error
   //// Make an array of max values from the complaints
   var maxArray = dataset.map(function(country){

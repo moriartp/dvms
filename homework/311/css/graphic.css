@@ -102,7 +102,7 @@ svg.block{
 }
 .countrygroup path{
     fill: none;
-    stroke-width: 13;
+    stroke-width: 1;
     stroke: #FB5012;
 }
 
