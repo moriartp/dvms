@@ -46,8 +46,8 @@
       ////adds the values into each county's properties data
       var allVeteransVals = [] ////and makes an array of values to use for domain of quantize 
       counties.forEach(function(d){
-        d.properties.Veterans = d.id in lookup ? +lookup[d.id].VETS : 0
-        d.properties.countyName = d.id in lookup ? +lookup[d.id].Area_name : 0        
+        d.properties.Veterans = d.id in lookup ? lookup[+d.id].VETS : 0
+        d.properties.countyName = d.id in lookup ? lookup[+d.id].Area_name : 0        
         if(lookup[d.id] != undefined) allVeteransVals.push(d.properties.Veterans)
       })
       ////sets quantize domain
