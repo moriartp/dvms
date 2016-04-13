@@ -1,38 +1,38 @@
 {
- "name": "flare",
+ "name": "Level1",
  "children": [
   {
-   "name": "categories",
+   "name": "Level2a",
    "children": [
     {
-     "name": "cluster",
+     "name": "clusterA",
      "children": [
-      {"name": "AgglomerativeCluster", "size": 3938},
-      {"name": "CommunityStructure", "size": 3812},
-      {"name": "HierarchicalCluster", "size": 6714},
-      {"name": "MergeEdge", "size": 743}
+      {"name": "Outermost A", "size": 3938},
+      {"name": "Outermost B", "size": 3812},
+      {"name": "Outermost C", "size": 6714},
+      {"name": "Outermost D", "size": 743}
      ]
     },
     {
-     "name": "graph",
+     "name": "clusterB",
      "children": [
-      {"name": "BetweennessCentrality", "size": 3534},
-      {"name": "LinkDistance", "size": 5731},
-      {"name": "MaxFlowMinCut", "size": 7840},
-      {"name": "ShortestPaths", "size": 5914},
-      {"name": "SpanningTree", "size": 3416}
+      {"name": "OutermostZ", "size": 3534},
+      {"name": "OutermostY", "size": 5731},
+      {"name": "OutermostX", "size": 7840},
+      {"name": "OutermostW", "size": 5914},
+      {"name": "OutermostV", "size": 3416}
      ]
     },
     {
-     "name": "optimization",
+     "name": "ClusterC",
      "children": [
-      {"name": "AspectRatioBanker", "size": 7074}
+      {"name": "Just One Thing Here", "size": 77074}
      ]
     }
    ]
   },
   {
-   "name": "animate",
+   "name": "Level2-animate",
    "children": [
     {"name": "Easing", "size": 17010},
     {"name": "FunctionSequence", "size": 5842},
@@ -83,7 +83,7 @@
    ]
   },
   {
-   "name": "display",
+   "name": "Dad",
    "children": [
     {"name": "DirtySprite", "size": 8833},
     {"name": "LineSprite", "size": 1732},
@@ -111,7 +111,7 @@
    ]
   },
   {
-   "name": "query",
+   "name": "Level2-query",
    "children": [
     {"name": "AggregateExpression", "size": 1616},
     {"name": "And", "size": 1027},
@@ -196,7 +196,7 @@
    ]
   },
   {
-   "name": "util",
+   "name": "Level2-util",
    "children": [
     {"name": "Arrays", "size": 8258},
     {"name": "Colors", "size": 10001},
@@ -241,7 +241,7 @@
    ]
   },
   {
-   "name": "vis",
+   "name": "Level2-Other",
    "children": [
     {
      "name": "axis",
