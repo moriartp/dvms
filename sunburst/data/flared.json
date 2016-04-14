@@ -1,22 +1,42 @@
 {
-  "name": "top",
-  "children": [
-    {
-      "name": "level2a",
-      "children": [
-        {"name": "apple", "size":90},
-        {"name": "plum", "size":90}
+    "name": "Top Level",
+    "parent": "null",
+    "size": 10,
+    "type": "black",
+    "level": "red",
+    "children": [
+      {
+        "name": "Level 2: A",
+        "parent": "Top Level",
+        "size": 15,
+        "type": "grey",
+        "level": "red",
+        "children": [
+          {
+            "name": "Son of A",
+            "parent": "Level 2: A",
+            "size": 5,
+            "type": "steelblue",
+            "level": "orange"
+          },
+          {
+            "name": "Daughter of A",
+            "parent": "Level 2: A",
+            "size": 8,
+            "type": "steelblue",
+            "level": "red"
+          }
         ]
-    },
-    {
-      "name": "level2b",
-      "children": [
-        {"name": "pair", "size":90},
-        {"name": "cherry", "size":90}
-        ]
-    }
+      },
+      {
+        "name": "Level 2: B",
+        "parent": "Top Level",
+        "size": 10,
+        "type": "grey",
+        "level": "green"
+      }
     ]
-}
+  }
 
 
 
@@ -235,7 +255,7 @@
 //     },
 //     {"name": "IEvaluable", "size": 335},
 //     {"name": "IPredicate", "size": 383},
-//     {"name": "IValueProxy", "size": 874},
+//     {"name": "IsizeProxy", "size": 874},
 //     {
 //      "name": "math",
 //      "children": [

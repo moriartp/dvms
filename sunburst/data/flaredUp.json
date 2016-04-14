@@ -1,0 +1,206 @@
+{
+    "name": "Overall",
+    "parent": "null",
+    "size": 10,
+    "type": "black",
+    "level": "red",
+    "children": [
+      {
+        "name": "Level 2: Leadership",
+        "parent": "Top Level",
+        "size": 15,
+        "type": "grey",
+        "level": "red",
+        "children": [
+          {
+            "name": "Son of A",
+            "parent": "Level 2: A",
+            "size": 7.5,
+            "type": "steelblue",
+            "level": "orange"
+          },
+          {
+            "name": "Daughter of A",
+            "parent": "Level 2: A",
+            "size": 7.5,
+            "type": "steelblue",
+            "level": "red"
+          }
+        ]
+      },
+      {
+        "name": "Level 2: My Agency",
+        "parent": "Top Level",
+        "size": 15,
+        "type": "grey",
+        "level": "red",
+        "children": [
+          {
+            "name": "Son of X",
+            "parent": "Level 2: A",
+            "size": 7.5,
+            "type": "steelblue",
+            "level": "orange"
+          },
+          {
+            "name": "Daughter of X",
+            "parent": "Level 2: A",
+            "size": 7.5,
+            "type": "steelblue",
+            "level": "red"
+          }
+        ]
+      },
+
+      {
+        "name": "Level 2: My Satisfaction",
+        "parent": "Top Level",
+        "size": 15,
+        "type": "grey",
+        "level": "red",
+        "children": [
+          {
+            "name": "Son of Y",
+            "parent": "Level 2: A",
+            "size": 7.5,
+            "type": "steelblue",
+            "level": "orange"
+          },
+          {
+            "name": "Daughter of Y",
+            "parent": "Level 2: A",
+            "size": 7.5,
+            "type": "steelblue",
+            "level": "red"
+          }
+        ]
+      },
+
+      {
+        "name": "Level 2: My Supervisor",
+        "parent": "Top Level",
+        "size": 15,
+        "type": "grey",
+        "level": "red",
+        "children": [
+          {
+            "name": "Son of Y",
+            "parent": "Level 2: A",
+            "size": 7.5,
+            "type": "steelblue",
+            "level": "orange"
+          },
+          {
+            "name": "Daughter of Y",
+            "parent": "Level 2: A",
+            "size": 7.5,
+            "type": "steelblue",
+            "level": "red"
+          }
+        ]
+      },
+
+      {
+        "name": "Level 2: My Work Unit",
+        "parent": "Top Level",
+        "size": 15,
+        "type": "grey",
+        "level": "red",
+        "children": [
+          {
+            "name": "Son of Y",
+            "parent": "Level 2: A",
+            "size": 7.5,
+            "type": "steelblue",
+            "level": "orange"
+          },
+          {
+            "name": "Daughter of Y",
+            "parent": "Level 2: A",
+            "size": 7.5,
+            "type": "steelblue",
+            "level": "red"
+          }
+        ]
+      },
+
+      {
+        "name": "Level 2: Work/Life",
+        "parent": "Top Level",
+        "size": 15,
+        "type": "grey",
+        "level": "red",
+        "children": [
+          {
+            "name": "Alternative Work Schedules",
+            "parent": "Level 2: A",
+            "size": 2.5,
+            "type": "steelblue",
+            "level": "orange"
+          },
+          {
+            "name": "Health and Wellness Programs",
+            "parent": "Level 2: A",
+            "size": 2.5,
+            "type": "steelblue",
+            "level": "red"
+          },
+
+          {
+            "name": "Telework Program",
+            "parent": "Level 2: A",
+            "size": 2.5,
+            "type": "steelblue",
+            "level": "orange"
+          },
+          {
+            "name": "Employee Assistance Program",
+            "parent": "Level 2: A",
+            "size": 2.5,
+            "type": "steelblue",
+            "level": "red"
+          },
+          {
+            "name": "Child Care Programs",
+            "parent": "Level 2: A",
+            "size": 2.5,
+            "type": "steelblue",
+            "level": "orange"
+          },
+          {
+            "name": "Elder Care Programs",
+            "parent": "Level 2: A",
+            "size": 2.5,
+            "type": "steelblue",
+            "level": "red"
+          }
+        ]
+      },
+
+      {
+        "name": "Level 2: My Work Experience",
+        "parent": "Top Level",
+        "size": 15,
+        "type": "grey",
+        "level": "red",
+        "children": [
+          {
+            "name": "Son of Y",
+            "parent": "Level 2: A",
+            "size": 7.5,
+            "type": "steelblue",
+            "level": "orange"
+          },
+          {
+            "name": "Daughter of Y",
+            "parent": "Level 2: A",
+            "size": 7.5,
+            "type": "steelblue",
+            "level": "red"
+          }
+        ]
+      }
+
+
+    ]
+  }
