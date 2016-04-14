@@ -27,7 +27,7 @@ var svg = d3.select("body").append("svg")
   .append("g")
     .attr("transform", "translate(" + width / 2 + "," + (height / 2) + ")");
 
-d3.json("https://raw.githubusercontent.com/moriartp/dvms/master/sunburst/data/flare.json", function(error, root) {
+d3.json("data/flaredUp.json", function(error, root) {
   if (error) throw error;
 
   svg.selectAll("path")

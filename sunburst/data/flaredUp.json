@@ -2,6 +2,7 @@
     "name": "Overall",
     "parent": "null",
     "size": 10,
+    "approval": 60.80,
     "type": "black",
     "level": "red",
     "children": [

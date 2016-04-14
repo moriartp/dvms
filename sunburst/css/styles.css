@@ -1,3 +1,60 @@
+body {
+	font-family: 'Montserrat', sans-serif;
+}
+
+header{
+	margin-top:50px;
+	margin-left:250px;
+	margin-right:250px;
+	max-width: 960px;
+	padding: 10px;
+	font-size: 40px;
+	font-weight: bold;
+	text-align: center;
+	font-stretch: expanded;
+	border-style: solid;
+	border-width: 1px;
+	border-color: darkgray;
+	color: darkgray;
+}
+
 path {
   stroke: #fff;
+}
+
+svg {
+	margin-top: 50px;
+
+/*	TRANSFORM TO ENSURE SVG IS ALWAYS CENTERED*/
+	align-self: center;
+	position: relative;
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+	transform: translateX(-50%);
+
+/*	NOT CONVINCED THIS DOES ANYTHING*/
+	vertical-align: center;
+	position: relative;
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+	transform: translateX(-50%);
+
+}
+
+footer {
+	margin-top:50px;
+	margin-left:250px;
+	margin-right:250px;
+	max-width: 960px;
+	padding: 10px;
+	font-size: 14px;
+	font-weight: bold;
+	text-align: center;
+	font-stretch: expanded;
+	border-style: solid;
+	border-width: 1px;
+	border-color: darkgray;
+	color: darkgray;
 }
