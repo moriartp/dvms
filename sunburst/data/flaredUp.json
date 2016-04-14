@@ -2,14 +2,15 @@
     "name": "Overall",
     "parent": "null",
     "size": 10,
-    "approval": 60.80,
+    "approval": 61.30,
     "type": "black",
     "level": "red",
     "children": [
       {
-        "name": "Level 2: Leadership",
+        "name": "Leadership",
         "parent": "Top Level",
         "size": 15,
+        "approval": 53.65,
         "type": "grey",
         "level": "55%",
         "children": [
@@ -17,6 +18,7 @@
             "name": "Diversity Management",
             "parent": "Level 2: A",
             "size": 1.5,
+            "approval": 62.9,
             "type": "steelblue",
             "level": "orange"
           },
@@ -24,6 +26,7 @@
             "name": "Verticle Communication",
             "parent": "Level 2: A",
             "size": 1.5,
+            "approval": 59.1,
             "type": "steelblue",
             "level": "red"
           },
@@ -31,6 +34,7 @@
             "name": "Goal-Orientation",
             "parent": "Level 2: A",
             "size": 1.5,
+            "approval": 58.8,
             "type": "steelblue",
             "level": "red"
           },
@@ -38,6 +42,7 @@
             "name": "Overall Leadership Performance",
             "parent": "Level 2: A",
             "size": 1.5,
+            "approval": 56.80,
             "type": "steelblue",
             "level": "red"
           },
@@ -45,6 +50,7 @@
             "name": "Foster Collaboration",
             "parent": "Level 2: A",
             "size": 1.5,
+            "approval": 54.2,
             "type": "steelblue",
             "level": "red"
           },
@@ -52,6 +58,7 @@
             "name": "Program Support",
             "parent": "Level 2: A",
             "size": 1.5,
+            "approval": 53.4,
             "type": "steelblue",
             "level": "red"
           },
@@ -59,6 +66,7 @@
             "name": "Respectability",
             "parent": "Level 2: A",
             "size": 1.5,
+            "approval": 51.4,
             "type": "steelblue",
             "level": "red"
           },
@@ -66,6 +74,7 @@
             "name": "Lateral Communication",
             "parent": "Level 2: A",
             "size": 1.5,
+            "approval": 50.5,
             "type": "steelblue",
             "level": "red"
           },
@@ -73,6 +82,7 @@
             "name": "Integrity",
             "parent": "Level 2: A",
             "size": 1.5,
+            "approval": 50.40,
             "type": "steelblue",
             "level": "red"
           },
@@ -80,15 +90,17 @@
             "name": "Motivational",
             "parent": "Level 2: A",
             "size": 1.5,
+            "approval": 39.00,
             "type": "steelblue",
             "level": "red"
           }         
         ]
       },
       {
-        "name": "Level 2: My Agency",
+        "name": "My Agency",
         "parent": "Top Level",
         "size": 15,
+        "approval": 55.06,
         "type": "grey",
         "level": "red",
         "children": [
@@ -96,6 +108,7 @@
             "name": "Safety",
             "parent": "Level 2: A",
             "size": 1.15384615384615,
+            "approval": 75.9,
             "type": "steelblue",
             "level": "orange"
           },
@@ -103,6 +116,7 @@
             "name": "Threat Preparedness",
             "parent": "Level 2: A",
             "size": 1.15384615384615,
+            "approval": 75.90,
             "type": "steelblue",
             "level": "red"
           },
@@ -110,6 +124,7 @@
             "name": "Mission Focus",
             "parent": "Level 2: A",
             "size": 1.15384615384615,
+            "approval": 73.2,
             "type": "steelblue",
             "level": "red"
           },
@@ -117,6 +132,7 @@
             "name": "Skills Alignment",
             "parent": "Level 2: A",
             "size": 1.15384615384615,
+            "approval": 69.00,
             "type": "steelblue",
             "level": "red"
           },
@@ -124,6 +140,7 @@
             "name": "Inclusiveness",
             "parent": "Level 2: A",
             "size": 1.15384615384615,
+            "approval": 65.60,
             "type": "steelblue",
             "level": "red"
           },
@@ -131,6 +148,7 @@
             "name": "Positive Work Environment",
             "parent": "Level 2: A",
             "size": 1.15384615384615,
+            "approval": 62.7,
             "type": "steelblue",
             "level": "red"
           },
@@ -138,6 +156,7 @@
             "name": "Diversity",
             "parent": "Level 2: A",
             "size": 1.15384615384615,
+            "approval": 56.50,
             "type": "steelblue",
             "level": "red"
           },
@@ -145,6 +164,7 @@
             "name": "Apoliticism",
             "parent": "Level 2: A",
             "size": 1.15384615384615,
+            "approval": 50.7,
             "type": "steelblue",
             "level": "red"
           },
@@ -152,6 +172,7 @@
             "name": "Recognition",
             "parent": "Level 2: A",
             "size": 1.15384615384615,
+            "approval": 56.50,
             "type": "steelblue",
             "level": "red"
           },
@@ -159,6 +180,7 @@
             "name": "Empowerment",
             "parent": "Level 2: A",
             "size": 1.15384615384615,
+            "approval": 43.00,
             "type": "steelblue",
             "level": "red"
           },
@@ -166,6 +188,7 @@
             "name": "Action-Orientation",
             "parent": "Level 2: A",
             "size": 1.15384615384615,
+            "approval": 39.00,
             "type": "steelblue",
             "level": "red"
           },
@@ -173,6 +196,7 @@
             "name": "Innovative Culture",
             "parent": "Level 2: A",
             "size": 1.15384615384615,
+            "approval": 36.7,
             "type": "steelblue",
             "level": "red"
           },
@@ -180,6 +204,7 @@
             "name": "Meritocracy",
             "parent": "Level 2: A",
             "size": 1.15384615384615,
+            "approval": 21.1,
             "type": "steelblue",
             "level": "red"
           }          
@@ -187,9 +212,10 @@
       },
 
       {
-        "name": "Level 2: My Satisfaction",
+        "name": "My Satisfaction",
         "parent": "Top Level",
         "size": 15,
+        "approval": 49.80,
         "type": "grey",
         "level": "red",
         "children": [
@@ -197,6 +223,7 @@
             "name": "Work",
             "parent": "Level 2: A",
             "size": 1.66666666666667,
+            "approval": 65.20,
             "type": "steelblue",
             "level": "orange"
           },
@@ -204,6 +231,7 @@
             "name": "Pay",
             "parent": "Level 2: A",
             "size": 1.66666666666667,
+            "approval": 57.1,
             "type": "steelblue",
             "level": "red"
           },
@@ -211,6 +239,7 @@
             "name": "Organization",
             "parent": "Level 2: A",
             "size": 1.66666666666667,
+            "approval": 55.7,
             "type": "steelblue",
             "level": "red"
           },
@@ -218,6 +247,7 @@
             "name": "Development Opportunities",
             "parent": "Level 2: A",
             "size": 1.66666666666667,
+            "approval": 51.60,
             "type": "steelblue",
             "level": "red"
           },
@@ -225,6 +255,7 @@
             "name": "Democratic Decision-Making",
             "parent": "Level 2: A",
             "size": 1.66666666666667,
+            "approval": 49.60,
             "type": "steelblue",
             "level": "red"
           },
@@ -232,6 +263,7 @@
             "name": "Transparency",
             "parent": "Level 2: A",
             "size": 1.66666666666667,
+            "approval": 46.8,
             "type": "steelblue",
             "level": "red"
           },
@@ -239,6 +271,7 @@
             "name": "Recognition",
             "parent": "Level 2: A",
             "size": 1.66666666666667,
+            "approval": 46.6,
             "type": "steelblue",
             "level": "red"
           },
@@ -246,6 +279,7 @@
             "name": "Policy Appropriateness",
             "parent": "Level 2: A",
             "size": 1.66666666666667,
+            "approval": 40.80,
             "type": "steelblue",
             "level": "red"
           },
@@ -253,6 +287,7 @@
             "name": "Growth Opportunity",
             "parent": "Level 2: A",
             "size": 1.66666666666667,
+            "approval": 34.80,
             "type": "steelblue",
             "level": "red"
           }
@@ -260,9 +295,10 @@
       },
 
       {
-        "name": "Level 2: My Supervisor",
+        "name": "My Supervisor",
         "parent": "Top Level",
         "size": 15,
+        "approval": 69.88,
         "type": "grey",
         "level": "red",
         "children": [
@@ -270,13 +306,15 @@
             "name": "Respectfulness",
             "parent": "Level 2: A",
             "size": 1.36363636363636,
+            "approval": 80.90,
             "type": "steelblue",
             "level": "orange"
           },
           {
-            "name": "Work/Life Support",
+            "name": "Work-Life Support",
             "parent": "Level 2: A",
             "size": 1.36363636363636,
+            "approval": 77.80,
             "type": "steelblue",
             "level": "red"
           },
@@ -284,6 +322,7 @@
             "name": "Feedback",
             "parent": "Level 2: A",
             "size": 1.36363636363636,
+            "approval": 77.5,
             "type": "steelblue",
             "level": "red"
           },
@@ -291,6 +330,7 @@
             "name": "Two-Way Communication",
             "parent": "Level 2: A",
             "size": 1.36363636363636,
+            "approval": 75.70,
             "type": "steelblue",
             "level": "red"
           },
@@ -298,6 +338,7 @@
             "name": "Overall",
             "parent": "Level 2: A",
             "size": 1.36363636363636,
+            "approval": 69.70,
             "type": "steelblue",
             "level": "red"
           },
@@ -305,6 +346,7 @@
             "name": "Workforce Diversity",
             "parent": "Level 2: A",
             "size": 1.36363636363636,
+            "approval": 66.90,
             "type": "steelblue",
             "level": "red"
           },
@@ -312,6 +354,7 @@
             "name": "Trustworthiness",
             "parent": "Level 2: A",
             "size": 1.36363636363636,
+            "approval": 66.5,
             "type": "steelblue",
             "level": "red"
           },
@@ -319,6 +362,7 @@
             "name": "Leadership Development",
             "parent": "Level 2: A",
             "size": 1.36363636363636,
+            "approval": 65.50,
             "type": "steelblue",
             "level": "red"
           },
@@ -326,6 +370,7 @@
             "name": "Professional Development",
             "parent": "Level 2: A",
             "size": 1.36363636363636,
+            "approval": 64.3,
             "type": "steelblue",
             "level": "red"
           },
@@ -333,6 +378,7 @@
             "name": "Interpersonal Impact",
             "parent": "Level 2: A",
             "size": 1.36363636363636,
+            "approval": 62.5,
             "type": "steelblue",
             "level": "red"
           },
@@ -340,6 +386,7 @@
             "name": "Constructiveness",
             "parent": "Level 2: A",
             "size": 1.36363636363636,
+            "approval": 61.4,
             "type": "steelblue",
             "level": "red"
           }
@@ -347,9 +394,10 @@
       },
 
       {
-        "name": "Level 2: My Work Unit",
+        "name": "My Work Unit",
         "parent": "Top Level",
         "size": 15,
+        "approval": 50.61,
         "type": "grey",
         "level": "red",
         "children": [
@@ -357,6 +405,7 @@
             "name": "Overall Quality",
             "parent": "Level 2: A",
             "size": 1.66666666666667,
+            "approval": 82.00,
             "type": "steelblue",
             "level": "orange"
           },
@@ -364,6 +413,7 @@
             "name": "Cooperation",
             "parent": "Level 2: A",
             "size": 1.66666666666667,
+            "approval": 72.70,
             "type": "steelblue",
             "level": "red"
           },
@@ -371,6 +421,7 @@
             "name": "Knowledge Sharing",
             "parent": "Level 2: A",
             "size": 1.66666666666667,
+            "approval": 72.70,
             "type": "steelblue",
             "level": "red"
           },
@@ -378,6 +429,7 @@
             "name": "Continuous Improvement",
             "parent": "Level 2: A",
             "size": 1.66666666666667,
+            "approval": 52.5,
             "type": "steelblue",
             "level": "red"
           },
@@ -385,6 +437,7 @@
             "name": "Recruitment",
             "parent": "Level 2: A",
             "size": 1.66666666666667,
+            "approval": 41.60,
             "type": "steelblue",
             "level": "red"
           },
@@ -392,6 +445,7 @@
             "name": "Meritocratic Award",
             "parent": "Level 2: A",
             "size": 1.66666666666667,
+            "approval": 40.1,
             "type": "steelblue",
             "level": "red"
           },
@@ -399,6 +453,7 @@
             "name": "Meritocratic Promotion",
             "parent": "Level 2: A",
             "size": 1.66666666666667,
+            "approval": 32.9,
             "type": "steelblue",
             "level": "red"
           },
@@ -406,6 +461,7 @@
             "name": "Performance Recognition",
             "parent": "Level 2: A",
             "size": 1.66666666666667,
+            "approval": 32.80,
             "type": "steelblue",
             "level": "red"
           },
@@ -413,6 +469,7 @@
             "name": "Performance Accountability",
             "parent": "Level 2: A",
             "size": 1.66666666666667,
+            "approval": 28.2,
             "type": "steelblue",
             "level": "red"
           }
@@ -420,9 +477,10 @@
       },
 
       {
-        "name": "Level 2: Work/Life",
+        "name": "Work/Life Balance",
         "parent": "Top Level",
         "size": 15,
+        "approval": 76.63,
         "type": "grey",
         "level": "red",
         "children": [
@@ -430,6 +488,7 @@
             "name": "Alternative Work Schedules",
             "parent": "Level 2: A",
             "size": 2.5,
+            "approval": 89.00,
             "type": "steelblue",
             "level": "orange"
           },
@@ -437,6 +496,7 @@
             "name": "Health and Wellness Programs",
             "parent": "Level 2: A",
             "size": 2.5,
+            "approval": 79.9,
             "type": "steelblue",
             "level": "red"
           },
@@ -445,6 +505,7 @@
             "name": "Telework Program",
             "parent": "Level 2: A",
             "size": 2.5,
+            "approval": 78.20,
             "type": "steelblue",
             "level": "orange"
           },
@@ -452,6 +513,7 @@
             "name": "Employee Assistance Program",
             "parent": "Level 2: A",
             "size": 2.5,
+            "approval": 74.8,
             "type": "steelblue",
             "level": "red"
           },
@@ -459,6 +521,7 @@
             "name": "Child Care Programs",
             "parent": "Level 2: A",
             "size": 2.5,
+            "approval": 71.60,
             "type": "steelblue",
             "level": "orange"
           },
@@ -466,6 +529,7 @@
             "name": "Elder Care Programs",
             "parent": "Level 2: A",
             "size": 2.5,
+            "approval": 66.3,
             "type": "steelblue",
             "level": "red"
           }
@@ -473,9 +537,10 @@
       },
 
       {
-        "name": "Level 2: My Work Experience",
+        "name": "My Work Experience",
         "parent": "Top Level",
         "size": 15,
+        "approval": 70.35,
         "type": "grey",
         "level": "red",
         "children": [
@@ -483,6 +548,7 @@
             "name": "Flexibility",
             "parent": "Level 2: A",
             "size": 0.789473684210526,
+            "approval": 95.6,
             "type": "steelblue",
             "level": "orange"
           },
@@ -490,6 +556,7 @@
             "name": "Vigilance",
             "parent": "Level 2: A",
             "size": 0.789473684210526,
+            "approval": 90.5,
             "type": "steelblue",
             "level": "red"
           },
@@ -497,6 +564,7 @@
             "name": "Importance",
             "parent": "Level 2: A",
             "size": 0.789473684210526,
+            "approval": 90.00,
             "type": "steelblue",
             "level": "red"
           },
@@ -504,6 +572,7 @@
             "name": "Enjoyment",
             "parent": "Level 2: A",
             "size": 0.789473684210526,
+            "approval": 82.90,
             "type": "steelblue",
             "level": "red"
           },
@@ -511,6 +580,7 @@
             "name": "Task Alignment",
             "parent": "Level 2: A",
             "size": 0.789473684210526,
+            "approval": 82.50,
             "type": "steelblue",
             "level": "red"
           },
@@ -518,6 +588,7 @@
             "name": "Accountability",
             "parent": "Level 2: A",
             "size": 0.789473684210526,
+            "approval": 81.30,
             "type": "steelblue",
             "level": "red"
           },
@@ -525,6 +596,7 @@
             "name": "Role Clarity",
             "parent": "Level 2: A",
             "size": 0.789473684210526,
+            "approval": 79.10,
             "type": "steelblue",
             "level": "red"
           },
@@ -532,6 +604,7 @@
             "name": "Accomplishment",
             "parent": "Level 2: A",
             "size": 0.789473684210526,
+            "approval": 70.40,
             "type": "steelblue",
             "level": "red"
           },
@@ -539,6 +612,7 @@
             "name": "Information Sharing",
             "parent": "Level 2: A",
             "size": 0.789473684210526,
+            "approval": 69.90,
             "type": "steelblue",
             "level": "red"
           },
@@ -546,13 +620,7 @@
             "name": "Fairness",
             "parent": "Level 2: A",
             "size": 0.789473684210526,
-            "type": "steelblue",
-            "level": "red"
-          },
-          {
-            "name": "Resource Allowances",
-            "parent": "Level 2: A",
-            "size": 0.789473684210526,
+            "approval": 69.1,
             "type": "steelblue",
             "level": "red"
           },
@@ -560,6 +628,7 @@
             "name": "Direction",
             "parent": "Level 2: A",
             "size": 0.789473684210526,
+            "approval": 68.10,
             "type": "steelblue",
             "level": "red"
           },
@@ -567,6 +636,7 @@
             "name": "Environment",
             "parent": "Level 2: A",
             "size": 0.789473684210526,
+            "approval": 65.80,
             "type": "steelblue",
             "level": "red"
           },
@@ -574,6 +644,7 @@
             "name": "Professional Development Opportunities",
             "parent": "Level 2: A",
             "size": 0.789473684210526,
+            "approval": 61.30,
             "type": "steelblue",
             "level": "red"
           },
@@ -581,6 +652,7 @@
             "name": "Organizational Accountability",
             "parent": "Level 2: A",
             "size": 0.789473684210526,
+            "approval": 61.20,
             "type": "steelblue",
             "level": "red"
           },
@@ -588,6 +660,7 @@
             "name": "Talent Alignment",
             "parent": "Level 2: A",
             "size": 0.789473684210526,
+            "approval": 57.70,
             "type": "steelblue",
             "level": "red"
           },
@@ -595,6 +668,7 @@
             "name": "Workload Manageability",
             "parent": "Level 2: A",
             "size": 0.789473684210526,
+            "approval": 57.00,
             "type": "steelblue",
             "level": "red"
           },
@@ -602,6 +676,7 @@
             "name": "Creative Encouragement",
             "parent": "Level 2: A",
             "size": 0.789473684210526,
+            "approval": 56.5,
             "type": "steelblue",
             "level": "red"
           },
@@ -609,6 +684,15 @@
             "name": "Needs Assessment",
             "parent": "Level 2: A",
             "size": 0.789473684210526,
+            "approval": 51.7,
+            "type": "steelblue",
+            "level": "red"
+          },
+          {
+            "name": "Resource Allowances",
+            "parent": "Level 2: A",
+            "size": 0.789473684210526,
+            "approval": 46.10,
             "type": "steelblue",
             "level": "red"
           }

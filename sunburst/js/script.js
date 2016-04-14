@@ -10,7 +10,9 @@ var x = d3.scale.linear()
 var y = d3.scale.sqrt()
     .range([0, radius]);
 
-var color = d3.scale.category20c();
+var color = d3.scale.linear()
+    .domain([31.3, 61.3, 91.3])
+    .range(["#3F88C5", "#F6F7EB", "#E94F37"]);
 
 var partition = d3.layout.partition()
     .value(function(d) { return d.size; });
@@ -34,10 +36,43 @@ d3.json("data/flaredUp.json", function(error, root) {
       .data(partition.nodes(root))
     .enter().append("path")
       .attr("d", arc)
-      .style("fill", function(d) { return color((d.children ? d : d.parent).name); })
+      .style("fill", function(d) { return color(d.approval); })//((d.children ? d : d.parent).approval); })
       .on("click", click)
     .append("title")
-      .text(function(d) { return d.name + "\n" + formatNumber(d.value); });
+      .text(function(d) { return d.name + "\nPositive Responses: " + d.approval + '%'; });
+
+/////TOOLTIP ATTEMPT
+    var tooltip = d3.select('body').append('div').attr('class', 'tooltip')
+
+    path.on('mouseenter', showToolTip)
+      .on('mouseleave', hideToolTip)
+    // var decimal = d3.format(".2f")
+    
+    function showToolTip(d,i){
+      tooltip.classed('show', true)
+      tooltip.html( function(d) { return( d.name + '<br>Positive Responses' + d.approval +' %' )})
+      var thisBRC = this.getBoundingClientRect()
+
+      var ttBCR = tooltip.node().getBoundingClientRect()
+      var topPosition = ( thisBRC.top - ttBCR.height + pageYOffset )
+      var leftPosition = ( thisBRC.left - ttBCR.width*0.5 + thisBRC.width*0.5 )
+      
+      tooltip
+        .style({
+          top: topPosition+'px', 
+          left: leftPosition+'px'
+        })
+    }
+    function hideToolTip(d,i){
+      tooltip.classed('show', false)
+    }
+
+
+
+
+
+
+
 });
 
 function click(d) {

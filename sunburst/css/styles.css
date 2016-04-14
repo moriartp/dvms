@@ -3,19 +3,16 @@ body {
 }
 
 header{
-	margin-top:50px;
+	left:50%;
+	margin-top:10px;
 	margin-left:250px;
 	margin-right:250px;
-	max-width: 960px;
 	padding: 10px;
 	font-size: 25px;
 	font-weight: bold;
 	text-align: center;
 	font-stretch: expanded;
-/*	border-style: solid;
-	border-width: 1px;
-	border-color: lightgray;
-*/	color: lightgray;
+	color: lightgray;
 	-webkit-transition: color 1s ease-out;
 	-moz-transition: color 1s ease-out;
 	-o-transition: color 1s ease-out;
@@ -24,12 +21,21 @@ header{
 } 
 
 header:hover {
-   color: darkgray;
+   color: #393E41;
 }
 
 h1 {
 	font-size: 35px;
 }
+
+h2{
+	left:50%;
+	margin-top:10px;
+	font-weight: bold;
+	text-align: center;
+	font-stretch: expanded;
+	color: #393E41;
+} 
 
 
 
@@ -55,7 +61,7 @@ a:hover {
 }
 
 path {
-  stroke: #fff;
+  stroke: #F6F7EB;
 }
 
 svg {
@@ -76,21 +82,15 @@ svg {
 	-webkit-transform: translateX(-50%);
 	-ms-transform: translateX(-50%);
 	transform: translateX(-50%);
-
 }
 
 footer {
-	margin-top:50px;
+	margin-top:20px;
 	margin-left:250px;
 	margin-right:250px;
-	max-width: 960px;
-	padding: 10px;
 	font-size: 14px;
 	font-weight: bold;
 	text-align: center;
 	font-stretch: expanded;
-	border-style: solid;
-	border-width: 1px;
-	border-color: darkgray;
 	color: darkgray;
 }
