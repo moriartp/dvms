@@ -8,14 +8,50 @@ header{
 	margin-right:250px;
 	max-width: 960px;
 	padding: 10px;
-	font-size: 40px;
+	font-size: 25px;
 	font-weight: bold;
 	text-align: center;
 	font-stretch: expanded;
-	border-style: solid;
+/*	border-style: solid;
 	border-width: 1px;
-	border-color: darkgray;
-	color: darkgray;
+	border-color: lightgray;
+*/	color: lightgray;
+	-webkit-transition: color 1s ease-out;
+	-moz-transition: color 1s ease-out;
+	-o-transition: color 1s ease-out;
+	-ms-transition: color 1s ease-out;
+	transition: color 1s ease-out;
+} 
+
+header:hover {
+   color: darkgray;
+}
+
+h1 {
+	font-size: 35px;
+}
+
+
+
+div {
+	display: inline-block;
+	margin-left:125px;
+	margin-right: 125px;
+}
+
+a {
+	font-style: none;
+	text-decoration: none;
+	color: lightgray;
+	-webkit-transition: color 1s ease-out;
+	-moz-transition: color 1s ease-out;
+	-o-transition: color 1s ease-out;
+	-ms-transition: color 1s ease-out;
+	transition: color 1s ease-out;
+}
+
+a:hover {
+	color: #E94F37;
 }
 
 path {
