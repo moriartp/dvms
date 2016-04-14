@@ -10,22 +10,78 @@
         "parent": "Top Level",
         "size": 15,
         "type": "grey",
-        "level": "red",
+        "level": "55%",
         "children": [
           {
-            "name": "Son of A",
+            "name": "Diversity Management",
             "parent": "Level 2: A",
-            "size": 7.5,
+            "size": 1.5,
             "type": "steelblue",
             "level": "orange"
           },
           {
-            "name": "Daughter of A",
+            "name": "Verticle Communication",
             "parent": "Level 2: A",
-            "size": 7.5,
+            "size": 1.5,
             "type": "steelblue",
             "level": "red"
-          }
+          },
+          {
+            "name": "Goal-Orientation",
+            "parent": "Level 2: A",
+            "size": 1.5,
+            "type": "steelblue",
+            "level": "red"
+          },
+          {
+            "name": "Overall Leadership Performance",
+            "parent": "Level 2: A",
+            "size": 1.5,
+            "type": "steelblue",
+            "level": "red"
+          },
+          {
+            "name": "Foster Collaboration",
+            "parent": "Level 2: A",
+            "size": 1.5,
+            "type": "steelblue",
+            "level": "red"
+          },
+          {
+            "name": "Program Support",
+            "parent": "Level 2: A",
+            "size": 1.5,
+            "type": "steelblue",
+            "level": "red"
+          },
+          {
+            "name": "Respectability",
+            "parent": "Level 2: A",
+            "size": 1.5,
+            "type": "steelblue",
+            "level": "red"
+          },
+          {
+            "name": "Lateral Communication",
+            "parent": "Level 2: A",
+            "size": 1.5,
+            "type": "steelblue",
+            "level": "red"
+          },
+          {
+            "name": "Integrity",
+            "parent": "Level 2: A",
+            "size": 1.5,
+            "type": "steelblue",
+            "level": "red"
+          },
+          {
+            "name": "Motivational",
+            "parent": "Level 2: A",
+            "size": 1.5,
+            "type": "steelblue",
+            "level": "red"
+          }         
         ]
       },
       {
@@ -36,19 +92,96 @@
         "level": "red",
         "children": [
           {
-            "name": "Son of X",
+            "name": "Safety",
             "parent": "Level 2: A",
-            "size": 7.5,
+            "size": 1.15384615384615,
             "type": "steelblue",
             "level": "orange"
           },
           {
-            "name": "Daughter of X",
+            "name": "Threat Preparedness",
             "parent": "Level 2: A",
-            "size": 7.5,
+            "size": 1.15384615384615,
             "type": "steelblue",
             "level": "red"
-          }
+          },
+          {
+            "name": "Mission Focus",
+            "parent": "Level 2: A",
+            "size": 1.15384615384615,
+            "type": "steelblue",
+            "level": "red"
+          },
+          {
+            "name": "Skills Alignment",
+            "parent": "Level 2: A",
+            "size": 1.15384615384615,
+            "type": "steelblue",
+            "level": "red"
+          },
+          {
+            "name": "Inclusiveness",
+            "parent": "Level 2: A",
+            "size": 1.15384615384615,
+            "type": "steelblue",
+            "level": "red"
+          },
+          {
+            "name": "Positive Work Environment",
+            "parent": "Level 2: A",
+            "size": 1.15384615384615,
+            "type": "steelblue",
+            "level": "red"
+          },
+          {
+            "name": "Diversity",
+            "parent": "Level 2: A",
+            "size": 1.15384615384615,
+            "type": "steelblue",
+            "level": "red"
+          },
+          {
+            "name": "Apoliticism",
+            "parent": "Level 2: A",
+            "size": 1.15384615384615,
+            "type": "steelblue",
+            "level": "red"
+          },
+          {
+            "name": "Recognition",
+            "parent": "Level 2: A",
+            "size": 1.15384615384615,
+            "type": "steelblue",
+            "level": "red"
+          },
+          {
+            "name": "Empowerment",
+            "parent": "Level 2: A",
+            "size": 1.15384615384615,
+            "type": "steelblue",
+            "level": "red"
+          },
+          {
+            "name": "Action-Orientation",
+            "parent": "Level 2: A",
+            "size": 1.15384615384615,
+            "type": "steelblue",
+            "level": "red"
+          },
+          {
+            "name": "Innovative Culture",
+            "parent": "Level 2: A",
+            "size": 1.15384615384615,
+            "type": "steelblue",
+            "level": "red"
+          },
+          {
+            "name": "Meritocracy",
+            "parent": "Level 2: A",
+            "size": 1.15384615384615,
+            "type": "steelblue",
+            "level": "red"
+          }          
         ]
       },
 
@@ -60,16 +193,65 @@
         "level": "red",
         "children": [
           {
-            "name": "Son of Y",
+            "name": "Work",
             "parent": "Level 2: A",
-            "size": 7.5,
+            "size": 1.66666666666667,
             "type": "steelblue",
             "level": "orange"
           },
           {
-            "name": "Daughter of Y",
+            "name": "Pay",
             "parent": "Level 2: A",
-            "size": 7.5,
+            "size": 1.66666666666667,
+            "type": "steelblue",
+            "level": "red"
+          },
+          {
+            "name": "Organization",
+            "parent": "Level 2: A",
+            "size": 1.66666666666667,
+            "type": "steelblue",
+            "level": "red"
+          },
+          {
+            "name": "Development Opportunities",
+            "parent": "Level 2: A",
+            "size": 1.66666666666667,
+            "type": "steelblue",
+            "level": "red"
+          },
+          {
+            "name": "Democratic Decision-Making",
+            "parent": "Level 2: A",
+            "size": 1.66666666666667,
+            "type": "steelblue",
+            "level": "red"
+          },
+          {
+            "name": "Transparency",
+            "parent": "Level 2: A",
+            "size": 1.66666666666667,
+            "type": "steelblue",
+            "level": "red"
+          },
+          {
+            "name": "Recognition",
+            "parent": "Level 2: A",
+            "size": 1.66666666666667,
+            "type": "steelblue",
+            "level": "red"
+          },
+          {
+            "name": "Policy Appropriateness",
+            "parent": "Level 2: A",
+            "size": 1.66666666666667,
+            "type": "steelblue",
+            "level": "red"
+          },
+          {
+            "name": "Growth Opportunity",
+            "parent": "Level 2: A",
+            "size": 1.66666666666667,
             "type": "steelblue",
             "level": "red"
           }
@@ -84,16 +266,79 @@
         "level": "red",
         "children": [
           {
-            "name": "Son of Y",
+            "name": "Respectfulness",
             "parent": "Level 2: A",
-            "size": 7.5,
+            "size": 1.36363636363636,
             "type": "steelblue",
             "level": "orange"
           },
           {
-            "name": "Daughter of Y",
+            "name": "Work/Life Support",
             "parent": "Level 2: A",
-            "size": 7.5,
+            "size": 1.36363636363636,
+            "type": "steelblue",
+            "level": "red"
+          },
+          {
+            "name": "Feedback",
+            "parent": "Level 2: A",
+            "size": 1.36363636363636,
+            "type": "steelblue",
+            "level": "red"
+          },
+          {
+            "name": "Two-Way Communication",
+            "parent": "Level 2: A",
+            "size": 1.36363636363636,
+            "type": "steelblue",
+            "level": "red"
+          },
+          {
+            "name": "Overall",
+            "parent": "Level 2: A",
+            "size": 1.36363636363636,
+            "type": "steelblue",
+            "level": "red"
+          },
+          {
+            "name": "Workforce Diversity",
+            "parent": "Level 2: A",
+            "size": 1.36363636363636,
+            "type": "steelblue",
+            "level": "red"
+          },
+          {
+            "name": "Trustworthiness",
+            "parent": "Level 2: A",
+            "size": 1.36363636363636,
+            "type": "steelblue",
+            "level": "red"
+          },
+          {
+            "name": "Leadership Development",
+            "parent": "Level 2: A",
+            "size": 1.36363636363636,
+            "type": "steelblue",
+            "level": "red"
+          },
+          {
+            "name": "Professional Development",
+            "parent": "Level 2: A",
+            "size": 1.36363636363636,
+            "type": "steelblue",
+            "level": "red"
+          },
+          {
+            "name": "Interpersonal Impact",
+            "parent": "Level 2: A",
+            "size": 1.36363636363636,
+            "type": "steelblue",
+            "level": "red"
+          },
+          {
+            "name": "Constructiveness",
+            "parent": "Level 2: A",
+            "size": 1.36363636363636,
             "type": "steelblue",
             "level": "red"
           }
@@ -108,16 +353,65 @@
         "level": "red",
         "children": [
           {
-            "name": "Son of Y",
+            "name": "Overall Quality",
             "parent": "Level 2: A",
-            "size": 7.5,
+            "size": 1.66666666666667,
             "type": "steelblue",
             "level": "orange"
           },
           {
-            "name": "Daughter of Y",
+            "name": "Cooperation",
             "parent": "Level 2: A",
-            "size": 7.5,
+            "size": 1.66666666666667,
+            "type": "steelblue",
+            "level": "red"
+          },
+          {
+            "name": "Knowledge Sharing",
+            "parent": "Level 2: A",
+            "size": 1.66666666666667,
+            "type": "steelblue",
+            "level": "red"
+          },
+          {
+            "name": "Continuous Improvement",
+            "parent": "Level 2: A",
+            "size": 1.66666666666667,
+            "type": "steelblue",
+            "level": "red"
+          },
+          {
+            "name": "Recruitment",
+            "parent": "Level 2: A",
+            "size": 1.66666666666667,
+            "type": "steelblue",
+            "level": "red"
+          },
+          {
+            "name": "Meritocratic Award",
+            "parent": "Level 2: A",
+            "size": 1.66666666666667,
+            "type": "steelblue",
+            "level": "red"
+          },
+          {
+            "name": "Meritocratic Promotion",
+            "parent": "Level 2: A",
+            "size": 1.66666666666667,
+            "type": "steelblue",
+            "level": "red"
+          },
+          {
+            "name": "Performance Recognition",
+            "parent": "Level 2: A",
+            "size": 1.66666666666667,
+            "type": "steelblue",
+            "level": "red"
+          },
+          {
+            "name": "Performance Accountability",
+            "parent": "Level 2: A",
+            "size": 1.66666666666667,
             "type": "steelblue",
             "level": "red"
           }
@@ -185,16 +479,135 @@
         "level": "red",
         "children": [
           {
-            "name": "Son of Y",
+            "name": "Flexibility",
             "parent": "Level 2: A",
-            "size": 7.5,
+            "size": 0.789473684210526,
             "type": "steelblue",
             "level": "orange"
           },
           {
-            "name": "Daughter of Y",
+            "name": "Vigilance",
             "parent": "Level 2: A",
-            "size": 7.5,
+            "size": 0.789473684210526,
+            "type": "steelblue",
+            "level": "red"
+          },
+          {
+            "name": "Importance",
+            "parent": "Level 2: A",
+            "size": 0.789473684210526,
+            "type": "steelblue",
+            "level": "red"
+          },
+          {
+            "name": "Enjoyment",
+            "parent": "Level 2: A",
+            "size": 0.789473684210526,
+            "type": "steelblue",
+            "level": "red"
+          },
+          {
+            "name": "Task Alignment",
+            "parent": "Level 2: A",
+            "size": 0.789473684210526,
+            "type": "steelblue",
+            "level": "red"
+          },
+          {
+            "name": "Accountability",
+            "parent": "Level 2: A",
+            "size": 0.789473684210526,
+            "type": "steelblue",
+            "level": "red"
+          },
+          {
+            "name": "Role Clarity",
+            "parent": "Level 2: A",
+            "size": 0.789473684210526,
+            "type": "steelblue",
+            "level": "red"
+          },
+          {
+            "name": "Accomplishment",
+            "parent": "Level 2: A",
+            "size": 0.789473684210526,
+            "type": "steelblue",
+            "level": "red"
+          },
+          {
+            "name": "Information Sharing",
+            "parent": "Level 2: A",
+            "size": 0.789473684210526,
+            "type": "steelblue",
+            "level": "red"
+          },
+          {
+            "name": "Fairness",
+            "parent": "Level 2: A",
+            "size": 0.789473684210526,
+            "type": "steelblue",
+            "level": "red"
+          },
+          {
+            "name": "Resource Allowances",
+            "parent": "Level 2: A",
+            "size": 0.789473684210526,
+            "type": "steelblue",
+            "level": "red"
+          },
+          {
+            "name": "Direction",
+            "parent": "Level 2: A",
+            "size": 0.789473684210526,
+            "type": "steelblue",
+            "level": "red"
+          },
+          {
+            "name": "Environment",
+            "parent": "Level 2: A",
+            "size": 0.789473684210526,
+            "type": "steelblue",
+            "level": "red"
+          },
+          {
+            "name": "Professional Development Opportunities",
+            "parent": "Level 2: A",
+            "size": 0.789473684210526,
+            "type": "steelblue",
+            "level": "red"
+          },
+          {
+            "name": "Organizational Accountability",
+            "parent": "Level 2: A",
+            "size": 0.789473684210526,
+            "type": "steelblue",
+            "level": "red"
+          },
+          {
+            "name": "Talent Alignment",
+            "parent": "Level 2: A",
+            "size": 0.789473684210526,
+            "type": "steelblue",
+            "level": "red"
+          },
+          {
+            "name": "Workload Manageability",
+            "parent": "Level 2: A",
+            "size": 0.789473684210526,
+            "type": "steelblue",
+            "level": "red"
+          },
+          {
+            "name": "Creative Encouragement",
+            "parent": "Level 2: A",
+            "size": 0.789473684210526,
+            "type": "steelblue",
+            "level": "red"
+          },
+          {
+            "name": "Needs Assessment",
+            "parent": "Level 2: A",
+            "size": 0.789473684210526,
             "type": "steelblue",
             "level": "red"
           }
