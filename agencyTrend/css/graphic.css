@@ -51,7 +51,7 @@ div {
 	display: inline-block;
 	margin-left:90px;
 	margin-right: 90px;
-	
+
 }
 
 a {
@@ -92,11 +92,11 @@ body, html{
 	font-size: 1.2em;
 }
 
-/*section{
+section{
 	max-width: 1220px;
 	width: 88%;
 	margin: 5px auto 40px;
-}*/
+}
 
 h2{
 	font-size: 56px;
@@ -112,7 +112,7 @@ h3{
 
 
 svg{
-	margin: 30px auto;
+	margin: 10px auto;
 	background-color: white;
 	align-self: center;
 	position: relative;
@@ -120,6 +120,7 @@ svg{
 	-webkit-transform: translateX(-50%);
 	-ms-transform: translateX(-50%);
 	transform: translateX(-50%);
+	border-radius: 22px;
 
 }
 
@@ -131,17 +132,18 @@ svg{
 	shape-rendering: crispEdges;
 }
 
-/*.x.axis path, 
+.x.axis path, 
 .x.axis line {
 	fill: none;
 	stroke: #393E41;
 	shape-rendering: crispEdges;
-}*/
+}
+
 
 
 .typelabel{
 	fill: #333;
-	font-size: 12px;
+	font-size: 9px;
 	font-style: bold;
 	font-family: Helvetica;
 }
@@ -154,27 +156,40 @@ svg{
 	display: block;
 }
 .countrygroup.active path{
-	stroke: #111;
+	stroke: #E94F37;
 	opacity: 1;
 }
 .countrygroup path{
     fill: none;
     stroke-width: 1;
-    stroke: #3F88C5;
+    stroke: #545A5E;
 }
 
 
 /*//GRIDLINES*/
 #lines .axis line{
-	stroke: #ddd;
+	stroke: #E94F37;
 	stroke-dasharray: 0,4;
 }
 
 section {
-	padding: 20px;
-	width: 800px;
+/*	padding: 20px;
+	width: 800px;*/
 	background-color: white;
 	font-size: 12px;
+}
+
+#dropper{
+	margin: 10px auto;
+	background-color: white;
+	align-self: center;
+	position: relative;
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+	transform: translateX(-50%);
+	border-radius: 22px;
+
 }
 
 

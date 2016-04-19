@@ -44,11 +44,11 @@ d3.csv("data/agencyTrend1.csv", convert, function(error, dataset) {
 //// Global Variables
 ////////////////////////////////////////////////////////
 var margin = {top: 20, right: 130, bottom: 30, left: 70},
-    width = 900 - margin.left - margin.right,
+    width = 1100 - margin.left - margin.right,
     height = 700 - margin.top - margin.bottom
 
 var xScale = d3.scale.linear()
-    .range([0, width])
+    .range([0, width - 70])
     .domain( [2011, 2015] )
 
 var yScale = d3.scale.linear()
@@ -78,7 +78,7 @@ function createSelection(dataset){
   selectElement.on('change', updateHighlight)
 
   highlight = svg.append('path')
-    .attr('stroke', '#111')
+    .attr('stroke', '#E94F37')
     .attr('stroke-width', 3)
     .attr('fill-opacity', '0')
     .attr('opacity', 0.9)
