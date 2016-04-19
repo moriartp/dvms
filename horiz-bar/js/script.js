@@ -93,7 +93,7 @@
               .data(dollars)
               .enter()
               .append('text')
-              .attr({'x':function(d) {return xscale(d)-65; },'y':function(d,i){ return yscale(i)+65; }})
+              .attr({'x':function(d) {return xscale(d)-75; },'y':function(d,i){ return yscale(i)+65; }})
               .text(function(d){ return d+" Words"; }).style({'fill':'#fff','font-size':'16px'});
 
 

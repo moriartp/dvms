@@ -1,0 +1,96 @@
+body {
+	font-family: 'Montserrat', sans-serif;
+}
+
+header{
+	left:50%;
+	margin-top:10px;
+	margin-left:250px;
+	margin-right:250px;
+	padding: 10px;
+	font-size: 20px;
+	font-weight: bold;
+	text-align: center;
+	font-stretch: expanded;
+	color: lightgray;
+	-webkit-transition: color 1s ease-out;
+	-moz-transition: color 1s ease-out;
+	-o-transition: color 1s ease-out;
+	-ms-transition: color 1s ease-out;
+	transition: color 1s ease-out;
+} 
+
+header:hover {
+   color: #393E41;
+}
+
+h1 {
+	font-size: 25px;
+}
+
+h2{
+	left:50%;
+	margin-top:10px;
+	font-weight: bold;
+	text-align: center;
+	font-stretch: expanded;
+	color: #393E41;
+} 
+
+
+
+div {
+	display: inline-block;
+	margin-left:90px;
+	margin-right: 90px;
+}
+
+a {
+	font-style: none;
+	text-decoration: none;
+	color: lightgray;
+	-webkit-transition: color 1s ease-out;
+	-moz-transition: color 1s ease-out;
+	-o-transition: color 1s ease-out;
+	-ms-transition: color 1s ease-out;
+	transition: color 1s ease-out;
+}
+
+a:hover {
+	color: #E94F37;
+}
+
+path {
+  stroke: #F6F7EB;
+}
+
+svg {
+	margin-top: 20px;
+
+/*	TRANSFORM TO ENSURE SVG IS ALWAYS CENTERED*/
+	align-self: center;
+	position: relative;
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+	transform: translateX(-50%);
+
+/*	NOT CONVINCED THIS DOES ANYTHING*/
+	vertical-align: center;
+	position: relative;
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+	transform: translateX(-50%);
+}
+
+footer {
+	margin-top:20px;
+	margin-left:250px;
+	margin-right:250px;
+	font-size: 14px;
+	font-weight: bold;
+	text-align: center;
+	font-stretch: expanded;
+	color: lightgray;
+}

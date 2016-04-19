@@ -1,0 +1,124 @@
+body, html{
+	margin:0;padding:0;
+	font-size: 1.2em;
+}
+
+section{
+	max-width: 1220px;
+	width: 88%;
+	margin: 5px auto 40px;
+	border: 1px solid #333;
+}
+
+h2{
+	font-size: 56px;
+	background-color: white;
+	width:800px;
+	font-family: 'Pompiere', cursive;
+	text-align: center;
+}
+
+h3{
+	margin: 2px 0;
+	font-family: 'Pompiere', cursive;
+	font-size: 28px;
+}
+
+
+svg{
+	border: 2px solid #333;
+	margin: 30px auto;
+	background-color: white;
+	border-color: black;
+}
+svg.block{
+	display: block;
+}
+
+.svgbox{
+	position: relative;
+	min-height: 400px;
+}
+
+.domain{
+	display: none;
+}
+.x.axis .domain{
+	display: block;
+	stroke: #bbb;
+}
+
+.axis text{
+	font-size: 12px;
+	fill: #000;
+}
+
+.axis .tick line{
+	stroke: #bbb;
+	stroke-width: 1px;
+}
+.y.axis .tick line{
+	stroke: #bbb;
+}
+
+.axis {
+  font: 10px sans-serif;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #FFF;
+  shape-rendering: crispEdges;
+}
+
+.x.axis path {
+  display: none;
+}
+
+
+
+#lines .x.axis .domain{
+	display: none;
+}
+
+.typelabel{
+	fill: #333;
+	font-size: 12px;
+	font-style: bold;
+	font-family: Helvetica;
+}
+
+
+.countrygroup .typelabel{
+	display: none;
+}
+.countrygroup.active .typelabel{
+	display: block;
+}
+.countrygroup.active path{
+	stroke: #111;
+	opacity: 1;
+}
+.countrygroup path{
+    fill: none;
+    stroke-width: 1;
+    stroke: #FB5012;
+}
+
+
+/*GRIDLINES*/
+#lines .axis line{
+	stroke: #ddd;
+	stroke-dasharray: 0,4;
+}
+
+section {
+	padding: 20px;
+	width: 800px;
+	background-color: white;
+	font-size: 12px;
+}
+
+
+

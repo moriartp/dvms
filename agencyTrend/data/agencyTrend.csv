@@ -1,0 +1,191 @@
+year,val,country
+2011,Governmentwide,67
+2011,Broadcasting Board of Governors,57
+2011,Court Services and Offender Supervision Agency,70
+2011,Department of Agriculture,65
+2011,Department of Commerce,70
+2011,Department of Defense,68
+2011,Department of Education,64
+2011,Department of Energy,63
+2011,Department of Health and Human Services,65
+2011,Department of Homeland Security,60
+2011,Department of Housing and Urban Development,61
+2011,Department of Justice,69
+2011,Department of Labor,64
+2011,Department of State,72
+2011,Department of the Interior,64
+2011,Department of the Treasury,70
+2011,Department of Transportation,63
+2011,Department of Veterans Affairs,65
+2011,Environmental Protection Agency,67
+2011,Equal Employment Opportunity Commission,65
+2011,Federal Communications Commission,69
+2011,Federal Energy Regulatory Commission,71
+2011,Federal Trade Commission,76
+2011,General Services Administration,71
+2011,National Aeronautics and Space Administration,75
+2011,National Archives and Records Administration,62
+2011,National Credit Union Administration,68
+2011,National Labor Relations Board,66
+2011,National Science Foundation,67
+2011,Nuclear Regulatory Commission,79
+2011,Office of Management and Budget,63
+2011,Office of Personnel Management,72
+2011,Pension Benefit Guaranty Corporation,69
+2011,Railroad Retirement Board,66
+2011,Securities and Exchange Commission,61
+2011,Small Business Administration,65
+2011,Social Security Administration,72
+2011,U.S. Agency for International Development,65
+2012,Governmentwide,65
+2012,Broadcasting Board of Governors,56
+2012,Court Services and Offender Supervision Agency,67
+2012,Department of Agriculture,63
+2012,Department of Commerce,70
+2012,Department of Defense,67
+2012,Department of Education,65
+2012,Department of Energy,65
+2012,Department of Health and Human Services,66
+2012,Department of Homeland Security,58
+2012,Department of Housing and Urban Development,62
+2012,Department of Justice,67
+2012,Department of Labor,64
+2012,Department of State,71
+2012,Department of the Interior,64
+2012,Department of the Treasury,69
+2012,Department of Transportation,64
+2012,Department of Veterans Affairs,62
+2012,Environmental Protection Agency,68
+2012,Equal Employment Opportunity Commission,67
+2012,Federal Communications Commission,69
+2012,Federal Energy Regulatory Commission,70
+2012,Federal Trade Commission,74
+2012,General Services Administration,69
+2012,National Aeronautics and Space Administration,76
+2012,National Archives and Records Administration,59
+2012,National Credit Union Administration,73
+2012,National Labor Relations Board,65
+2012,National Science Foundation,65
+2012,Nuclear Regulatory Commission,76
+2012,Office of Management and Budget,73
+2012,Office of Personnel Management,71
+2012,Pension Benefit Guaranty Corporation,67
+2012,Railroad Retirement Board,68
+2012,Securities and Exchange Commission,62
+2012,Small Business Administration,64
+2012,Social Security Administration,69
+2012,U.S. Agency for International Development,67
+2013,Governmentwide,64
+2013,Broadcasting Board of Governors,58
+2013,Court Services and Offender Supervision Agency,65
+2013,Department of Agriculture,63
+2013,Department of Commerce,70
+2013,Department of Defense,65
+2013,Department of Education,66
+2013,Department of Energy,64
+2013,Department of Health and Human Services,66
+2013,Department of Homeland Security,56
+2013,Department of Housing and Urban Development,57
+2013,Department of Justice,66
+2013,Department of Labor,62
+2013,Department of State,69
+2013,Department of the Interior,62
+2013,Department of the Treasury,67
+2013,Department of Transportation,65
+2013,Department of Veterans Affairs,63
+2013,Environmental Protection Agency,64
+2013,Equal Employment Opportunity Commission,65
+2013,Federal Communications Commission,73
+2013,Federal Energy Regulatory Commission,73
+2013,Federal Trade Commission,75
+2013,General Services Administration,69
+2013,National Aeronautics and Space Administration,77
+2013,National Archives and Records Administration,60
+2013,National Credit Union Administration,70
+2013,National Labor Relations Board,64
+2013,National Science Foundation,68
+2013,Nuclear Regulatory Commission,75
+2013,Office of Management and Budget,68
+2013,Office of Personnel Management,72
+2013,Pension Benefit Guaranty Corporation,64
+2013,Railroad Retirement Board,69
+2013,Securities and Exchange Commission,62
+2013,Small Business Administration,65
+2013,Social Security Administration,67
+2013,U.S. Agency for International Development,66
+2014,Governmentwide,63
+2014,Broadcasting Board of Governors,56
+2014,Court Services and Offender Supervision Agency,63
+2014,Department of Agriculture,63
+2014,Department of Commerce,70
+2014,Department of Defense,64
+2014,Department of Education,67
+2014,Department of Energy,61
+2014,Department of Health and Human Services,66
+2014,Department of Homeland Security,54
+2014,Department of Housing and Urban Development,57
+2014,Department of Justice,66
+2014,Department of Labor,64
+2014,Department of State,70
+2014,Department of the Interior,61
+2014,Department of the Treasury,66
+2014,Department of Transportation,64
+2014,Department of Veterans Affairs,61
+2014,Environmental Protection Agency,63
+2014,Equal Employment Opportunity Commission,65
+2014,Federal Communications Commission,70
+2014,Federal Energy Regulatory Commission,74
+2014,Federal Trade Commission,76
+2014,General Services Administration,68
+2014,National Aeronautics and Space Administration,77
+2014,National Archives and Records Administration,59
+2014,National Credit Union Administration,72
+2014,National Labor Relations Board,64
+2014,National Science Foundation,69
+2014,Nuclear Regulatory Commission,75
+2014,Office of Management and Budget,73
+2014,Office of Personnel Management,72
+2014,Pension Benefit Guaranty Corporation,65
+2014,Railroad Retirement Board,68
+2014,Securities and Exchange Commission,66
+2014,Small Business Administration,62
+2014,Social Security Administration,66
+2014,U.S. Agency for International Development,64
+2015,Governmentwide,64
+2015,Broadcasting Board of Governors,58
+2015,Court Services and Offender Supervision Agency,68
+2015,Department of Agriculture,64
+2015,Department of Commerce,68
+2015,Department of Defense,65
+2015,Department of Education,68
+2015,Department of Energy,64
+2015,Department of Health and Human Services,68
+2015,Department of Homeland Security,53
+2015,Department of Housing and Urban Development,62
+2015,Department of Justice,68
+2015,Department of Labor,67
+2015,Department of State,70
+2015,Department of the Interior,62
+2015,Department of the Treasury,66
+2015,Department of Transportation,66
+2015,Department of Veterans Affairs,61
+2015,Environmental Protection Agency,63
+2015,Equal Employment Opportunity Commission,67
+2015,Federal Communications Commission,66
+2015,Federal Energy Regulatory Commission,76
+2015,Federal Trade Commission,78
+2015,General Services Administration,69
+2015,National Aeronautics and Space Administration,78
+2015,National Archives and Records Administration,63
+2015,National Credit Union Administration,72
+2015,National Labor Relations Board,68
+2015,National Science Foundation,70
+2015,Nuclear Regulatory Commission,75
+2015,Office of Management and Budget,78
+2015,Office of Personnel Management,71
+2015,Pension Benefit Guaranty Corporation,69
+2015,Railroad Retirement Board,69
+2015,Securities and Exchange Commission,68
+2015,Small Business Administration,60
+2015,Social Security Administration,68
+2015,U.S. Agency for International Development,67
