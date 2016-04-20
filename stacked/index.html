@@ -9,7 +9,7 @@ body {
 .axis path,
 .axis line {
   fill: none;
-  stroke: #000;
+  stroke: none;
   shape-rendering: crispEdges;
 }
 
@@ -26,7 +26,8 @@ body {
 	font-family: sans-serif;
 	font-size: 12px;
 	font-weight: bold;
-	fill:green;	
+	background-color: #393E41;
+	color: #F6F7EB;	
 }
 
 
@@ -58,7 +59,7 @@ var yRelative = d3.scale.linear() // for absolute scale
 	    .rangeRound([height, 0]);
 
 var color = d3.scale.ordinal()
-    .range(["#E94F37", "#8a89a6", "#FE755F", "#F6F7EB", "#61A0D5", "3F88C5", "#393E41"]);
+    .range(["#E94F37", "#FE755F", "#F6F7EB", "#61A0D5", "#3F88C5", "#72787C"]);
 
 var xAxis = d3.svg.axis()
     .scale(x)
