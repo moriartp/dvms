@@ -1,5 +1,6 @@
 body {
 	font-family: 'Montserrat', sans-serif;
+	font: 10px sans-serif;
 }
 
 header{
@@ -65,7 +66,7 @@ path {
 }
 
 svg {
-	margin-top: 20px;
+	margin-top: 120px;
 
 /*	TRANSFORM TO ENSURE SVG IS ALWAYS CENTERED*/
 	align-self: center;
@@ -83,6 +84,40 @@ svg {
 	-ms-transform: translateX(-50%);
 	transform: translateX(-50%);
 }
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: none;
+  shape-rendering: crispEdges;
+}
+
+.bar {
+  fill: steelblue;
+}
+
+.x.axis path {
+  display: none;
+}
+
+.tooltip{
+	text-anchor: middle;
+	font-family: sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	background-color: #393E41;
+	color: #F6F7EB;	
+}
+
+
+.node.active {
+  fill: blue;
+}
+
+
+
+
+
 
 footer {
 	margin-top:20px;
