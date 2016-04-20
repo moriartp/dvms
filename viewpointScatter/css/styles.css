@@ -1,0 +1,195 @@
+body {
+	font-family: 'Montserrat', sans-serif;
+}
+
+header{
+	left:50%;
+	margin-top:10px;
+	margin-left:250px;
+	margin-right:250px;
+	padding: 10px;
+	font-size: 20px;
+	font-weight: bold;
+	text-align: center;
+	font-stretch: expanded;
+	color: lightgray;
+	-webkit-transition: color 1s ease-out;
+	-moz-transition: color 1s ease-out;
+	-o-transition: color 1s ease-out;
+	-ms-transition: color 1s ease-out;
+	transition: color 1s ease-out;
+} 
+
+header:hover {
+   color: #393E41;
+}
+
+h1 {
+	font-size: 25px;
+}
+
+h2{
+	left:50%;
+	margin-top:10px;
+	font-weight: bold;
+	text-align: center;
+	font-stretch: expanded;
+	color: #393E41;
+} 
+
+
+
+div {
+	display: inline-block;
+	margin-left:90px;
+	margin-right: 90px;
+}
+
+a {
+	font-style: none;
+	text-decoration: none;
+	color: lightgray;
+	-webkit-transition: color 1s ease-out;
+	-moz-transition: color 1s ease-out;
+	-o-transition: color 1s ease-out;
+	-ms-transition: color 1s ease-out;
+	transition: color 1s ease-out;
+}
+
+a:hover {
+	color: #E94F37;
+}
+
+path {
+  stroke: #F6F7EB;
+}
+
+svg {
+	margin-top: 20px;
+	border: 2px solid #333;
+	margin: 30px auto;
+
+/*	TRANSFORM TO ENSURE SVG IS ALWAYS CENTERED*/
+	align-self: center;
+	position: relative;
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+	transform: translateX(-50%);
+
+/*	NOT CONVINCED THIS DOES ANYTHING*/
+	vertical-align: center;
+	position: relative;
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+	transform: translateX(-50%);
+}
+
+.tooltip {
+	color: red;
+}
+
+footer {
+	margin-top:20px;
+	margin-left:250px;
+	margin-right:250px;
+	font-size: 14px;
+	font-weight: bold;
+	text-align: center;
+	font-stretch: expanded;
+	color: lightgray;
+}
+
+/*THIS IS THE OLD CSS STUFF*/
+
+/*svg.block{
+	display: block;
+}
+
+.domain{
+	display: none;
+}*/
+/*.x.axis .domain{
+	display: block;
+	stroke: #777;
+}*/
+
+/*.axis text{
+	font-size: 12px;
+	fill: #444;
+}*/
+
+.axis .tick line{
+	stroke: #777;
+	stroke-width: 1px;
+}
+.y.axis .tick line{
+	stroke: #777;
+}
+
+.circlegroup circle{
+	transition: all 0.7s ease-out;
+	fill: #30CF90;
+}
+
+.circlegroup text{
+	transition: all 0.7s ease-out;
+}
+
+.circlegroup{
+	font-size: 28px;
+	font-family: 'Arial', sans-serif;
+	transition: all 0.7s ease-out;
+	fill: #30CF90;
+}
+
+.circlegroup:hover circle{
+	fill-opacity: 1;
+}
+
+.circlegroup:hover text{
+	fill-opacity: 1;
+	font-size: 14px;
+	fill: #393E41;
+	text-align: center;
+}
+
+.circlegroup.catVeryLow{
+	fill: #30CF90;/*EXTRA GREEN*/
+	font-family: 'Arial', sans-serif;
+}
+.circlegroup.catLow{
+	fill: #44BBA4;/*GREEN*/
+	font-family: 'Arial', sans-serif;
+}
+.circlegroup.catNormal{
+	fill: #3F88B7;/*BLUE*/
+	font-family: 'Arial', sans-serif;
+}
+.circlegroup.catHigh{
+	fill: #E94F37;/*RED*/
+	font-family: 'Arial', sans-serif;
+}
+
+.circlegroup.catVeryHigh{
+	fill: #FC3B23;/*VERY RED*/
+	font-family: 'Arial', sans-serif;
+}
+
+.circlegroup.catmatureAdulthood{
+	fill: purple;
+	font-family: 'Arial', sans-serif;
+}
+
+.bar {
+	fill: #E94F37;
+}
+
+.domain {
+	fill: none;
+}
+
+.axis {
+	font-family: Arial;
+}
