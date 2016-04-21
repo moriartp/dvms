@@ -77,10 +77,10 @@ function renderChart(dataset){
       .call(yAxis)
     .append("text")
       .attr("transform", "rotate(-0)")
-      .attr("y", height - 6)
+      .attr("y", height + 26)
       .attr("dy", ".71em")    
       .style("text-anchor", "end")
-      .text("index")
+      .text("Engagement Index")
 
 
   svg.append("g")
@@ -112,6 +112,6 @@ function renderChart(dataset){
       // .attr('dx', radius - 100)
       .attr('dx', 0)
       .attr('dy', -radius)
-      .attr('font-size', 12)
+      .attr('font-size', 13)
       .attr({'fill-opacity': 0.00})
 }
