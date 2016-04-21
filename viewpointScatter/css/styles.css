@@ -39,11 +39,11 @@ h2{
 
 
 
-div {
+/*div {
 	display: inline-block;
 	margin-left:90px;
 	margin-right: 90px;
-}
+}*/
 
 a {
 	font-style: none;
@@ -67,7 +67,10 @@ path {
 svg {
 	margin-top: 20px;
 	border: 2px solid #333;
-	margin: 30px auto;
+	padding: 50px;
+	border-radius: 5px;
+/*	margin: 530px auto;*/
+
 
 /*	TRANSFORM TO ENSURE SVG IS ALWAYS CENTERED*/
 	align-self: center;
@@ -86,9 +89,9 @@ svg {
 	transform: translateX(-50%);
 }
 
-.tooltip {
+/*.tooltip {
 	color: red;
-}
+}*/
 
 footer {
 	margin-top:20px;
@@ -103,23 +106,6 @@ footer {
 
 /*THIS IS THE OLD CSS STUFF*/
 
-/*svg.block{
-	display: block;
-}
-
-.domain{
-	display: none;
-}*/
-/*.x.axis .domain{
-	display: block;
-	stroke: #777;
-}*/
-
-/*.axis text{
-	font-size: 12px;
-	fill: #444;
-}*/
-
 .axis .tick line{
 	stroke: #777;
 	stroke-width: 1px;
@@ -129,12 +115,12 @@ footer {
 }
 
 .circlegroup circle{
-	transition: all 0.7s ease-out;
-	fill: #30CF90;
+	transition: all 0.5s ease-out;
+	fill: #3F88C5;
 }
 
 .circlegroup text{
-	transition: all 0.7s ease-out;
+	transition: all 0.5s ease-out;
 }
 
 .circlegroup{
@@ -146,43 +132,16 @@ footer {
 
 .circlegroup:hover circle{
 	fill-opacity: 1;
+	fill: #E94F37;
 }
 
 .circlegroup:hover text{
 	fill-opacity: 1;
-	font-size: 14px;
 	fill: #393E41;
 	text-align: center;
 }
 
-.circlegroup.catVeryLow{
-	fill: #30CF90;/*EXTRA GREEN*/
-	font-family: 'Arial', sans-serif;
-}
-.circlegroup.catLow{
-	fill: #44BBA4;/*GREEN*/
-	font-family: 'Arial', sans-serif;
-}
-.circlegroup.catNormal{
-	fill: #3F88B7;/*BLUE*/
-	font-family: 'Arial', sans-serif;
-}
-.circlegroup.catHigh{
-	fill: #E94F37;/*RED*/
-	font-family: 'Arial', sans-serif;
-}
-
-.circlegroup.catVeryHigh{
-	fill: #FC3B23;/*VERY RED*/
-	font-family: 'Arial', sans-serif;
-}
-
-.circlegroup.catmatureAdulthood{
-	fill: purple;
-	font-family: 'Arial', sans-serif;
-}
-
-.bar {
+/*.bar {
 	fill: #E94F37;
 }
 
@@ -193,3 +152,4 @@ footer {
 .axis {
 	font-family: Arial;
 }
+*/

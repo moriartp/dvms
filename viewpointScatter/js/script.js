@@ -8,10 +8,10 @@ function renderChart(dataset){
 
   var margin = {top: 20, right: 30, bottom: 40, left: 60};
 
-  var width = 855 - margin.left - margin.right,
-      height = 700 - margin.top - margin.bottom,
+  var width = 1000 - margin.left - margin.right,
+      height = 600 - margin.top - margin.bottom,
       //radius = function(d){ return Math.sqrt(d.TierWeight)*5 }
-      radius = 20//function(d){ return d.ProjectTier * 20 }
+      radius = 12//function(d){ return d.ProjectTier * 20 }
 
 
   //// make scales with d3.extent()
@@ -22,8 +22,8 @@ function renderChart(dataset){
 
 
   //// Create padding for the min and max 
-  xExtent[0] = 50//xExtent[0] - ( xExtent[0] )
-  xExtent[1] = 80//xExtent[1] + ( xExtent[1] )
+  xExtent[0] = 45//xExtent[0] - ( xExtent[0] )
+  xExtent[1] = 90//xExtent[1] + ( xExtent[1] )
 
   yExtent[0] = 45//0 - ( yExtent[0] )
   yExtent[1] = 80//yExtent[1] + ( yExtent[1] )
@@ -75,6 +75,23 @@ function renderChart(dataset){
       .attr('class', 'y axis')
       .attr('transform', 'translate(' +  width + ',0)')
       .call(yAxis)
+    .append("text")
+      .attr("transform", "rotate(-0)")
+      .attr("y", height - 6)
+      .attr("dy", ".71em")    
+      .style("text-anchor", "end")
+      .text("index")
+
+
+  svg.append("g")
+      .attr("class", "y axis")
+      .call(yAxis)
+    .append("text")
+      .attr("transform", "rotate(-90)")
+      .attr("y", 6)
+      .attr("dy", ".71em")    
+      .style("text-anchor", "end")
+      .text("Satisfaction")
       
   var circleGroup = marginedgroup.selectAll('.circlegroup').data(dataset)
       .enter().append('g')
@@ -92,7 +109,9 @@ function renderChart(dataset){
 
   circleGroup.append('text')
       .text(function(d){ return d.Agency})
-      .attr('dx', radius - 100)
-      .attr('font-size', 3)
+      // .attr('dx', radius - 100)
+      .attr('dx', 0)
+      .attr('dy', -radius)
+      .attr('font-size', 12)
       .attr({'fill-opacity': 0.00})
 }
