@@ -5,7 +5,7 @@ $(document).ready(function()  {
     right : 20,
     bottom : 30,
     left : 40
-  }, width = 1725 - margin.left - margin.right, height = 600 - margin.top - margin.bottom;
+  }, width = 725 - margin.left - margin.right, height = 600 - margin.top - margin.bottom;
 
   var x = d3.scale.linear()
     .range([0, width]);
