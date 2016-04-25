@@ -17,8 +17,8 @@ $(document).ready(function()  {
 
   var div = d3.select("body")
     .append("div")
-      .attr("id", "agencyinfo")
-      .style("opacity", 0.5);
+      .attr("id", "schoolinfo")
+      .style("opacity", 0);
 
   //var color = d3.scale.category10();
   var color = d3.scale.ordinal()
@@ -42,10 +42,10 @@ $(document).ready(function()  {
     .append("g")
       .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-  d3.csv("data/data.csv", function(error, data) {
+  d3.csv("data/loanvscost1.csv", function(error, data) {
 
-    x.domain([40, 90]).nice();
-    y.domain([40, 90]).nice();
+    x.domain([0, 30000]).nice();
+    y.domain([0, 11000]).nice();
 
     //x axis
     svg.append("g")
@@ -118,11 +118,11 @@ $(document).ready(function()  {
           })//gave it a base 3.4 plus a proportional amount to the enrollment
         .attr("cx", 
           function(d) {
-            return x(d.HCAAF_RSLT_2011);
+            return x(d.TF9900);
           })
         .attr("cy", 
           function(d) {
-            return y(d.HCAAF_LEAD_2011);
+            return y(d.loan9900);
           })
         .style("fill", 
           function(d) {
@@ -141,8 +141,8 @@ $(document).ready(function()  {
     $("button").on("click", function() {
     
       var duration = 3000,
-        maxstep = 2015,
-        minstep = 2011;
+        maxstep = 2011,
+        minstep = 2000;
       
       if (running == true) {
       
@@ -197,20 +197,41 @@ else if (running == true && $("#slider").val() == maxstep) {
         .attr("cy", function(d) {
       
           switch ($("#slider").val()) {
+            case "2000":
+              return y(d.loan9900);
+              break;
+            case "2001":
+              return y(d.loan0001);
+              break;
+            case "2002":
+              return y(d.loan0102);
+              break;
+            case "2003":
+              return y(d.loan0203);
+              break;
+            case "2004":
+              return y(d.loan0304);
+              break;
+            case "2005":
+              return y(d.loan0405);
+              break;
+            case "2006":
+              return y(d.loan0506);
+              break;
+            case "2007":
+              return y(d.loan0607);
+              break;
+            case "2008":
+              return y(d.loan0708);
+              break;
+            case "2009":
+              return y(d.loan0809);
+              break;
+            case "2010":
+              return y(d.loan0910);
+              break;
             case "2011":
-              return y(d.HCAAF_LEAD_2011);
-              break;
-            case "2012":
-              return y(d.HCAAF_LEAD_2012);
-              break;
-            case "2013":
-              return y(d.lHCAAF_LEAD_2013);
-              break;
-            case "2014":
-              return y(d.HCAAF_LEAD_2014);
-              break;
-            case "2015":
-              return y(d.HCAAF_LEAD_2015);
+              return y(d.loan1011);
               break;
           }
         })
@@ -218,20 +239,41 @@ else if (running == true && $("#slider").val() == maxstep) {
         .duration(1000)
         .attr("cx", function(d) {
           switch ($("#slider").val()) {
+            case "2000":
+              return x(d.TF9900);
+              break;
+            case "2001":
+              return x(d.TF0001);
+              break;
+            case "2002":
+              return x(d.TF0102);
+              break;
+            case "2003":
+              return x(d.TF0203);
+              break;
+            case "2004":
+              return x(d.TF0304);
+              break;
+            case "2005":
+              return x(d.TF0405);
+              break;
+            case "2006":
+              return x(d.TF0506);
+              break;
+            case "2007":
+              return x(d.TF0607);
+              break;
+            case "2008":
+              return x(d.TF0708);
+              break;
+            case "2009":
+              return x(d.TF0809);
+              break;
+            case "2010":
+              return x(d.TF0910);
+              break;
             case "2011":
-              return x(d.HCAAF_RSLT_2011);
-              break;
-            case "2012":
-              return x(d.HCAAF_RSLT_2012);
-              break;
-            case "2013":
-              return x(d.HCAAF_RSLT_2013);
-              break;
-            case "2014":
-              return x(d.HCAAF_RSLT_2014);
-              break;
-            case "2015":
-              return x(d.HCAAF_RSLT_2015);
+              return x(d.TF1011);
               break;
           }
         });

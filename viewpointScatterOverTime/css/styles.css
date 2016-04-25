@@ -166,7 +166,7 @@ body {
 
 input[type=range] {
 }
-
+x
 div.tooltip {
 	position: absolute;
 	text-align: left;
@@ -278,6 +278,6 @@ h4 {
 	font-size: 1.2em;
 }
 
-#schoolinfo {
+#agencyinfo {
 	position: absolute;
 }
