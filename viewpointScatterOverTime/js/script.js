@@ -23,7 +23,7 @@ $(document).ready(function()  {
   //var color = d3.scale.category10();
   var color = d3.scale.ordinal()
     .domain([1, 2, 3])
-    .range(["rgb(53,135,212)", "rgb(77, 175, 74)", "rgb(228, 26, 28)"]);
+    .range(["rgb(233,79,55)", "rgb(63, 163, 197)", "rgb(68, 187, 164)"]);
 
   var xAxis = d3.svg.axis()
     .scale(x)
@@ -78,17 +78,17 @@ $(document).ready(function()  {
     svg.append("text").attr("class", "label").attr("x", LXP - 5).attr("y", LYP).text("Agency Type").style("font-weight", "bold");
 
     //color legend
-    svg.append("circle").attr("cx", LXP).attr("cy", LYP + 20).attr("r", 12).style("fill", "rgb(53, 135, 212)").attr("stroke", "#000");
+    svg.append("circle").attr("cx", LXP).attr("cy", LYP + 20).attr("r", 12).style("fill", "rgb(233,79,55)").attr("stroke", "#000");
     svg.append("text").attr("class", "label").attr("x", LXP + 15).attr("y", LYP + 25).style("text-anchor", "start").text(function(d) {
-      return "Public";
+      return "Pres. Counsel";
     });
-    svg.append("circle").attr("cx", LXP).attr("cy", LYP + 50).attr("r", 12).style("fill", "rgb(77, 175, 74)").attr("stroke", "#000");
+    svg.append("circle").attr("cx", LXP).attr("cy", LYP + 50).attr("r", 12).style("fill", "rgb(63, 163, 197)").attr("stroke", "#000");
     svg.append("text").attr("class", "label").attr("x", LXP + 15).attr("y", LYP + 55).style("text-anchor", "start").text(function(d) {
-      return "Nonprofit";
+      return "Ind. Agency";
     });
-    svg.append("circle").attr("cx", LXP).attr("cy", LYP + 80).attr("r", 12).style("fill", "rgb(228, 26, 28)").attr("stroke", "#000");
+    svg.append("circle").attr("cx", LXP).attr("cy", LYP + 80).attr("r", 12).style("fill", "rgb(68, 187, 164)").attr("stroke", "#000");
     svg.append("text").attr("class", "label").attr("x", LXP + 15).attr("y", LYP + 85).style("text-anchor", "start").text(function(d) {
-      return "For-profit";
+      return "Other";
     });
     svg.append("text").attr("class", "label").attr("x", LXP - 5).attr("y", LYP + 110).text("Respondents").style("font-weight", "bold");
 
@@ -127,11 +127,11 @@ $(document).ready(function()  {
         .style("fill", 
           function(d) {
             if (d.type == 3) {
-              return "rgb(228, 26, 28)";
+              return "rgb(68, 187, 164)";
             } else if (d.type == 2) {
-              return "rgb(77, 175, 74)";
+              return "rgb(63, 163, 197)";
             } else {
-              return "rgb(53, 135, 212)";
+              return "rgb(233,79,55)";
             }
           });
         
