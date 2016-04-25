@@ -44,8 +44,8 @@ $(document).ready(function()  {
 
   d3.csv("data/data.csv", function(error, data) {
 
-    x.domain([40, 90]).nice();
-    y.domain([40, 90]).nice();
+    x.domain([40, 80]).nice();
+    y.domain([40, 80]).nice();
 
     //x axis
     svg.append("g")
@@ -192,6 +192,29 @@ else if (running == true && $("#slider").val() == maxstep) {
     update = function() {
     
       d3.selectAll(".dot")
+
+        .transition()
+        .duration(1000)
+        .attr("cx", function(d) {
+          switch ($("#slider").val()) {
+            case "2011":
+              return x(d.HCAAF_RSLT_2011);
+              break;
+            case "2012":
+              return x(d.HCAAF_RSLT_2012);
+              break;
+            case "2013":
+              return x(d.HCAAF_RSLT_2013);
+              break;
+            case "2014":
+              return x(d.HCAAF_RSLT_2014);
+              break;
+            case "2015":
+              return x(d.HCAAF_RSLT_2015);
+              break;
+          }
+        })
+
         .transition()
         .duration(1000)
         .attr("cy", function(d) {
@@ -214,27 +237,28 @@ else if (running == true && $("#slider").val() == maxstep) {
               break;
           }
         })
-        .transition()
-        .duration(1000)
-        .attr("cx", function(d) {
-          switch ($("#slider").val()) {
-            case "2011":
-              return x(d.HCAAF_RSLT_2011);
-              break;
-            case "2012":
-              return x(d.HCAAF_RSLT_2012);
-              break;
-            case "2013":
-              return x(d.HCAAF_RSLT_2013);
-              break;
-            case "2014":
-              return x(d.HCAAF_RSLT_2014);
-              break;
-            case "2015":
-              return x(d.HCAAF_RSLT_2015);
-              break;
-          }
-        });
+        // .transition()
+        // .duration(1000)
+        // .attr("cx", function(d) {
+        //   switch ($("#slider").val()) {
+        //     case "2011":
+        //       return x(d.HCAAF_RSLT_2011);
+        //       break;
+        //     case "2012":
+        //       return x(d.HCAAF_RSLT_2012);
+        //       break;
+        //     case "2013":
+        //       return x(d.HCAAF_RSLT_2013);
+        //       break;
+        //     case "2014":
+        //       return x(d.HCAAF_RSLT_2014);
+        //       break;
+        //     case "2015":
+        //       return x(d.HCAAF_RSLT_2015);
+        //       break;
+        //   }
+        // })
+        ;
     };
     
   });
