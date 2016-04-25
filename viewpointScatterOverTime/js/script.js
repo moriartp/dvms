@@ -110,6 +110,11 @@ $(document).ready(function()  {
           return b.TotalEnrollment - a.TotalEnrollment;
         }))
       .enter()
+      // .append("text")
+      //    .text(function(d) {return (d.name)}
+      //    .attr('dx',function(d) {return (d.HCAAF_LEAD_2011)}
+      //    .attr('dy',function(d) {return (d.HCAAF_RSLT_2011);
+      //    })          
       .append("circle")
         .attr("class", "dot")
         .attr("r", 
@@ -118,12 +123,18 @@ $(document).ready(function()  {
           })//gave it a base 3.4 plus a proportional amount to the enrollment
         .attr("cx", 
           function(d) {
-            return x(d.HCAAF_RSLT_2011);
+            return x(d.HCAAF_LEAD_2011);
           })
         .attr("cy", 
           function(d) {
-            return y(d.HCAAF_LEAD_2011);
+            return y(d.HCAAF_RSLT_2011);
           })
+        ///TRYING TO ADD TEXT HERE///////////////////
+        .attr("text", 
+          function(d) {
+            return (d.name);
+          })
+        ///END OF TEXT EFFORT/////////////////////////
         .style("fill", 
           function(d) {
             if (d.type == 3) {

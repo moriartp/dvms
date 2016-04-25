@@ -40,8 +40,10 @@ d3.json("data/flaredUp.json", function(error, root) {
       .on("click", click)
     .append("title")
       .text(function(d) { return d.name + "\nPositive Responses: " + d.approval + '%'; });
+    // .append('text')
+    //   .text(.text(function(d) { return d.name + "\nPositive Responses: " + d.approval + '%'; });
 
-/////TOOLTIP ATTEMPT
+// ///TOOLTIP ATTEMPT
     var tooltip = d3.select('body').append('div').attr('class', 'tooltip')
 
     path.on('mouseenter', showToolTip)
@@ -67,11 +69,9 @@ d3.json("data/flaredUp.json", function(error, root) {
       tooltip.classed('show', false)
     }
 
-
-
-
-
-
+//   //Add an element to the body of your HTML to be used as a tooltip.
+//   //This one element can be used for anything you hover over,
+//   //instead of having groups with text elements that display on hover.
 
 });
 

@@ -154,10 +154,12 @@ body {
 .dot {
 	stroke: #000;
 	stroke-width: 1;
+	font-size: 0px;
 }
 
 .dot:hover {
 	stroke: #bbb;
+	font-size: 10px;
 }
 
 #range {

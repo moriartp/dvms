@@ -1,0 +1,63 @@
+body, html{
+  width: 100%;
+  height: 100%;
+}
+
+.h1, .h2, .h3, h1, h2, h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.carousel, .carousel-inner{
+  width: 100%;
+  height: 100%;
+}
+.carousel-inner .item{
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.fullheight{
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.grade_blue{
+  background: linear-gradient(to bottom, rgba(147,206,222,1) 0%, rgba(117,189,209,1) 41%, rgba(5,119,150,1) 100%);
+}
+.grade_orange{
+  background: linear-gradient(to bottom, rgba(255,175,75,1) 0%, rgba(189,110,13,1) 100%);
+}
+
+h1.absoluted{
+  position: absolute;
+  top: 100px;
+  color: #fff;
+  text-align: center;
+  width: 100%;
+  z-index: 10;
+}
+
+.carousel-inner .item:nth-child(1){
+ background: url(../assets/slide1.png) no-repeat center center fixed;
+ background-size: cover;
+}
+.carousel-inner .item:nth-child(2){
+ background: url(../assets/slide2.png) no-repeat center center fixed;
+ background-size: cover;
+}
+.carousel-inner .item:nth-child(3){
+ background: url(../assets/slide3.png) no-repeat center center fixed;
+ background-size: cover;
+}
+
+@media only screen and (max-width: 440px){
+
+}
+
+
+
+
+
