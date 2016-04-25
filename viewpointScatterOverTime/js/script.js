@@ -57,7 +57,7 @@ $(document).ready(function()  {
         .attr("x", width)
         .attr("y", -6)
         .style("text-anchor", "end")
-        .text("Tuition and Fees ($)");
+        .text("Strength of Leadership");
 
     //y axis
     svg.append("g")
@@ -69,13 +69,13 @@ $(document).ready(function()  {
         .attr("y", 6)
         .attr("dy", ".71em")
         .style("text-anchor", "end")
-        .text("Avg. Student Loan Total ($)")
+        .text("Results-Oriented Culture")
 
     //legend y position
     var LYP = 300, 
       LXP = 570;
       
-    svg.append("text").attr("class", "label").attr("x", LXP - 5).attr("y", LYP).text("Institution Type").style("font-weight", "bold");
+    svg.append("text").attr("class", "label").attr("x", LXP - 5).attr("y", LYP).text("Agency Type").style("font-weight", "bold");
 
     //color legend
     svg.append("circle").attr("cx", LXP).attr("cy", LYP + 20).attr("r", 12).style("fill", "rgb(53, 135, 212)").attr("stroke", "#000");
@@ -90,7 +90,7 @@ $(document).ready(function()  {
     svg.append("text").attr("class", "label").attr("x", LXP + 15).attr("y", LYP + 85).style("text-anchor", "start").text(function(d) {
       return "For-profit";
     });
-    svg.append("text").attr("class", "label").attr("x", LXP - 5).attr("y", LYP + 110).text("Enrollment").style("font-weight", "bold");
+    svg.append("text").attr("class", "label").attr("x", LXP - 5).attr("y", LYP + 110).text("Respondents").style("font-weight", "bold");
 
     //size legend
     svg.append("circle").attr("cx", LXP).attr("cy", LYP + 30 + 110).attr("r", 20).style("fill", "#bbb").attr("stroke", "#000");
