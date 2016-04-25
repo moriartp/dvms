@@ -45,7 +45,7 @@ $(document).ready(function()  {
   d3.csv("data/data.csv", function(error, data) {
 
     x.domain([40, 80]).nice();
-    y.domain([40, 80]).nice();
+    y.domain([40, 70]).nice();
 
     //x axis
     svg.append("g")
@@ -230,7 +230,7 @@ else if (running == true && $("#slider").val() == maxstep) {
               return y(d.HCAAF_RSLT_2012);
               break;
             case "2013":
-              return y(d.lHCAAF_RSLT_2013);
+              return y(d.HCAAF_RSLT_2013);
               break;
             case "2014":
               return y(d.HCAAF_RSLT_2014);
