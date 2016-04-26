@@ -38,40 +38,47 @@ d3.json("data/flaredUp.json", function(error, root) {
       .attr("d", arc)
       .style("fill", function(d) { return color(d.approval); })//((d.children ? d : d.parent).approval); })
       .on("click", click)
-    .append("title")
-      .text(function(d) { return d.name + "\nPositive Responses: " + d.approval + '%'; });
-    // .append('text')
-    //   .text(.text(function(d) { return d.name + "\nPositive Responses: " + d.approval + '%'; });
+    // .append("title")
+    //   .text(function(d) { return d.name + "\nPositive Responses: " + d.approval + '%'; });
 
-// ///TOOLTIP ATTEMPT
+// ///TOOLTIP ATTEMPT : CONTINUED FAILURE
     var tooltip = d3.select('body').append('div').attr('class', 'tooltip')
 
     path.on('mouseenter', showToolTip)
-      .on('mouseleave', hideToolTip)
-    // var decimal = d3.format(".2f")
-    
+              .on('mousemove', moveTooltip)
+              .on('mouseleave', hideToolTip)
+
     function showToolTip(d,i){
       tooltip.classed('show', true)
-      tooltip.html( function(d) { return( d.name + '<br>Positive Responses' + d.approval +' %' )})
-      var thisBRC = this.getBoundingClientRect()
+    }
+              
+    
+    function moveTooltip(d,i){
 
-      var ttBCR = tooltip.node().getBoundingClientRect()
-      var topPosition = ( thisBRC.top - ttBCR.height + pageYOffset )
-      var leftPosition = ( thisBRC.left - ttBCR.width*0.5 + thisBRC.width*0.5 )
+      ////Add the class `reced` if the data of a `stategroup` is not the same as `d`
+      ////`d` is the data bound to the element that triggered the event 
+      // stategroups.classed('reced', function(state_data){return state_data != d })
+
+      ////Get the mouse X position 
+      var mouseX = d3.event.clientX
+      var mouseY = d3.event.clientY
       
-      tooltip
+      ////Put the state initial and all age group data in the tooltip HTML
+      tooltip.html('').html('<h4>'+d.name+'</h4>')
+      }
+
+       tooltip
         .style({
           top: topPosition+'px', 
           left: leftPosition+'px'
-        })
-    }
+        })     
+
+
     function hideToolTip(d,i){
       tooltip.classed('show', false)
     }
 
-//   //Add an element to the body of your HTML to be used as a tooltip.
-//   //This one element can be used for anything you hover over,
-//   //instead of having groups with text elements that display on hover.
+///////////////////////////////////////////
 
 });
 
