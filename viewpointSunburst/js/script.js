@@ -38,8 +38,8 @@ d3.json("data/flaredUp.json", function(error, root) {
       .attr("d", arc)
       .style("fill", function(d) { return color(d.approval); })//((d.children ? d : d.parent).approval); })
       .on("click", click)
-    // .append("title")
-    //   .text(function(d) { return d.name + "\nPositive Responses: " + d.approval + '%'; });
+    .append("title")
+      .text(function(d) { return d.name + "\nPositive Responses: " + d.approval + '%'; });
 
 // ///TOOLTIP ATTEMPT : CONTINUED FAILURE
     var tooltip = d3.select('body').append('div').attr('class', 'tooltip')

@@ -42,7 +42,7 @@ $(document).ready(function()  {
     .append("g")
       .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-  d3.csv("data/data.csv", function(error, data) {
+  d3.csv("data/data1.csv", function(error, data) {
 
     x.domain([40, 80]).nice();
     y.domain([40, 70]).nice();
