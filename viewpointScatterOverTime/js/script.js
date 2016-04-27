@@ -1,3 +1,5 @@
+var depend = 
+
 $(document).ready(function()  {
   
   var margin = {

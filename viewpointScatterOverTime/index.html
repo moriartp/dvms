@@ -14,12 +14,24 @@
   <a href="moriartp.github.io">bar</a></div>
 </header>
 
-
-<div><input id="slider" type="range" min="2011" max="2015" value="2011" step="1" />
+<!-- UI DIVS -->
+<div>
+	<select>
+  <option value="HCAAF_LEAD_">Leadership</option>
+  <option value="HCAAF_RSLT_">Results-Oriented</option>
+</select>
+<select>
+  <option value="HCAAF_RSLT_">Results-Oriented</option>
+  <option value="HCAAF_LEAD_">Leadership</option>
+</select>
+</div>
+<div>
+<input id="slider" type="range" min="2011" max="2015" value="2011" step="1" />
 <span id="range">2011</span>
 </div><div>
-<button name="play" id="play">Play</button></div>
-	
+<button name="play" id="play">Play</button>
+</div>
+<!-- END UI DIVS -->	
 <div id="chart"></div>
 	
 <script src="http://d3js.org/d3.v3.min.js"></script>
@@ -28,10 +40,6 @@
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
 <script src="js/script.js"></script>
-
-
-
-
 
 <h2>Factor Ratings Comparisons</h2>
 <footer>This is the footer. This is the footer. This is the footer. This is the footer.</footer>

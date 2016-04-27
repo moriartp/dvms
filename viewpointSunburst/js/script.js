@@ -41,44 +41,48 @@ d3.json("data/flaredUp.json", function(error, root) {
     .append("title")
       .text(function(d) { return d.name + "\nPositive Responses: " + d.approval + '%'; });
 
-// ///TOOLTIP ATTEMPT : CONTINUED FAILURE
+    //////////////////////////////////////////////////////////
+    //// Adding a tooltip to follow the mouse
+    //////////////////////////////////////////////////////////
     var tooltip = d3.select('body').append('div').attr('class', 'tooltip')
 
     path.on('mouseenter', showToolTip)
               .on('mousemove', moveTooltip)
               .on('mouseleave', hideToolTip)
 
+    // var decimal = d3.format(".1f")
+    
     function showToolTip(d,i){
       tooltip.classed('show', true)
     }
-              
-    
-    function moveTooltip(d,i){
 
-      ////Add the class `reced` if the data of a `stategroup` is not the same as `d`
-      ////`d` is the data bound to the element that triggered the event 
-      // stategroups.classed('reced', function(state_data){return state_data != d })
+
+    function moveTooltip(d,i){
 
       ////Get the mouse X position 
       var mouseX = d3.event.clientX
       var mouseY = d3.event.clientY
       
-      ////Put the state initial and all age group data in the tooltip HTML
+      ////Put the name in the tooltip HTML
       tooltip.html('').html('<h4>'+d.name+'</h4>')
-      }
 
-       tooltip
+
+      ////Calculate positioning and move tooltip
+      var ttBCR = tooltip.node().getBoundingClientRect()
+      var topPosition = mouseY - ttBCR.height + pageYOffset - 14
+      var leftPosition = ( mouseX - ttBCR.width*0.5 ) + pageXOffset
+      
+      tooltip
         .style({
           top: topPosition+'px', 
           left: leftPosition+'px'
-        })     
-
+        })
+    }
 
     function hideToolTip(d,i){
       tooltip.classed('show', false)
     }
-
-///////////////////////////////////////////
+    //////////////////////////////////////////////////////////
 
 });
 
