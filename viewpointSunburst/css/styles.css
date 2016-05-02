@@ -97,10 +97,12 @@ footer {
 
 .tooltip{
 	position: absolute;
+	text-align: center;
 	padding: 3px 8px;
 	border: 1px solid #bbb;
 	background-color: rgba(255,255,255,0.9);
 	font-size: 12px;
+	border-radius: 3px;
 	color: #333;
 	pointer-events: none;
 	display: none;

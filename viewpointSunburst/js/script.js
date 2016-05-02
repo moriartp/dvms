@@ -32,21 +32,24 @@ var svg = d3.select("body").append("svg")
 d3.json("data/flaredUp.json", function(error, root) {
   if (error) throw error;
 
-  svg.selectAll("path")
+var arcs = svg.selectAll("path")
       .data(partition.nodes(root))
     .enter().append("path")
       .attr("d", arc)
       .style("fill", function(d) { return color(d.approval); })//((d.children ? d : d.parent).approval); })
       .on("click", click)
-    .append("title")
-      .text(function(d) { return d.name + "\nPositive Responses: " + d.approval + '%'; });
+    // .append("title")
+    //   .text(function(d) { return d.name + "\nPositive Responses: " + d.approval + '%'; });
+
+// var titles = arcs.append("title")
+//       .text(function(d) { return d.name + "\nPositive Responses: " + d.approval + '%'; });      
 
     //////////////////////////////////////////////////////////
     //// Adding a tooltip to follow the mouse
     //////////////////////////////////////////////////////////
     var tooltip = d3.select('body').append('div').attr('class', 'tooltip')
 
-    path.on('mouseenter', showToolTip)
+    arcs.on('mouseenter', showToolTip)
               .on('mousemove', moveTooltip)
               .on('mouseleave', hideToolTip)
 
@@ -64,13 +67,13 @@ d3.json("data/flaredUp.json", function(error, root) {
       var mouseY = d3.event.clientY
       
       ////Put the name in the tooltip HTML
-      tooltip.html('').html('<h4>'+d.name+'</h4>')
+      tooltip.html('').html('<h4>'+d.name+'</h4><p>Positive Responses: ' + d.approval + '%')
 
 
       ////Calculate positioning and move tooltip
       var ttBCR = tooltip.node().getBoundingClientRect()
       var topPosition = mouseY - ttBCR.height + pageYOffset - 14
-      var leftPosition = ( mouseX - ttBCR.width*0.5 ) + pageXOffset
+      var leftPosition = ( mouseX - ttBCR.width*1 ) + pageXOffset
       
       tooltip
         .style({
