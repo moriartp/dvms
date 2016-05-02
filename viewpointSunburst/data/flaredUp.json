@@ -5,7 +5,7 @@
     "approval": 61.30,
     "type": "black",
     "level": "red",
-    "statement": "The overall score is derived from teh cummulative average of percent of positive responses to all statement/questions in the Viewpoint Survey.",
+    "statement": "The overall score is derived from the cummulative average of percent of positive responses to all statement/questions in the Viewpoint Survey.",
     "children": [
       {
         "name": "Leadership",

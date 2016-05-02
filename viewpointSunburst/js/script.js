@@ -38,11 +38,6 @@ var arcs = svg.selectAll("path")
       .attr("d", arc)
       .style("fill", function(d) { return color(d.approval); })//((d.children ? d : d.parent).approval); })
       .on("click", click)
-    // .append("title")
-    //   .text(function(d) { return d.name + "\nPositive Responses: " + d.approval + '%'; });
-
-// var titles = arcs.append("title")
-//       .text(function(d) { return d.name + "\nPositive Responses: " + d.approval + '%'; });      
 
     //////////////////////////////////////////////////////////
     //// Adding a tooltip to follow the mouse
