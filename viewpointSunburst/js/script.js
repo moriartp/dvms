@@ -67,7 +67,7 @@ var arcs = svg.selectAll("path")
       var mouseY = d3.event.clientY
       
       ////Put the name in the tooltip HTML
-      tooltip.html('').html('<h4>'+d.name+'</h4><p>Positive Responses: ' + d.approval + '%')
+      tooltip.html('').html('<h4>'+d.name+'</h4><p>Positive Responses: ' + d.approval + '%</p><p></p><i>' + d.statement + '</i>')
 
 
       ////Calculate positioning and move tooltip
