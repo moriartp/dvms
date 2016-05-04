@@ -15,21 +15,22 @@
 </header>
 
 <!-- UI DIVS -->
+<div class="uis">
 <div>
 <p>Dependent Index Variable (Y Axis)</p>
-	<select>
+	<select id="dep">
   <option value="ENGAG_INDX_">Employee Engagement Index</option>
   <option value="HCAAF_LEAD_">Leadership/Knowledge Management Index</option>
   <option value="HCAAF_RSLT_">Results-Oriented Performance Culture Index</option>
   <option value="HCAAF_TLNT_">Talent Management Index</option>
   <option value="HCAAF_SATF_">Job Satisfaction Index</option>
   <option value="NEWIQ_INDX_">New IQ Index</option>
-  <option value="GLOBL_SATF_">Global Satisfaction Index</option>
+  <option selected="selected" value="GLOBL_SATF_">Global Satisfaction Index</option>
 </select>
 </div>
 <div>
 <p>Independent Index Variable (X Axis)</p>
-  <select>
+  <select id="ind">
   <option value="ENGAG_INDX_">Employee Engagement Index</option>
   <option value="HCAAF_LEAD_">Leadership/Knowledge Management Index</option>
   <option value="HCAAF_RSLT_">Results-Oriented Performance Culture Index</option>
@@ -45,6 +46,7 @@
 </div><div>
 <button name="play" id="play">Play</button>
 </div>
+</div>
 <!-- END UI DIVS -->	
 <div id="chart"></div>
 	
@@ -53,7 +55,7 @@
 	
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
-<script src="js/script.js"></script>
+<script src="js/scriptUIs.js"></script>
 
 <h2>Factor Ratings Comparisons</h2>
 <footer>This is the footer. This is the footer. This is the footer. This is the footer.</footer>
