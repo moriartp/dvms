@@ -131,14 +131,14 @@ $(document).ready(function()  {
           function(d) {
             return (4 + (d.TotalEnrollment * .0006));
           })//gave it a base 3.4 plus a proportional amount to the enrollment
-        .attr("cx", 
-          function(d) {
-            return x(d.HCAAF_LEAD_2011);
-          })
-        .attr("cy", 
-          function(d) {
-            return y(d.HCAAF_RSLT_2011);
-          })
+        // .attr("cx", 
+        //   function(d) {
+        //     return x(d.HCAAF_LEAD_2011);
+        //   })
+        // .attr("cy", 
+        //   function(d) {
+        //     return y(d.HCAAF_RSLT_2011);
+        //   })
         .style("fill", function(d) {
             if (d.type == 3) {
               return "rgb(68, 187, 164)"
@@ -285,12 +285,15 @@ $(document).ready(function()  {
       update();
     });
 
+    update()
+
 }////chartSetup end
 
 
   
 var update = function() {
     
+      var positions = []
       d3.selectAll(".dot")
 
         .transition()
@@ -304,8 +307,23 @@ var update = function() {
         .attr("cy", function(d) {
             return y( d[depend+sliderValue] )
 
+        }).each(function (d){
+          positions.push( [ x( d[indep+sliderValue] ),  y( d[depend+sliderValue] ) ] )
         })
-        ;
+        positions.sort(function (a,b) {
+          return a[0] - b[0]
+        })
+        var regression = ss.linearRegression(positions)
+        var regline = ['M', positions[0][0], (regression.b+regression.m*positions[0][0]),  'L', positions[positions.length - 1][0], (regression.b+regression.m*positions[positions.length-1][0]) ].join(' ')
+
+        d3.select('.regline').remove()
+
+        svg.append('path')
+          .attr('class', 'regline')
+          .attr('d', regline)
+          .style('stroke', 'blue')
+          .style('stroke-width', 1)
     };
+
     
   });
