@@ -1,5 +1,7 @@
 var depend = document.getElementById("dep").value;
 var indep = document.getElementById("ind").value;
+var sliderValue = $("#slider").val();
+
 
 $(document).ready(function()  {
   
@@ -8,7 +10,9 @@ $(document).ready(function()  {
     right : 20,
     bottom : 30,
     left : 40
-  }, width = 725 - margin.left - margin.right, height = 600 - margin.top - margin.bottom;
+  }, 
+  width = 725 - margin.left - margin.right, 
+  height = 600 - margin.top - margin.bottom;
 
   var x = d3.scale.linear()
     .range([0, width]);
@@ -38,17 +42,25 @@ $(document).ready(function()  {
 
   var svg = d3.select("#chart")
     .append("svg")
-      .attr("class", "chart")
+      // .attr("class", "chart")
+      // .attr("preserveAspectRatio", "xMinYMin meet")
       .attr("viewBox", "0 0 725 600")
       .attr("width", width + margin.left + margin.right)
       .attr("height", height + margin.top + margin.bottom)
     .append("g")
       .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-  d3.csv("data/agencyRatingsTrend.csv", function(error, data) {
+  var agencyData     
 
-    x.domain([40, 80]).nice();
-    y.domain([40, 70]).nice();
+  d3.csv("data/agencyRatingsTrend.csv", function(error, data) {
+    agencyData = data
+    chartSetup(agencyData)
+  });
+
+  function chartSetup(data){
+
+    x.domain([40, 90]).nice();
+    y.domain([40, 90]).nice();
 
     //x axis
     svg.append("g")
@@ -107,22 +119,17 @@ $(document).ready(function()  {
 
 
     //circles
-    svg.selectAll(".dot")
+    var dots = svg.selectAll(".dot")
       .data(data.sort(
         function(a, b) {
           return b.TotalEnrollment - a.TotalEnrollment;
         }))
-      .enter()
-      // .append("text")
-      //    .text(function(d) {return (d.name)}
-      //    .attr('dx',function(d) {return (d.HCAAF_LEAD_2011)}
-      //    .attr('dy',function(d) {return (d.HCAAF_RSLT_2011);
-      //    })          
+      .enter()          
       .append("circle")
         .attr("class", "dot")
         .attr("r", 
           function(d) {
-            return (4 + 10);//(d.TotalEnrollment * .0006));
+            return (4 + (d.TotalEnrollment * .0006));
           })//gave it a base 3.4 plus a proportional amount to the enrollment
         .attr("cx", 
           function(d) {
@@ -132,22 +139,83 @@ $(document).ready(function()  {
           function(d) {
             return y(d.HCAAF_RSLT_2011);
           })
-        // ///TRYING TO ADD TEXT HERE///////////////////
-        // .attr("text", 
-        //   function(d) {
-        //     return (d.name);
-        //   })
-        // ///END OF TEXT EFFORT/////////////////////////
-        .style("fill", 
-          function(d) {
+        .style("fill", function(d) {
             if (d.type == 3) {
-              return "rgb(68, 187, 164)";
+              return "rgb(68, 187, 164)"
             } else if (d.type == 2) {
-              return "rgb(63, 163, 197)";
+              return "rgb(63, 163, 197)"
             } else {
-              return "rgb(233,79,55)";
+              return "rgb(233,79,55)"
             }
-          });
+          })
+
+    ///add a tooltip////
+    var tooltip = d3.select('body').append('div').attr('class', 'tooltip')
+
+    dots.on('mouseenter', showToolTip)
+              .on('mousemove', moveTooltip)
+              .on('mouseleave', hideToolTip)
+              .on('click', focusDot)
+
+    // var decimal = d3.format(".1f")
+
+    function focusDot (d,i){
+      var selection = d3.select(this)
+      var test = selection.classed('highlight')
+      selection.classed('highlight', !test)
+
+      var highlighted = []
+
+      dots.classed('recede', function (dot){
+        var dotSel = d3.select(this)
+        var hightlightTest = dotSel.classed('highlight')
+        if (hightlightTest) {
+          highlighted.push(dot)
+        }
+        return !hightlightTest
+      })
+
+      if (highlighted.length == 0){
+        dots.classed('recede', false)
+      }
+
+    }
+    
+    function showToolTip(d,i){
+      tooltip.classed('show', true)
+      
+    }
+
+
+    function moveTooltip(d,i){
+
+      ////Get the mouse X position 
+      var mouseX = d3.event.clientX
+      var mouseY = d3.event.clientY
+      
+      ////Put the name in the tooltip HTML
+      tooltip.html('').html('<h4>'+d.Agencies+'</h4>')
+
+
+      ////Calculate positioning and move tooltip
+      var ttBCR = tooltip.node().getBoundingClientRect()
+      var topPosition = mouseY - ttBCR.height + pageYOffset - 14
+      var leftPosition = ( mouseX - ttBCR.width*1 ) + pageXOffset
+      
+      tooltip
+        .style({
+          top: topPosition+'px', 
+          left: leftPosition+'px'
+        })
+    }
+
+    function hideToolTip(d,i){
+      tooltip.classed('show', false)
+    }
+    //////////////////////////////////////////////////////////
+
+
+
         
     var running = false;
     var timer;
@@ -166,7 +234,7 @@ $(document).ready(function()  {
         
       } 
       
-else if (running == true && $("#slider").val() == maxstep) {
+      else if (running == true && $("#slider").val() == maxstep) {
          running = true;
          $("button").html("Play1");
          
@@ -195,6 +263,10 @@ else if (running == true && $("#slider").val() == maxstep) {
       }
 
     });
+
+
+
+
   
     $("#slider").on("change", function(){
       update();
@@ -202,74 +274,38 @@ else if (running == true && $("#slider").val() == maxstep) {
       clearInterval(timer);
       $("button").html("Play");
     });
+
+    $("#dep").on("change", function(){
+      depend = document.getElementById("dep").value;
+      update();
+    });
+
+    $("#ind").on("change", function(){
+      indep = document.getElementById("ind").value;
+      update();
+    });
+
+}////chartSetup end
+
+
   
-    update = function() {
+var update = function() {
     
       d3.selectAll(".dot")
 
         .transition()
         .duration(1000)
         .attr("cx", function(d) {
-          switch ($("#slider").val()) {
-            case sliderValue:
-              return x(d.depend + sliderValue);
-              break;
-          }
+          return x( d[indep+sliderValue] )
         })
-
-
-
-
-        // .transition()
-        // .duration(1000)
-        // .attr("cx", function(d) {
-        //   switch ($("#slider").val()) {
-        //     case "2011":
-        //       return x(d.HCAAF_LEAD_2011);
-        //       break;
-        //     case "2012":
-        //       return x(d.HCAAF_LEAD_2012);
-        //       break;
-        //     case "2013":
-        //       return x(d.HCAAF_LEAD_2013);
-        //       break;
-        //     case "2014":
-        //       return x(d.HCAAF_LEAD_2014);
-        //       break;
-        //     case "2015":
-        //       return x(d.HCAAF_LEAD_2015);
-        //       break;
-        //   }
-        // })
-
-
-
 
         .transition()
         .duration(1000)
         .attr("cy", function(d) {
-      
-          switch ($("#slider").val()) {
-            case "2011":
-              return y(d.HCAAF_RSLT_2011);
-              break;
-            case "2012":
-              return y(d.HCAAF_RSLT_2012);
-              break;
-            case "2013":
-              return y(d.HCAAF_RSLT_2013);
-              break;
-            case "2014":
-              return y(d.HCAAF_RSLT_2014);
-              break;
-            case "2015":
-              return y(d.HCAAF_RSLT_2015);
-              break;
-          }
+            return y( d[depend+sliderValue] )
+
         })
         ;
     };
     
   });
-
-});
