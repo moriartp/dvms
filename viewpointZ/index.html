@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Viewpoint Survey</title>
+
+    <!-- Bootstrap -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS to (overwrite Bootstrap) -->
+    <link href="css/graphic.css" rel="stylesheet">
+  
+  </head>
+
+
+      <!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand scrollbtn" href="#home">Home</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a class="scrollbtn" href="#home">Home</a></li>
+<!--             <li><a class="scrollbtn" href="#home2">Home</a></li> -->
+            <li><a class="scrollbtn" href="#summary">Summary</a></li>
+            <li><a class="scrollbtn" href="#index">Agency Scores</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>  
+
+    <h1 class="absoluted">Viewpoint Survey</h1>
+    <p class="pHome">In 2015, more than 400,000 employees participated in the Federal Employee Viewpoint Survey (FEVS). Employee feedback on key performance metrics captured in the FEVS helps to realizing the federal Office of Personell Management's mission to maintain and enhance a talented, engaged, and diverse Federal workforce. The feedback provided enables each agency to develop effective strategies and tools for driving continuous improvement.</p>
+    <p class="pHome">On this site you will find two tools for use in analyzing the results of this survey. The Summary displays an overview of the 2015 survey. All survey statement/questions are grouped in the survey section in which they appear. These sections descend in clockwise fashion, by highest to lowest average respondents approval rates (positive responses recorded). Within each section, the individual questions are also sorted by this manner as well. Further, color scaling indicates differences in approval ratings from the overall survey average to highlight the highest and lowerst deviations from the average.</p>
+
+
+    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel" data-anchor="home">
+    </div>
+
+    <div class="fullheight grade_blue" data-anchor="summary">
+      <h1>Summary</h1>
+    </div>
+
+    <div class="fullheight grade_orange" data-anchor="index">
+      <h1>Agency Scores</h1>
+    </div>
+
+
+  <body>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+
+    <script src="js/nav.js"></script>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+<script type="text/javascript" src="js/viewpointSunburst/js/script.js"></script>
+
+
+
+  </body>
+</html>
