@@ -39,8 +39,8 @@ var arcs = svg.selectAll("path")
       .data(partition.nodes(root))
     .enter().append("path")
       .attr("d", arc)
-      .style("fill", function(d) { return color(d.approval); })//((d.children ? d : d.parent).approval); })
-      .on("click", click)
+      .style("fill", function(d) { return color(d.approval); })
+      .on("click", click)     
 
     //////////////////////////////////////////////////////////
     //// Adding a tooltip to follow the mouse
