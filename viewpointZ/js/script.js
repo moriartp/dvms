@@ -61,7 +61,7 @@ var arcs = svg.selectAll("path")
     function moveTooltip(d,i){
 
       ////Get the mouse X position 
-      var mouseX = d3.event.clientX
+      var mouseX = d3.event.clientX + 82.5
       var mouseY = d3.event.clientY
       
       ////Put the name in the tooltip HTML

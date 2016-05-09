@@ -129,7 +129,7 @@ $(document).ready(function()  {
         .attr("class", "dot")
         .attr("r", 
           function(d) {
-            return (4 + (d.TotalEnrollment * .0006));
+            return (4 + (d.TotalEnrollment * .0008));
           })//gave it a base 3.4 plus a proportional amount to the enrollment
         // .attr("cx", 
         //   function(d) {
@@ -190,7 +190,7 @@ $(document).ready(function()  {
     function moveTooltip(d,i){
 
       ////Get the mouse X position 
-      var mouseX = d3.event.clientX
+      var mouseX = d3.event.clientX + 82.5
       var mouseY = d3.event.clientY
       
       ////Put the name in the tooltip HTML
@@ -321,8 +321,8 @@ var update = function() {
         svg.append('path')
           .attr('class', 'regline')
           .attr('d', regline)
-          .style('stroke', 'blue')
-          .style('stroke-width', 1)
+          .style('stroke', '#3F88C5')
+          .style('stroke-width', 2)
     };
 
     

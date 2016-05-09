@@ -99,8 +99,9 @@ footer {
 }
 
 select{
-	margin:20px;
+/*	margin:20px;*/
 	margin-top: 2px;
+	margin-bottom: 15px;
 }
 
 html {
@@ -113,8 +114,9 @@ input[type='range'] {
 	/*-webkit-box-shadow: inset 0 0 5px #333;*/
 	background-color: #3F88C5;
 	height: 5px;
-	width: 269px;
-	margin: 20px;
+	width: 227px;
+	margin-bottom: 20px;
+	margin-top: 20px;
 	/*position: relative;
 	 left: 10%;*/
 
@@ -156,7 +158,8 @@ body {
 }
 
 #range {
-	font: 15px sans-serif;
+	font: 85px sans-serif;
+	text-align: center;
 }
 
 input[type=range] {
@@ -271,7 +274,7 @@ button {
 	border-radius: 4px;
 	color: white;
 	font-size: 1.5em;
-	margin:20px;
+	margin-top:20px;
 }
 
 h4 {
@@ -290,5 +293,9 @@ h4 {
 
 .uis{
 	position: absolute;
-	margin-left: 0px;
+	margin-left: 1px;
+	padding: 20px;
+	border-color: black;
+	border-radius: 5px;
+	border-width: 3px;
 }
