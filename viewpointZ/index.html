@@ -11,6 +11,7 @@
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom CSS to (overwrite Bootstrap) -->
     <link href="css/graphic.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/stylescatter.css">
     <link rel="stylesheet" type="text/css" href="css/styles.css">
   
   </head>
@@ -58,6 +59,41 @@
 
     <div class="fullheight grade_orange" data-anchor="index">
       <h1>Agency Scores</h1>
+      <!-- UI DIVS -->
+      <div class="uis">
+      <div>
+      <p>Dependent Index Variable (Y Axis)</p>
+      <select id="dep">
+      <option value="ENGAG_INDX_">Employee Engagement Index</option>
+      <option value="HCAAF_LEAD_">Leadership/Knowledge Management Index</option>
+      <option value="HCAAF_RSLT_">Results-Oriented Performance Culture Index</option>
+      <option value="HCAAF_TLNT_">Talent Management Index</option>
+      <option value="HCAAF_SATF_">Job Satisfaction Index</option>
+      <option value="NEWIQ_INDX_">New IQ Index</option>
+      <option selected="selected" value="GLOBL_SATF_">Global Satisfaction Index</option>
+      </select>
+      </div>
+      <div>
+      <p>Independent Index Variable (X Axis)</p>
+      <select id="ind">
+      <option value="ENGAG_INDX_">Employee Engagement Index</option>
+      <option value="HCAAF_LEAD_">Leadership/Knowledge Management Index</option>
+      <option value="HCAAF_RSLT_">Results-Oriented Performance Culture Index</option>
+      <option value="HCAAF_TLNT_">Talent Management Index</option>
+      <option value="HCAAF_SATF_">Job Satisfaction Index</option>
+      <option value="NEWIQ_INDX_">New IQ Index</option>
+      <option value="GLOBL_SATF_">Global Satisfaction Index</option>
+      </select>
+      </div>
+      <div>
+      <input id="slider" type="range" min="2011" max="2015" value="2011" step="1" />
+      <span id="range">2011</span>
+      </div><div>
+      <button name="play" id="play">Play</button>
+      </div>
+      </div>
+      <!-- END UI DIVS -->  
+      <div id="chart"></div>
     </div>
 
 
@@ -68,10 +104,22 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="bootstrap/js/bootstrap.min.js"></script>
 
+    <!-- Jeremy's nav script for scrolling -->
     <script src="js/nav.js"></script>
 
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+    
+    <!-- sunburst script -->
     <script type="text/javascript" src="js/script.js"></script>
+
+    <!-- ajax library -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    
+    <!-- Stats library -->
+    <script src="js/simple_statistics.min.js"></script>
+
+    <!-- Scatterplot over time -->
+    <script src="js/scriptUIs.js"></script>
 
 
 
