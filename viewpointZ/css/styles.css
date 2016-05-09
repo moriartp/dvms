@@ -52,8 +52,9 @@ footer {
 	top: 0px;
 	left: 0px;
 }
-.tooltip.show{
+.tooltip.showthetooltip{
 	display: block;
+	opacity: 1;
 }
 .tooltip h4{
 	margin: 1px 0;

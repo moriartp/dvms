@@ -175,8 +175,9 @@ input[type=range] {
 	display: none;
 }
 
-.tooltip.show {
+.tooltip.showit {
 	display: block;
+	opacity: 1;
 }
 
 

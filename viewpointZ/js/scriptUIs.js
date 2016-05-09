@@ -12,7 +12,7 @@ $(document).ready(function()  {
     left : 40
   }, 
   width = 825 - margin.left - margin.right, 
-  height = 600 - margin.top - margin.bottom;
+  height = 625 - margin.top - margin.bottom;
 
   var x = d3.scale.linear()
     .range([0, width]);
@@ -86,36 +86,36 @@ $(document).ready(function()  {
         .style("text-anchor", "end")
         .text("Dependent Variable")
 
-    //legend y position
-    var LYP = 300, 
-      LXP = 570;
+    // //legend y position
+    // var LYP = 300, 
+    //   LXP = 570;
       
-    svg.append("text").attr("class", "label").attr("x", LXP - 5).attr("y", LYP).text("Agency Type").style("font-weight", "bold");
+    // svg.append("text").attr("class", "label").attr("x", LXP - 5).attr("y", LYP).text("Agency Type").style("font-weight", "bold");
 
-    //color legend
-    svg.append("circle").attr("cx", LXP).attr("cy", LYP + 20).attr("r", 12).style("fill", "rgb(233,79,55)").attr("stroke", "#000");
-    svg.append("text").attr("class", "label").attr("x", LXP + 15).attr("y", LYP + 25).style("text-anchor", "start").text(function(d) {
-      return "Pres. Counsel";
-    });
-    svg.append("circle").attr("cx", LXP).attr("cy", LYP + 50).attr("r", 12).style("fill", "rgb(63, 163, 197)").attr("stroke", "#000");
-    svg.append("text").attr("class", "label").attr("x", LXP + 15).attr("y", LYP + 55).style("text-anchor", "start").text(function(d) {
-      return "Ind. Agency";
-    });
-    svg.append("circle").attr("cx", LXP).attr("cy", LYP + 80).attr("r", 12).style("fill", "rgb(68, 187, 164)").attr("stroke", "#000");
-    svg.append("text").attr("class", "label").attr("x", LXP + 15).attr("y", LYP + 85).style("text-anchor", "start").text(function(d) {
-      return "Other";
-    });
-    svg.append("text").attr("class", "label").attr("x", LXP - 5).attr("y", LYP + 110).text("Respondents").style("font-weight", "bold");
+    // //color legend
+    // svg.append("circle").attr("cx", LXP).attr("cy", LYP + 20).attr("r", 12).style("fill", "rgb(233,79,55)").attr("stroke", "#000");
+    // svg.append("text").attr("class", "label").attr("x", LXP + 15).attr("y", LYP + 25).style("text-anchor", "start").text(function(d) {
+    //   return "Pres. Counsel";
+    // });
+    // svg.append("circle").attr("cx", LXP).attr("cy", LYP + 50).attr("r", 12).style("fill", "rgb(63, 163, 197)").attr("stroke", "#000");
+    // svg.append("text").attr("class", "label").attr("x", LXP + 15).attr("y", LYP + 55).style("text-anchor", "start").text(function(d) {
+    //   return "Ind. Agency";
+    // });
+    // svg.append("circle").attr("cx", LXP).attr("cy", LYP + 80).attr("r", 12).style("fill", "rgb(68, 187, 164)").attr("stroke", "#000");
+    // svg.append("text").attr("class", "label").attr("x", LXP + 15).attr("y", LYP + 85).style("text-anchor", "start").text(function(d) {
+    //   return "Other";
+    // });
+    // svg.append("text").attr("class", "label").attr("x", LXP - 5).attr("y", LYP + 110).text("Respondents").style("font-weight", "bold");
 
-    //size legend
-    svg.append("circle").attr("cx", LXP).attr("cy", LYP + 30 + 110).attr("r", 20).style("fill", "#bbb").attr("stroke", "#000");
-    svg.append("text").attr("class", "label").attr("x", LXP + 25).attr("y", LYP + 140).style("text-anchor", "start").text("27,000");
-    svg.append("circle").attr("cx", LXP).attr("cy", LYP + 60 + 110).attr("r", 15).style("fill", "#bbb").attr("stroke", "#000");
-    svg.append("text").attr("class", "label").attr("x", LXP + 25).attr("y", LYP + 170).style("text-anchor", "start").text("18,000+");
-    svg.append("circle").attr("cx", LXP).attr("cy", LYP + 80 + 110).attr("r", 9).style("fill", "#bbb").attr("stroke", "#000");
-    svg.append("text").attr("class", "label").attr("x", LXP + 25).attr("y", LYP + 190).style("text-anchor", "start").text("9,000+");
-    svg.append("circle").attr("cx", LXP).attr("cy", LYP + 93 + 110).attr("r", 4).style("fill", "#bbb").attr("stroke", "#000");
-    svg.append("text").attr("class", "label").attr("x", LXP + 25).attr("y", LYP + 210).style("text-anchor", "start").text("100+");
+    // //size legend
+    // svg.append("circle").attr("cx", LXP).attr("cy", LYP + 30 + 110).attr("r", 20).style("fill", "#bbb").attr("stroke", "#000");
+    // svg.append("text").attr("class", "label").attr("x", LXP + 25).attr("y", LYP + 140).style("text-anchor", "start").text("27,000");
+    // svg.append("circle").attr("cx", LXP).attr("cy", LYP + 60 + 110).attr("r", 15).style("fill", "#bbb").attr("stroke", "#000");
+    // svg.append("text").attr("class", "label").attr("x", LXP + 25).attr("y", LYP + 170).style("text-anchor", "start").text("18,000+");
+    // svg.append("circle").attr("cx", LXP).attr("cy", LYP + 80 + 110).attr("r", 9).style("fill", "#bbb").attr("stroke", "#000");
+    // svg.append("text").attr("class", "label").attr("x", LXP + 25).attr("y", LYP + 190).style("text-anchor", "start").text("9,000+");
+    // svg.append("circle").attr("cx", LXP).attr("cy", LYP + 93 + 110).attr("r", 4).style("fill", "#bbb").attr("stroke", "#000");
+    // svg.append("text").attr("class", "label").attr("x", LXP + 25).attr("y", LYP + 210).style("text-anchor", "start").text("100+");
 
 
     //circles
@@ -149,7 +149,7 @@ $(document).ready(function()  {
             }
           })
 
-    ///add a tooltip////
+    ///ADD A TOOLTIP TOOLTIP TOOLTIP////
     var tooltip = d3.select('body').append('div').attr('class', 'tooltip')
 
     dots.on('mouseenter', showToolTip)
@@ -182,7 +182,7 @@ $(document).ready(function()  {
     }
     
     function showToolTip(d,i){
-      tooltip.classed('show', true)
+      tooltip.classed('showit', true)
       
     }
 
@@ -194,7 +194,7 @@ $(document).ready(function()  {
       var mouseY = d3.event.clientY
       
       ////Put the name in the tooltip HTML
-      tooltip.html('').html('<h4>'+d.Agencies+'</h4>')
+      tooltip.html('').html('<b>'+d.Agencies+'</b><br>Total Respondents: '+d.TotalEnrollment)
 
 
       ////Calculate positioning and move tooltip
@@ -210,7 +210,7 @@ $(document).ready(function()  {
     }
 
     function hideToolTip(d,i){
-      tooltip.classed('show', false)
+      tooltip.classed('showit', false)
     }
     //////////////////////////////////////////////////////////
 

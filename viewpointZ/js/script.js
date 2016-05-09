@@ -54,7 +54,7 @@ var arcs = svg.selectAll("path")
     // var decimal = d3.format(".1f")
     
     function showToolTip(d,i){
-      tooltip.classed('show', true)
+      tooltip.classed('showthetooltip', true)
     }
 
 
@@ -81,7 +81,7 @@ var arcs = svg.selectAll("path")
     }
 
     function hideToolTip(d,i){
-      tooltip.classed('show', false)
+      tooltip.classed('showthetooltip', false)
     }
     //////////////////////////////////////////////////////////
 
