@@ -34,7 +34,9 @@
 <!--             <li class="active"><a class="scrollbtn" href="#home2">Home</a></li> -->
 <!--             <li><a class="scrollbtn" href="#home2">Home</a></li> -->
             <li><a class="scrollbtn" href="#summary">Summary</a></li>
+            <li><a class="scrollbtn" href="#indicies">Index Breakdown</a></li>
             <li><a class="scrollbtn" href="#index">Agency Scores</a></li>
+            <li><a class="scrollbtn" href="#line">Line</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -60,6 +62,15 @@
       <div id="sunburst"></div>
       <p class="pSun"><b>Overview of the 2015 survey:</b> All survey statement/questions are grouped by section. Sections descend in clockwise fashion depicting the highest to lowest average rate of positive response. Within each section, the individual questions are also sorted by this manner. Further, color scaling indicates differences in positive response rates from that the overall survey average, highlighting the greatest deviations from the average.</p>
     </div>
+
+    <div class="fullheight grade_white" data-anchor="indicies">
+      <h1>Indicies Breakdown</h1>
+      <div id="sunburstIndex"></div>
+      <p class="pSun"><b>Indicies Breakdown: </b>This is the breakdown of the various cultural factor/subfactors used for evaluation, as derived from the survey.</p>
+    </div>
+
+
+
 
     <div class="fullheight grade_orange" data-anchor="index">
       <h1>Agency Scores</h1>
@@ -101,6 +112,36 @@
       <p class="pSun">The above ratings are based on percent positive responses to the items that make up each index. The ratings provide a reliable assessment of where agencies fall within each index: HCAAF, Employee Engagement, Global Satisfaction, and the New IQ. Survey data is provided dating back to 2011. results.</p>
     </div>
 
+    <div class="fullheight grade_orange" data-anchor="line">
+      <h1>Line Chart</h1>
+      <!-- UI DIVS -->
+      <div class="uis">
+      <div>
+      <p><b>Cultural Index</b></p>
+      <select id="selectedCulturalIndex">
+      <option value="ENGAG_INDX_">Employee Engagement Index</option>
+      <option value="HCAAF_LEAD_">Leadership/Knowledge Management Index</option>
+      <option value="HCAAF_RSLT_">Results-Oriented Performance Culture Index</option>
+      <option value="HCAAF_TLNT_">Talent Management Index</option>
+      <option value="HCAAF_SATF_">Job Satisfaction Index</option>
+      <option value="NEWIQ_INDX_">New IQ Index</option>
+      <option selected="selected" value="GLOBL_SATF_">Global Satisfaction Index</option>
+      </select>
+      <select id="#fromAgencies">
+      <option selected disabled value=''>Choose an Agency</option>
+      </select>
+
+
+
+      </div>
+      <!-- END UI DIVS -->  
+      <div id="linechart"></div>
+      <p class="pSun">The above ratings are based on percent positive responses to the items that make up each index. The ratings provide a reliable assessment of where agencies fall within each index: HCAAF, Employee Engagement, Global Satisfaction, and the New IQ. Survey data is provided dating back to 2011. results.</p>
+    </div>
+
+
+
+
 
   <body>
 
@@ -115,7 +156,17 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
     
     <!-- sunburst script -->
-    <script type="text/javascript" src="js/script.js"></script>
+<!--     <script type="text/javascript" src="js/script.js"></script> -->
+
+    <!-- sunburst script with labels-->
+    <script type="text/javascript" src="js/sunburst.js"></script>
+
+    <!-- sunburst script with labels-->
+    <script type="text/javascript" src="js/sunburstIndex.js"></script>    
+
+    <!-- line script with labels-->
+    <script type="text/javascript" src="js/line.js"></script>
+
 
     <!-- ajax library -->
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>

@@ -50,6 +50,7 @@ $(document).ready(function()  {
     .append("g")
       .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
+
   var agencyData     
 
   d3.csv("data/agencyRatingsTrend.csv", function(error, data) {
@@ -86,38 +87,6 @@ $(document).ready(function()  {
         .style("text-anchor", "end")
         .text("Dependent Variable")
 
-    // //legend y position
-    // var LYP = 300, 
-    //   LXP = 570;
-      
-    // svg.append("text").attr("class", "label").attr("x", LXP - 5).attr("y", LYP).text("Agency Type").style("font-weight", "bold");
-
-    // //color legend
-    // svg.append("circle").attr("cx", LXP).attr("cy", LYP + 20).attr("r", 12).style("fill", "rgb(233,79,55)").attr("stroke", "#000");
-    // svg.append("text").attr("class", "label").attr("x", LXP + 15).attr("y", LYP + 25).style("text-anchor", "start").text(function(d) {
-    //   return "Pres. Counsel";
-    // });
-    // svg.append("circle").attr("cx", LXP).attr("cy", LYP + 50).attr("r", 12).style("fill", "rgb(63, 163, 197)").attr("stroke", "#000");
-    // svg.append("text").attr("class", "label").attr("x", LXP + 15).attr("y", LYP + 55).style("text-anchor", "start").text(function(d) {
-    //   return "Ind. Agency";
-    // });
-    // svg.append("circle").attr("cx", LXP).attr("cy", LYP + 80).attr("r", 12).style("fill", "rgb(68, 187, 164)").attr("stroke", "#000");
-    // svg.append("text").attr("class", "label").attr("x", LXP + 15).attr("y", LYP + 85).style("text-anchor", "start").text(function(d) {
-    //   return "Other";
-    // });
-    // svg.append("text").attr("class", "label").attr("x", LXP - 5).attr("y", LYP + 110).text("Respondents").style("font-weight", "bold");
-
-    // //size legend
-    // svg.append("circle").attr("cx", LXP).attr("cy", LYP + 30 + 110).attr("r", 20).style("fill", "#bbb").attr("stroke", "#000");
-    // svg.append("text").attr("class", "label").attr("x", LXP + 25).attr("y", LYP + 140).style("text-anchor", "start").text("27,000");
-    // svg.append("circle").attr("cx", LXP).attr("cy", LYP + 60 + 110).attr("r", 15).style("fill", "#bbb").attr("stroke", "#000");
-    // svg.append("text").attr("class", "label").attr("x", LXP + 25).attr("y", LYP + 170).style("text-anchor", "start").text("18,000+");
-    // svg.append("circle").attr("cx", LXP).attr("cy", LYP + 80 + 110).attr("r", 9).style("fill", "#bbb").attr("stroke", "#000");
-    // svg.append("text").attr("class", "label").attr("x", LXP + 25).attr("y", LYP + 190).style("text-anchor", "start").text("9,000+");
-    // svg.append("circle").attr("cx", LXP).attr("cy", LYP + 93 + 110).attr("r", 4).style("fill", "#bbb").attr("stroke", "#000");
-    // svg.append("text").attr("class", "label").attr("x", LXP + 25).attr("y", LYP + 210).style("text-anchor", "start").text("100+");
-
-
     //circles
     var dots = svg.selectAll(".dot")
       .data(data.sort(
@@ -130,22 +99,14 @@ $(document).ready(function()  {
         .attr("r", 
           function(d) {
             return (4 + (d.TotalEnrollment * .0008));
-          })//gave it a base 3.4 plus a proportional amount to the enrollment
-        // .attr("cx", 
-        //   function(d) {
-        //     return x(d.HCAAF_LEAD_2011);
-        //   })
-        // .attr("cy", 
-        //   function(d) {
-        //     return y(d.HCAAF_RSLT_2011);
-        //   })
+          })
         .style("fill", function(d) {
             if (d.type == 3) {
               return "rgb(68, 187, 164)"
             } else if (d.type == 2) {
               return "rgb(63, 163, 197)"
             } else {
-              return "rgb(233,79,55)"
+              return "rgb(152,206,0)"
             }
           })
 

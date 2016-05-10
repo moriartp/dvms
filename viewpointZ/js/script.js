@@ -12,7 +12,7 @@ var y = d3.scale.sqrt()
 
 var color = d3.scale.linear()
     .domain([31.3, 61.3, 91.3])
-    .range(["#3F88C5", "#F6F7EB", "#E94F37"]);
+    .range(["#6CCFF6", "#757780", "#98CE00"]);
 
 var partition = d3.layout.partition()
     .value(function(d) { return d.size; })

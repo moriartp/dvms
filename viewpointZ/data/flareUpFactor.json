@@ -1,0 +1,444 @@
+{
+    "name": "Overall",
+    "parent": "null",
+    "size": 10,
+    "approval": 61.30,
+    "type": "black",
+    "level": "red",
+    "statement": "The overall score is derived from the cummulative average of percent of positive responses to all statement/questions in the Viewpoint Survey.",
+    "children": [
+      {
+        "name": "Employee Engagement Index",
+        "parent": "Top Level",
+        "size": 1,
+        "approval": 53.65,
+        "type": "grey",
+        "level": "55%",
+        "statement": "Score derived from cummulative average of all statements in this section.",
+        "children": [
+          {
+            "name": "Diversity Management",
+            "parent": "Level 2: A",
+            "size": 1,
+            "approval": 62.9,
+            "type": "steelblue",
+            "level": "orange",
+            "statement": "Supervisors work well with employees of different backgrounds."
+          },
+          {
+            "name": "Verticle Communication",
+            "parent": "Level 2: A",
+            "size": 1,
+            "approval": 59.1,
+            "type": "steelblue",
+            "level": "red",
+            "statement": "Managers communicate the goals and priorities of the organization."
+          },
+          {
+            "name": "Goal-Orientation",
+            "parent": "Level 2: A",
+            "size": 1,
+            "approval": 58.8,
+            "type": "steelblue",
+            "level": "red",
+            "statement": "Managers review and evaluate the organization's progress toward meeting its goals and objectives."
+          },
+          {
+            "name": "Overall Leadership Performance",
+            "parent": "Level 2: A",
+            "size": 1,
+            "approval": 56.80,
+            "type": "steelblue",
+            "level": "red",
+            "statement": "Overall, how good a job do you feel is being done by the manager directly above your immediate supervisor?"
+          },
+          {
+            "name": "Foster Collaboration",
+            "parent": "Level 2: A",
+            "size": 1,
+            "approval": 54.2,
+            "type": "steelblue",
+            "level": "red",
+            "statement": "Managers support collaboration across work units to accomplish work objectives."
+          },
+          {
+            "name": "Program Support",
+            "parent": "Level 2: A",
+            "size": 1,
+            "approval": 53.4,
+            "type": "steelblue",
+            "level": "red",
+            "statement": "Senior leaders demonstrate support for Work/Life programs."
+          },
+          {
+            "name": "Respectability",
+            "parent": "Level 2: A",
+            "size": 1,
+            "approval": 51.4,
+            "type": "steelblue",
+            "level": "red",
+            "statement": "I have a high level of respect for my organization's senior leaders."
+          },
+          {
+            "name": "Lateral Communication",
+            "parent": "Level 2: A",
+            "size": 1,
+            "approval": 50.5,
+            "type": "steelblue",
+            "level": "red",
+            "statement": "Managers promote communication among different work units."
+          },
+          {
+            "name": "Integrity",
+            "parent": "Level 2: A",
+            "size": 1,
+            "approval": 50.40,
+            "type": "steelblue",
+            "level": "red",
+            "statement": "My organization's leaders maintain high standards of honesty and integrity."
+          },
+          {
+            "name": "Motivational",
+            "parent": "Level 2: A",
+            "size": 1,
+            "approval": 39.00,
+            "type": "steelblue",
+            "level": "red",
+            "statement": "In my organization, leaders generate high levels of motivation and commitment in the workforce."
+          }         
+        ]
+      },
+      {
+        "name": "Global Satisfaction Index",
+        "parent": "Top Level",
+        "size": 1,
+        "approval": 55.06,
+        "type": "grey",
+        "level": "red",
+        "statement": "Score derived from cummulative average of all statements in this section.",
+        "children": [
+          {
+            "name": "Safety",
+            "parent": "Level 2: A",
+            "size": 1,
+            "approval": 75.9,
+            "type": "steelblue",
+            "statement": "Employees are protected from health and safety hazards on the job.",
+            "level": "orange"
+          },
+          {
+            "name": "Threat Preparedness",
+            "parent": "Level 2: A",
+            "size": 1,
+            "approval": 75.90,
+            "type": "steelblue",
+            "statement": "My organization has prepared employees for potential security threats.",
+            "level": "red"
+          },
+          {
+            "name": "Mission Focus",
+            "parent": "Level 2: A",
+            "size": 1,
+            "approval": 73.2,
+            "type": "steelblue",
+            "statement": "My agency is successful at accomplishing its mission.",
+            "level": "red"
+          },
+          {
+            "name": "Skills Alignment",
+            "parent": "Level 2: A",
+            "size": 1,
+            "approval": 69.00,
+            "type": "steelblue",
+            "level": "red",
+            "statement": "The workforce has the job-relevant knowledge and skills necessary to accomplish organizational goals."
+          },
+          {
+            "name": "Inclusiveness",
+            "parent": "Level 2: A",
+            "size": 1,
+            "approval": 65.60,
+            "type": "steelblue",
+            "level": "red",
+            "statement": "Prohibited personnel practices are not tolerated."
+          },
+          {
+            "name": "Positive Work Environment",
+            "parent": "Level 2: A",
+            "size": 1,
+            "approval": 62.7,
+            "type": "steelblue",
+            "level": "red",
+            "statement": "I recommend my organization as a good place to work."
+          },
+          {
+            "name": "Diversity",
+            "parent": "Level 2: A",
+            "size": 1,
+            "approval": 56.50,
+            "type": "steelblue",
+            "level": "red",
+            "statement": "Policies and programs promote diversity in the workplace."
+          },
+          {
+            "name": "Apoliticism",
+            "parent": "Level 2: A",
+            "size": 1,
+            "approval": 50.7,
+            "type": "steelblue",
+            "level": "red",
+            "statement": "Arbitrary action, personal favoritism and coercion for partisan political purposes are not tolerated."
+          },
+          {
+            "name": "Recognition",
+            "parent": "Level 2: A",
+            "size": 1,
+            "approval": 56.50,
+            "type": "steelblue",
+            "level": "red",
+            "statement": "Employees are recognized for providing high quality products and services."
+          },
+          {
+            "name": "Empowerment",
+            "parent": "Level 2: A",
+            "size": 1,
+            "approval": 43.00,
+            "type": "steelblue",
+            "level": "red",
+            "statement": "Employees have a feeling of personal empowerment with respect to work processes."
+          },
+          {
+            "name": "Action-Orientation",
+            "parent": "Level 2: A",
+            "size": 1,
+            "approval": 39.00,
+            "type": "steelblue",
+            "level": "red",
+            "statement": "I believe the results of this survey will be used to make my agency a better place to work."
+          },
+          {
+            "name": "Innovative Culture",
+            "parent": "Level 2: A",
+            "size": 1,
+            "approval": 36.7,
+            "type": "steelblue",
+            "level": "red",
+            "statement": "Creativity and innovation are rewarded."
+          },
+          {
+            "name": "Meritocracy",
+            "parent": "Level 2: A",
+            "size": 1,
+            "approval": 21.1,
+            "type": "steelblue",
+            "level": "red",
+            "statement": "Pay raises depend on how well employees perform their jobs."
+          }          
+        ]
+      },
+
+      {
+        "name": "New IQ Index",
+        "parent": "Top Level",
+        "size": 1,
+        "approval": 49.80,
+        "type": "grey",
+        "level": "red",
+        "statement": "Score derived from cummulative average of all statements in this section.",
+        "children": [
+          {
+            "name": "Work",
+            "parent": "Level 2: A",
+            "size": 1,
+            "approval": 65.20,
+            "type": "steelblue",
+            "level": "orange",
+            "statement": "Considering everything, how satisfied are you with your job?"
+          },
+          {
+            "name": "Pay",
+            "parent": "Level 2: A",
+            "size": 1,
+            "approval": 57.1,
+            "type": "steelblue",
+            "level": "red",
+            "statement": "Considering everything, how satisfied are you with your pay?"
+          },
+          {
+            "name": "Organization",
+            "parent": "Level 2: A",
+            "size": 1,
+            "approval": 55.7,
+            "type": "steelblue",
+            "level": "red",
+            "statement": "Considering everything, how satisfied are you with your organization?"
+          },
+          {
+            "name": "Development Opportunities",
+            "parent": "Level 2: A",
+            "size": 1,
+            "approval": 51.60,
+            "type": "steelblue",
+            "level": "red",
+            "statement": "How satisfied are you with the training you receive for your present job?"
+          },
+          {
+            "name": "Democratic Decision-Making",
+            "parent": "Level 2: A",
+            "size": 1,
+            "approval": 49.60,
+            "type": "steelblue",
+            "level": "red",
+            "statement": "How satisfied are you with your involvement in decisions that affect your work?"
+          },
+          {
+            "name": "Transparency",
+            "parent": "Level 2: A",
+            "size": 1,
+            "approval": 46.8,
+            "type": "steelblue",
+            "level": "red",
+            "statement": "How satisfied are you with the information you receive from management on what's going on in your organization?"
+          },
+          {
+            "name": "Recognition",
+            "parent": "Level 2: A",
+            "size": 1,
+            "approval": 46.6,
+            "type": "steelblue",
+            "level": "red",
+            "statement": "How satisfied are you with the recognition you receive for doing a good job?"
+          },
+          {
+            "name": "Policy Appropriateness",
+            "parent": "Level 2: A",
+            "size": 1,
+            "approval": 40.80,
+            "type": "steelblue",
+            "level": "red",
+            "statement": "How satisfied are you with the policies and practices of your senior leaders?"
+          },
+          {
+            "name": "Growth Opportunity",
+            "parent": "Level 2: A",
+            "size": 1,
+            "approval": 34.80,
+            "type": "steelblue",
+            "level": "red",
+            "statement": "How satisfied are you with your opportunity to get a better job in your organization?"
+          }
+        ]
+      },
+
+      {
+        "name": "HCAAF Indicies",
+        "parent": "Top Level",
+        "size": 1,
+        "approval": 69.88,
+        "type": "grey",
+        "level": "red",
+        "statement": "Score derived from cummulative average of all statements in this section.",
+        "children": [
+          {
+            "name": "Respectfulness",
+            "parent": "Level 2: A",
+            "size": 1,
+            "approval": 80.90,
+            "type": "steelblue",
+            "level": "orange",
+            "statement": "My supervisor treats me with respect."
+          },
+          {
+            "name": "Work-Life Support",
+            "parent": "Level 2: A",
+            "size": 1,
+            "approval": 77.80,
+            "type": "steelblue",
+            "level": "red",
+            "statement": "My supervisor supports my need to balance work and other life issues."
+          },
+          {
+            "name": "Feedback",
+            "parent": "Level 2: A",
+            "size": 1,
+            "approval": 77.5,
+            "type": "steelblue",
+            "level": "red",
+            "statement": "In the last six months, my supervisor has talked with me about my performance."
+          },
+          {
+            "name": "Two-Way Communication",
+            "parent": "Level 2: A",
+            "size": 1,
+            "approval": 75.70,
+            "type": "steelblue",
+            "level": "red",
+            "statement": "My supervisor listens to what I have to say."
+          },
+          {
+            "name": "Overall",
+            "parent": "Level 2: A",
+            "size": 1,
+            "approval": 69.70,
+            "type": "steelblue",
+            "level": "red",
+            "statement": "Overall, how good a job do you feel is being done by your immediate supervisor?"
+          },
+          {
+            "name": "Workforce Diversity",
+            "parent": "Level 2: A",
+            "size": 1,
+            "approval": 66.90,
+            "type": "steelblue",
+            "level": "red",
+            "statement": "My supervisor is committed to a workforce representative of all segments of society."
+          },
+          {
+            "name": "Trustworthiness",
+            "parent": "Level 2: A",
+            "size": 1,
+            "approval": 66.5,
+            "type": "steelblue",
+            "level": "red",
+            "statement": "I have trust and confidence in my supervisor."
+          },
+          {
+            "name": "Leadership Development",
+            "parent": "Level 2: A",
+            "size": 1,
+            "approval": 65.50,
+            "type": "steelblue",
+            "level": "red",
+            "statement": "My supervisor provides me with opportunities to demonstrate my leadership skills."
+          },
+          {
+            "name": "Professional Development",
+            "parent": "Level 2: A",
+            "size": 1,
+            "approval": 64.3,
+            "type": "steelblue",
+            "level": "red",
+            "statement": "Supervisors in my work unit support employee development."
+          },
+          {
+            "name": "Interpersonal Impact",
+            "parent": "Level 2: A",
+            "size": 1,
+            "approval": 62.5,
+            "type": "steelblue",
+            "level": "red",
+            "statement": "Discussions with my supervisor about my performance are worthwhile."
+          },
+          {
+            "name": "Constructiveness",
+            "parent": "Level 2: A",
+            "size": 1,
+            "approval": 61.4,
+            "type": "steelblue",
+            "level": "red",
+            "statement": "My supervisor provides me with constructive suggestions to improve my job performance."
+          }
+        ]
+      }
+    ]
+  }
