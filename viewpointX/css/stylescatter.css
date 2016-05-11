@@ -1,0 +1,301 @@
+body {
+	font-family: 'Montserrat', sans-serif;
+}
+
+header{
+	left:50%;
+	margin-top:10px;
+	margin-left:250px;
+	margin-right:250px;
+	padding: 10px;
+	font-size: 20px;
+	font-weight: bold;
+	text-align: center;
+	font-stretch: expanded;
+	color: lightgray;
+	-webkit-transition: color 1s ease-out;
+	-moz-transition: color 1s ease-out;
+	-o-transition: color 1s ease-out;
+	-ms-transition: color 1s ease-out;
+	transition: color 1s ease-out;
+} 
+
+header:hover {
+   color: #393E41;
+}
+
+/*h1 {
+	font-size: 125px;
+}*/
+
+/*h2{
+	left:50%;
+	margin-top:10px;
+	font-weight: bold;
+	text-align: center;
+	font-stretch: expanded;
+	color: #393E41;
+} */
+
+
+
+
+a {
+	font-style: none;
+	text-decoration: none;
+	color: lightgray;
+	-webkit-transition: color 1s ease-out;
+	-moz-transition: color 1s ease-out;
+	-o-transition: color 1s ease-out;
+	-ms-transition: color 1s ease-out;
+	transition: color 1s ease-out;
+}
+
+section{
+	display: block;
+}
+
+a:hover {
+	color: #E94F37;
+}
+
+path {
+  stroke: #F6F7EB;
+}
+
+svg {
+	margin-top: 20px;
+
+/*	TRANSFORM TO ENSURE SVG IS ALWAYS CENTERED*/
+	align-self: center;
+	position: relative;
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+	transform: translateX(-50%);
+
+/*	NOT CONVINCED THIS DOES ANYTHING*/
+	/*vertical-align: center;
+	position: relative;
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+	transform: translateX(-50%);*/
+}
+
+.tooltip {
+	color: red;
+}
+
+footer {
+	margin-top:20px;
+	margin-left:250px;
+	margin-right:250px;
+	font-size: 14px;
+	font-weight: bold;
+	text-align: center;
+	font-stretch: expanded;
+	color: lightgray;
+}
+
+select{
+/*	margin:20px;*/
+	margin-top: 2px;
+	margin-bottom: 15px;
+}
+
+html {
+	min-height: 1000px;
+}
+
+input[type='range'] {
+	-webkit-appearance: none !important;
+	-webkit-border-radius: 5px;
+	/*-webkit-box-shadow: inset 0 0 5px #333;*/
+	background-color: #3F88C5;
+	height: 5px;
+	width: 227px;
+	margin-bottom: 20px;
+	margin-top: 20px;
+	/*position: relative;
+	 left: 10%;*/
+
+}
+
+input[type='range']::-webkit-slider-thumb {
+	-webkit-appearance: none !important;
+	-webkit-border-radius: 15px;
+	background-color: #bbb;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#bbb), to(#888));
+	border: 1px solid #000;
+	height: 25px;
+	width: 5px;
+}
+
+body {
+	font: 10px sans-serif;
+}
+
+.axis path, .axis line {
+	fill: none;
+	stroke: #000;
+	shape-rendering: crispEdges;
+}
+
+.dot {
+	stroke: #000;
+	stroke-width: 1;
+	font-size: 0px;
+}
+
+.dot:hover {
+	stroke: #bbb;
+	font-size: 10px;
+}
+
+.dot.recede{
+	opacity: .25;
+}
+
+#range {
+	font: 85px sans-serif;
+	text-align: center;
+}
+
+input[type=range] {
+}
+
+
+.tooltip {
+	position: absolute;
+	text-align: left;
+	padding: 2px;
+	font: 12px sans-serif;
+	background: #EDEDED;
+	border: 0px;
+	border-radius: 8px;
+	pointer-events: none;
+	display: none;
+}
+
+.tooltip.showit {
+	display: block;
+	opacity: 1;
+}
+
+
+table {
+	border-collapse: collapse;
+	width: 400px;
+	margin-left: 0px;
+}
+
+td {
+	text-align: left;
+	border-bottom: 2px solid #bbb;
+}
+
+th {
+	padding-top: 10px;
+	text-align: left;
+	/*padding-left: 20px;*/
+}
+
+/*h3 {
+	text-align: center;
+	margin-bottom: 0px;
+	font-size: 12pt;
+}*/
+	
+h4	{
+	text-align: center;
+}
+
+.chart {
+/*	width: 100%;
+	height: 500px;
+*/
+	/*align-self: center;
+	position: relative;
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+	transform: translateX(-50%);*/
+
+	display: block;
+
+
+}
+
+
+
+/*@media only screen and (min-width: 481px) {
+	.chart {
+		width: 100%;
+		height: 500px;
+	}
+	table{
+		width:500px;
+		margin-left: 10%;
+	}
+	h3, h4{
+		margin-left: 20%;
+	}
+	h3{
+		font-size: 16pt;
+	}
+		
+}
+@media only screen and (min-width: 769px) {
+	.chart {
+		width: 100%;
+		height: 600px;
+	}
+	
+	table{
+		width:700px;
+		left: -20px;
+		margin-left: 15%;
+	}
+	h3, h4{
+		margin-left: 20%;
+	}
+	h3{
+		font-size: 16pt;
+	}
+		
+}*/
+
+button {
+	width: 4em;
+	height: 2em;
+	background: #3F88C5;
+	border: 1px solid rgb(53, 135, 212);
+	border-radius: 4px;
+	color: white;
+	font-size: 1.5em;
+	margin-top:20px;
+}
+
+h4 {
+	text-align: center;
+	margin-bottom: .5em;
+	margin-top: .5em;
+}
+
+.label {
+	font-size: 1.2em;
+}
+
+#agencyinfo {
+	position: absolute;
+}
+
+.uis{
+	position: absolute;
+	margin-left: 1px;
+	padding: 20px;
+	border-color: black;
+	border-radius: 5px;
+	border-width: 3px;
+}
