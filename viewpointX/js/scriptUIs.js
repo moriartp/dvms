@@ -262,13 +262,10 @@ var update = function() {
         .attr("cx", function(d) {
           return x( d[indep+sliderValue] )
         })
-
-        .transition()
-        .duration(1000)
         .attr("cy", function(d) {
-            return y( d[depend+sliderValue] )
-
-        }).each(function (d){
+          return y( d[depend+sliderValue] )
+        })        
+        .each(function (d){
           positions.push( [ x( d[indep+sliderValue] ),  y( d[depend+sliderValue] ) ] )
         })
         positions.sort(function (a,b) {

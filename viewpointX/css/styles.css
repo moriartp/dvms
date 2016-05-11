@@ -2,6 +2,9 @@ a:hover {
 	color: #E94F37;
 }
 
+path{
+	stroke:#000;
+}
 .sunburstBorder {
   stroke: #F6F7EB;
 }
@@ -103,6 +106,7 @@ div.tooltip:before{
 }
 .countrygroup.active .countrylabel{
 	display: block;
+	stroke: black;
 }
 .countrygroup.active path{
 	stroke: red;
