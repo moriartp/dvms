@@ -1,6 +1,7 @@
-var depend = document.getElementById("dep").value;
+var depend = 'GLOBL_SATF_2015';
 var indep = document.getElementById("ind").value;
-var sliderValue = $("#slider").val();
+// var sliderValue = $("#slider").val();
+var xAxisElement
 
 
 $(document).ready(function()  {
@@ -58,17 +59,31 @@ $(document).ready(function()  {
     chartSetup(agencyData)
   });
 
+
+  function scaleUpdate(data){
+
+    var values = data.map( function(d) {
+      return +d[indep]
+    })
+
+    x.domain(d3.extent(values)).nice();
+    y.domain([45, 80]).nice();
+  }
+
   function chartSetup(data){
 
-    x.domain([40, 90]).nice();
-    y.domain([40, 90]).nice();
+    scaleUpdate(data)
+
+    // x.domain([40, 90]).nice();
+    // y.domain([45, 80]).nice();
 
     //x axis
-    svg.append("g")
+    xAxisElement = svg.append("g")
       .attr("class", "x axis")
       .attr("transform", "translate(0," + height + ")")
       .call(xAxis)
-      .append("text")
+
+    xAxisElement.append("text")
         .attr("class", "label")
         .attr("x", width)
         .attr("y", -6)
@@ -98,16 +113,17 @@ $(document).ready(function()  {
         .attr("class", "dot")
         .attr("r", 
           function(d) {
-            return (4 + (d.TotalEnrollment * .0008));
+            return (10 + (d.TotalEnrollment * .0008));
           })
         .style("fill", function(d) {
-            if (d.type == 3) {
-              return "rgb(68, 187, 164)"
-            } else if (d.type == 2) {
-              return "rgb(63, 163, 197)"
-            } else {
-              return "rgb(152,206,0)"
-            }
+            // if (d.type == 3) {
+            //   return "rgb(68, 187, 164)"
+            // } else if (d.type == 2) {
+            //   return "rgb(63, 163, 197)"
+            // } else {
+            //   return "rgb(152,206,0)"
+            // }
+            return randomColor([50,255])
           })
 
     ///ADD A TOOLTIP TOOLTIP TOOLTIP////
@@ -176,73 +192,6 @@ $(document).ready(function()  {
     //////////////////////////////////////////////////////////
 
 
-
-        
-    var running = false;
-    var timer;
-    
-    $("button").on("click", function() {
-    
-      var duration = 3000,
-        maxstep = 2015,
-        minstep = 2011;
-      
-      if (running == true) {
-      
-        $("button").html("Play");
-        running = false;
-        clearInterval(timer);
-        
-      } 
-      
-      else if (running == true && $("#slider").val() == maxstep) {
-         running = true;
-         $("button").html("Play1");
-         
-      
-      } 
-
-      else if (running == false) {
-      
-        $("button").html("Pause");
-        
-        sliderValue = $("#slider").val();
-        
-        timer = setInterval( function(){
-            if (sliderValue < maxstep){
-              sliderValue++;
-              $("#slider").val(sliderValue);
-              $('#range').html(sliderValue);
-            }
-            $("#slider").val(sliderValue);
-            update();
-          
-        }, duration);
-        running = true;
-        
-        
-      }
-
-    });
-
-
-
-
-  
-    $("#slider").on("change", function(){
-      console.log('sliderChange')
-      sliderValue = $("#slider").val();
-      update();
-      $("#range").html($("#slider").val());
-      clearInterval(timer);
-      $("button").html("Play");
-    });
-
-    $("#dep").on("change", function(){
-      depend = document.getElementById("dep").value;
-      update();
-    });
-
     $("#ind").on("change", function(){
       indep = document.getElementById("ind").value;
       update();
@@ -255,6 +204,9 @@ $(document).ready(function()  {
 
   
 var update = function() {
+
+  scaleUpdate(agencyData)
+  xAxisElement.transition().duration(1000).call(xAxis)
     
       var positions = []
       d3.selectAll(".dot")
@@ -262,13 +214,13 @@ var update = function() {
         .transition()
         .duration(1000)
         .attr("cx", function(d) {
-          return x( d[indep+sliderValue] )
+          return x( d[indep] )
         })
         .attr("cy", function(d) {
-          return y( d[depend+sliderValue] )
+          return y( d[depend] )
         })        
         .each(function (d){
-          positions.push( [ x( d[indep+sliderValue] ),  y( d[depend+sliderValue] ) ] )
+          positions.push( [ x( d[indep] ),  y( d[depend] ) ] )
         })
         positions.sort(function (a,b) {
           return a[0] - b[0]
@@ -281,9 +233,16 @@ var update = function() {
         svg.append('path')
           .attr('class', 'regline')
           .attr('d', regline)
-          .style('stroke', '#3F88C5')
-          .style('stroke-width', 2)
+          .style('stroke', '#000')
+          .style('stroke-width', 25)
+          .style('opacity', .05)
     };
 
     
   });
+
+function randomColor(range){
+    var range = range || [0, 255]
+    function getRandom(){return Math.floor( Math.random()*(range[1]-range[0])+range[0] ) }
+    return 'rgb('+getRandom()+','+getRandom()+','+getRandom()+')'
+}

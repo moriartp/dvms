@@ -11,9 +11,8 @@
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom CSS to (overwrite Bootstrap) -->
     <link href="css/graphic.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="css/styles.css">
-
     <link rel="stylesheet" type="text/css" href="css/stylescatter.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
 
   
   </head>
@@ -50,7 +49,7 @@
       </div>
     </nav>  
 
-    <h1 class="absoluted"><span class="textHighlight">Federal Employee Viewpoint Survey</span></h1>
+    <h1 class="absoluted"><span class="textHighlight"></span></h1>
     <div id="carousel-example-generic" class="carousel slide" data-ride="carousel" data-anchor="home">
         <ol class="carousel-indicators">
           <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
@@ -60,17 +59,17 @@
         <div class="carousel-inner" role="listbox">
           <div class="item active">
               <div class="carousel-caption">
-                <h3>The 2015 Federal Employee Viewpoint Survey collected 0ver 400,000 responses from federal employees to learn about the culture and work environments of numerous  agencies.</h3>
+                <h3>The 2015 Federal Employee Viewpoint Survey collected 0ver 400,000 responses from federal employees to learn about the culture, work environments, and levels of overall satisfaction experience by agency employees.</h3>
               </div>
           </div>
           <div class="item">
             <div class="carousel-caption">
-                <h3>By aggregating information provided by  individual employees we can understand the  organizational strengths and weaknesses throughout the government.</h3>
+                <h3>By aggregating information provided by  individual employees we can understand the  organizational strengths and weaknesses throughout the government and understand what factors contribute to employment satisfaction.</h3>
               </div>
           </div>
           <div class="item">
             <div class="carousel-caption">
-                <h3>With this information, strategic decisions may be made that will address organizational shortcomings as identified by the very people who make up our administrative offices</h3>
+                <h3>With this information, strategic decisions may be made that will address organizational shortcomings as identified by the very people who make up our administrative offices, and work to increase overal levels of satisfaction with federal agencies.</h3>
               </div>
           </div>
         </div>
@@ -93,10 +92,10 @@
 
 
     <div class="fullheight grade_orange" data-anchor="scatter">
-      <h1>Agency Scores</h1>
+      <h1>What Brings Us Work Satisfaction?</h1>
       <!-- UI DIVS -->
       <div class="uis">
-      <div>
+<!--       <div>
       <p><b>Dependent Index Variable (Y Axis)</b></p>
       <select id="dep">
       <option value="ENGAG_INDX_">Employee Engagement Index</option>
@@ -107,25 +106,31 @@
       <option value="NEWIQ_INDX_">New IQ Index</option>
       <option selected="selected" value="GLOBL_SATF_">Global Satisfaction Index</option>
       </select>
-      </div>
+      </div> -->
       <div>
       <p><b>Independent Index Variable (X Axis)</b></p>
       <select id="ind">
-      <option value="ENGAG_INDX_">Employee Engagement Index</option>
-      <option value="HCAAF_LEAD_">Leadership/Knowledge Management Index</option>
-      <option value="HCAAF_RSLT_">Results-Oriented Performance Culture Index</option>
-      <option value="HCAAF_TLNT_">Talent Management Index</option>
-      <option value="HCAAF_SATF_">Job Satisfaction Index</option>
-      <option value="NEWIQ_INDX_">New IQ Index</option>
-      <option value="GLOBL_SATF_">Global Satisfaction Index</option>
+      <option value="ENGAG_INDX_2015">Effective, Meaningful Goals</option>
+      <option value="HCAAF_LEAD_2015">Respect for Leadership</option>
+      <option value="HCAAF_RSLT_2015">Culture of Constant Improvement</option>
+      <option value="HCAAF_TLNT_2015">The Right Team</option>
+      <option value="HCAAF_SATF_2015">Gratifying Work</option>
+      <option value="NEWIQ_INDX_2015">Inclusive Environment</option>
+      <option value="ENGAG_LEAD_2015">Integrity of Leadership</option>
+      <option value="ENGAG_SUPV_2015">Supervisory Relationship</option>
+      <option value="NEWIQ_FAIR_2015">Equitable Treatment</option>
+      <option value="NEWIQ_OPEN_2015">Diversity</option>
+ 
+
+      
       </select>
       </div>
-      <div>
+<!--       <div>
       <input id="slider" type="range" min="2011" max="2015" value="2011" step="1" />
       <span id="range">2011</span>
       </div><div>
       <button name="play" id="play">Play</button>
-      </div>
+      </div> -->
       </div>
       <!-- END UI DIVS -->  
       <div id="chart"></div>
@@ -169,11 +174,16 @@
     <script type="text/javascript" src="js/sunburst.js"></script>
 
     <!-- sunburst script with labels-->
-    <script type="text/javascript" src="js/scriptUIs.js"></script>
+    <script type="text/javascript" src="js/scatter.js"></script>
 
 
     <!-- sunburst script with labels-->
     <script type="text/javascript" src="js/lines.js"></script>    
+
+    <!-- Stats library -->
+    <script src="js/simple_statistics.min.js"></script>
+
+
 
 
 

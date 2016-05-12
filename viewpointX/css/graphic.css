@@ -11,6 +11,10 @@ body, html{
     font-size: 33px;
 }
 
+h3{
+    margin-bottom: 110px;  
+}
+
 .carousel, .carousel-inner{
   width: 100%;
   height: 100%;
