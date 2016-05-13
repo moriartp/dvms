@@ -67,7 +67,7 @@ $(document).ready(function()  {
     })
 
     x.domain(d3.extent(values)).nice();
-    y.domain([45, 80]).nice();
+    y.domain([45, 75]).nice();
   }
 
   function chartSetup(data){
