@@ -54,7 +54,7 @@ $(document).ready(function()  {
 
   var agencyData     
 
-  d3.csv("data/agencyRatingsTrend.csv", function(error, data) {
+  d3.csv("data/agencyRatingsTrend1.csv", function(error, data) {
     agencyData = data
     chartSetup(agencyData)
   });
@@ -113,7 +113,7 @@ $(document).ready(function()  {
         .attr("class", "dot")
         .attr("r", 
           function(d) {
-            return (10 + (d.TotalEnrollment * .0008));
+            return (20);// + (d.TotalEnrollment * .0008));
           })
         .style("fill", function(d) {
             // if (d.type == 3) {
