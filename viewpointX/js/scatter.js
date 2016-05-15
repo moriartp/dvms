@@ -1,9 +1,9 @@
 var depend = 'GLOBL_SATF_2015';
 var indep = document.getElementById("ind").value;
-var indepDisplay = document.getElementById("ind").setAttribute("label", "new-label-value")
+var indepDisplay = document.getElementById("ind").getAttribute("label")
 // var sliderValue = $("#slider").val();
 var xAxisElement
-
+console.log(indepDisplay)
 
 $(document).ready(function()  {
   
