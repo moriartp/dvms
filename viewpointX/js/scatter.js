@@ -118,14 +118,41 @@ $(document).ready(function()  {
             return (20);// + (d.TotalEnrollment * .0008));
           })
         .style("fill", function(d) {
-            // if (d.type == 3) {
-            //   return "rgb(68, 187, 164)"
-            // } else if (d.type == 2) {
-            //   return "rgb(63, 163, 197)"
-            // } else {
-            //   return "rgb(152,206,0)"
-            // }
-            return randomColor([50,255])
+            if (d.type == 1) {
+              return "#8dd3c7"
+            } else if (d.type == 2) {
+              return "#ffffb3"
+            } else if (d.type == 3) {
+              return "#bebada"
+            } else if (d.type == 4) {
+              return "#fb8072"
+            } else if (d.type == 5) {
+              return "#80b1d3"
+            } else if (d.type == 6) {
+              return "#fdb462"
+            } else if (d.type == 7) {
+              return "#b3de69"
+            } else if (d.type == 8) {
+              return "#fccde5"
+            } else if (d.type == 9) {
+              return "#d9d9d9"
+            } else if (d.type == 10) {
+              return "#bc80bd"
+            } else if (d.type == 11) {
+              return "#ccebc5"
+            } else if (d.type == 12) {
+              return "#ffed6f"
+            } else if (d.type == 13) {
+              return "#fb9a99"
+            } else if (d.type == 14) {
+              return "#cab2d6"
+            } else {
+              return "#fdbf6f"              
+                          }
+
+
+
+
           })
 
     ///ADD A TOOLTIP TOOLTIP TOOLTIP////
