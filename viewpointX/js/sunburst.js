@@ -10,7 +10,8 @@ var y = d3.scale.linear()
 
 var color = d3.scale.linear()
     .domain([31.3, 61.3, 91.3])
-    .range(["#007871", "#a8b4ba", "#faf046"]);
+    .range(["#af8dc3", "#a8b4ba", "#7fbf7b"]);    
+    // .range(["#007871", "#a8b4ba", "#faf046"]);
   
 
 var svg = d3.select("#sunburst").append("svg")
@@ -117,6 +118,28 @@ d3.json("data/flareUp.json", function(error, root) {
       });
   }
 });
+
+
+///legend
+
+var legend = d3.select('#legend')
+  .append('ul')
+    .attr('class', 'list-inline');
+
+var keys = legend.selectAll('li.key')
+    .data(color.range());
+
+keys.enter().append('li')
+    .attr('class', 'key')
+    .style('border-top-color', String)
+    .text(function(d) {
+        var r = color.invertExtent(d);
+        return formats.percent(r[0]);
+    });
+
+
+///
+
 
 d3.select(self.frameElement).style("height", height + "px");
 
