@@ -1,5 +1,6 @@
 var depend = 'GLOBL_SATF_2015';
 var indep = document.getElementById("ind").value;
+var indepDisplay = document.getElementById("ind").setAttribute("label", "new-label-value")
 // var sliderValue = $("#slider").val();
 var xAxisElement
 
@@ -88,7 +89,8 @@ $(document).ready(function()  {
         .attr("x", width)
         .attr("y", -6)
         .style("text-anchor", "end")
-        .text("Independent Variable");
+        .text(indepDisplay);//"Independent Variable");
+        console.log(indepDisplay)
 
     //y axis
     svg.append("g")
@@ -171,7 +173,7 @@ $(document).ready(function()  {
       var mouseY = d3.event.clientY
       
       ////Put the name in the tooltip HTML
-      tooltip.html('').html('<b>'+d.Agencies+'</b><br>Total Respondents: '+d.TotalEnrollment)
+      tooltip.html('').html('<h4>'+d.Agencies+'</h4><br>Satisfaction Rating: '+d.GLOBL_SATF_2015)
 
 
       ////Calculate positioning and move tooltip
