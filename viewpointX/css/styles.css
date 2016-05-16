@@ -122,3 +122,13 @@ div.tooltip:before{
 	stroke: #ddd;
 	stroke-dasharray: 4,4;
 }
+
+.y.axis .domain{
+	display: none;
+}
+
+.x.axis .domain{
+	stroke: #ddd;
+	stroke-dasharray: 4,4;
+	display: none;
+}
