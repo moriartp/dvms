@@ -7,7 +7,7 @@ function convert(d) {
   var emissions = [] 
   d3.keys(d).forEach(function(key){
     if (key != 'Country'){
-      emissions.push( {year: +key, val: +d[key]} )
+      emissions.push( {year: +key, val: +d[key], Agency: d.Country} )
       delete d[key]
     }
   })
@@ -206,6 +206,10 @@ function renderAllPaths(dataset){
     
     function showToolTip(d,i){
       tooltip.classed('showthetooltip', true)
+      tooltip.html('').append('h4').html(d[0].Agency)
+      d.forEach(function(q) { 
+        tooltip.append('p').html(q.year+' Index Rating: '+q.val)
+      })
     }
 
 
@@ -216,7 +220,7 @@ function renderAllPaths(dataset){
       var mouseY = d3.event.clientY
       
       ////Put the name in the tooltip HTML
-      tooltip.html('').html('<h4>'+d.Country+'</h4>')
+      
 
 
       ////Calculate positioning and move tooltip

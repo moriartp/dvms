@@ -132,3 +132,7 @@ div.tooltip:before{
 	stroke-dasharray: 4,4;
 	display: none;
 }
+
+.tick{
+	font-size: 16px;
+}
