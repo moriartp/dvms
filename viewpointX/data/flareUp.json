@@ -544,7 +544,7 @@
         "statement": "Score derived from cummulative average of all statements in this section.",
         "children": [
           {
-            "name": "Alternative Work Schedules",
+            "name": "Alt. Work Schedules",
             "parent": "Level 2: A",
             "size": 1,
             "approval": 89.00,
@@ -553,7 +553,7 @@
             "statement": "How satisfied are you with the Alternative Work Schedules (AWS) program in your agency?"
           },
           {
-            "name": "Health and Wellness Programs",
+            "name": "Health & Wellness",
             "parent": "Level 2: A",
             "size": 1,
             "approval": 79.9,
@@ -572,7 +572,7 @@
             "statement": "How satisfied are you with the Telework program in your agency?"
           },
           {
-            "name": "Employee Assistance Program",
+            "name": "Employee Assistance",
             "parent": "Level 2: A",
             "size": 1,
             "approval": 74.8,

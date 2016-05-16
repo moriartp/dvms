@@ -1,5 +1,5 @@
 var width = 960,
-    height = 800,
+    height = 650,
     radius = Math.min(width, height) / 2;
 
 var x = d3.scale.linear()
@@ -10,7 +10,8 @@ var y = d3.scale.linear()
 
 var color = d3.scale.linear()
     .domain([31.3, 61.3, 91.3])
-    .range(["#af8dc3", "#a8b4ba", "#7fbf7b"]);    
+    // .range(["#af8dc3", "#f7f7f7", "#7fbf7b"]);    
+    .range(["#d8b365", "#f7f7f7", "#5ab4ac"]); 
     // .range(["#007871", "#a8b4ba", "#faf046"]);
   
 

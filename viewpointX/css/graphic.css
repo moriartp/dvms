@@ -29,7 +29,7 @@ h3{
     min-height: 100%;
 }
 
-.grade_white{
+/*.grade_white{
   background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 41%, rgba(246,247,235,1) 100%);
 }
 
@@ -39,6 +39,25 @@ h3{
 .grade_orange{
   background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(246,247,235,1) 100%);
 }
+
+*/
+.grade_white{
+  background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 41%, rgba(168,180,186,1) 100%);
+}
+
+.grade_blue{
+  background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 41%, rgba(168,180,186,1) 100%);
+}
+.grade_orange{
+  background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(168,180,186,1) 100%);
+}
+
+
+
+
+
+
+
 
 h1.absoluted{
   position: absolute;
@@ -76,7 +95,7 @@ h1.absoluted{
 
 .pSun {
   font-size: 14px;
-  margin-top: 50px;
+  margin-top: 20px;
   margin-right: 25%;
   margin-left: 25%;
 }

@@ -70,7 +70,7 @@ $(document).ready(function()  {
     })
 
     x.domain(d3.extent(values)).nice();
-    y.domain([45, 75]).nice();
+    y.domain([45, 70]).nice();
   }
 
   function chartSetup(data){
@@ -91,7 +91,7 @@ $(document).ready(function()  {
         .attr("x", width)
         .attr("y", -6)
         .style("text-anchor", "end")
-        .text(indepDisplay);//"Independent Variable");
+        .text($('#ind option:selected').attr('label'));//"Independent Variable");
         console.log(indepDisplay)
 
     //y axis
@@ -258,6 +258,7 @@ var update = function() {
         })
         var regression = ss.linearRegression(positions)
         var regline = ['M', positions[0][0], (regression.b+regression.m*positions[0][0]),  'L', positions[positions.length - 1][0], (regression.b+regression.m*positions[positions.length-1][0]) ].join(' ')
+        var indepDisplay = $('#ind option:selected').attr('label')
 
         d3.select('.regline').remove()
 

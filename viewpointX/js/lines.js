@@ -1,5 +1,5 @@
 ////////////////////////////////////////////////
-//// Session 5
+//// LINES!
 ////////////////////////////////////////////////
 
 function convert(d) {
@@ -50,8 +50,8 @@ d3.csv("data/agencyRatingGlobalSatisfaction.csv", convert, function(error, datas
 ////////////////////////////////////////////////////////
 //// Global Vars
 ////////////////////////////////////////////////////////
-var margin = {top: 20, right: 90, bottom: 30, left: 70},
-    width = 975 - margin.left - margin.right,
+var margin = {top: 20, right: 250, bottom: 30, left: 250},
+    width = 1275 - margin.left - margin.right,
     height = 600 - margin.top - margin.bottom
 
 var xScale = d3.scale.linear()
@@ -130,7 +130,7 @@ function renderAllPaths(dataset){
 
   //// get the max of all country extents
   var vmax = d3.max(dataset, function(d){ return d.extent[1] })
-  yScale.domain( [40, vmax] )
+  yScale.domain( [45, vmax] )
 
   var xAxis = d3.svg.axis()
     .scale(xScale)
@@ -187,8 +187,57 @@ function renderAllPaths(dataset){
     })
     .attr('d', line)
     .attr('stroke', 'cadetblue')
-    .attr('stroke-width', 3)
+    .attr('stroke-width', 16)
     .attr('fill-opacity', '0')
     .attr('opacity', 0.4)
+    .attr('class',"trendline")
+
+
+    //////////////////////////////////////////////////////////
+    //// Adding a tooltip to follow the mouse
+    //////////////////////////////////////////////////////////
+    var tooltip = d3.select('body').append('g').attr('class', 'tooltip')
+
+    lines.on('mouseenter', showToolTip)
+              .on('mousemove', moveTooltip)
+              .on('mouseleave', hideToolTip)
+
+    // var decimal = d3.format(".1f")
+    
+    function showToolTip(d,i){
+      tooltip.classed('showthetooltip', true)
+    }
+
+
+    function moveTooltip(d,i){
+
+      ////Get the mouse X position 
+      var mouseX = d3.event.clientX + 82.5
+      var mouseY = d3.event.clientY
+      
+      ////Put the name in the tooltip HTML
+      tooltip.html('').html('<h4>'+d.Country+'</h4>')
+
+
+      ////Calculate positioning and move tooltip
+      var ttBCR = tooltip.node().getBoundingClientRect()
+      var topPosition = mouseY - ttBCR.height + pageYOffset - 14
+      var leftPosition = ( mouseX - ttBCR.width*1 ) + pageXOffset
+      
+      tooltip
+        .style({
+          top: topPosition+'px', 
+          left: leftPosition+'px'
+        })
+    }
+
+    function hideToolTip(d,i){
+      tooltip.classed('showthetooltip', false)
+    }
+    //////////////////////////////////////////////////////////
+
+
+
+
 
 }
