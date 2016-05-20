@@ -1,0 +1,129 @@
+html,body,#wrapper {
+	width: 100%;
+	height: 100%;
+	margin: 0px;
+}
+
+.chart {
+	font-family: Arial, sans-serif;
+	font-size: 12px;
+}
+
+.axis path,.axis line {
+	fill: none;
+	stroke: #000;
+	shape-rendering: crispEdges;
+}
+
+.bar {
+	fill: #33b5e5;
+}
+
+.bar-failed {
+	fill: #CC0000;
+}
+
+.bar-running {
+	fill: #669900;
+}
+
+.bar-succeeded {
+	fill: #33b5e5;
+}
+
+.bar-killed {
+	fill: #ffbb33;
+}
+
+rect:hover {
+  fill: lightskyblue;
+  /*transform: translate(0px, -40px);*/
+}
+
+.tooltip{
+	position: absolute;
+	text-align: center;
+	padding: 8px;
+	border: 1px solid #bbb;
+	background-color: rgba(255,255,255,0.9);
+	font-size: 12px;
+	border-radius: 3px;
+	max-width: 165px;
+	color: #333;
+	pointer-events: none;
+	display: none;
+	top: 0px;
+	left: 0px;
+}
+.tooltip.showthetooltip{
+	display: block;
+	opacity: 1;
+}
+.tooltip h4{
+	margin: 1px 0;
+	padding: 1px 0;
+}
+.tooltip p{
+	margin: 1px 0;
+	padding: 1px 0;
+	white-space: nowrap;
+}
+.tooltip:after,.tooltip:before{
+	top:100%;
+	left:50%;
+	border: solid transparent;
+	content:"";
+	height:0;
+	width:0;
+	position:absolute;
+	pointer-events:none;
+	z-index: 2;
+}
+div.tooltip:after{
+	border-color:rgba(0,0,0,0);
+	border-top-color:#fff;
+	border-width:7px;
+	margin-left:-7px;
+}
+div.tooltip:before{
+	border-color:rgba(102,102,102,0);
+	border-top-color:#bbb;
+	border-width:8px;
+	margin-left:-8px;
+}
+
+/*#forkme_banner {
+	display: block;
+	position: absolute;
+	top: 0;
+	right: 5px;
+	z-index: 10;
+	padding: 10px 40px 10px 5px;
+	color: #fff;
+	background:
+		url('http://dk8996.github.io/Gantt-Chart/images/blacktocat.png')
+		#0090ff no-repeat 95% 50%;
+	font-weight: 700;
+	box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+	border-bottom-left-radius: 2px;
+	border-bottom-right-radius: 2px;
+	text-decoration: none;
+}
+
+#twittme_banner {
+	display: block;
+	position: absolute;
+	top: 0;
+	right: 180px;
+	z-index: 10;
+	padding: 10px 40px 10px 5px;
+	color: #fff;
+	background:
+		url('http://dk8996.github.io/Gantt-Chart/images/twitter.png')
+		#0090ff no-repeat 95% 50%;
+	font-weight: 700;
+	box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+	border-bottom-left-radius: 2px;
+	border-bottom-right-radius: 2px;
+	text-decoration: none;
+}*/
