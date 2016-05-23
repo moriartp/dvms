@@ -25,7 +25,6 @@ d3.gantt = function() {
 
     var keyFunction = function(d) {
   return d.startDate + d.taskName + d.endDate;
-  console.log(d.startDate);
     };
 
     var rectTransform = function(d) {
@@ -60,12 +59,13 @@ d3.gantt = function() {
     };
 
     var initAxis = function() {
-      x = d3.time.scale().domain([ timeDomainStart, timeDomainEnd ]).range([ 0, width ]).clamp(true);
-      y = d3.scale.ordinal().domain(taskTypes).rangeRoundBands([ 0, height - margin.top - margin.bottom ], .1);
-      xAxis = d3.svg.axis().scale(x).orient("bottom").tickFormat(d3.time.format(tickFormat)).tickSubdivide(true)
+  x = d3.time.scale().domain([ timeDomainStart, timeDomainEnd ]).range([ 0, width ]).clamp(true);
+  y = d3.scale.ordinal().domain(taskTypes).rangeRoundBands([ 0, height - margin.top - margin.bottom ], .1);
+  xAxis = d3.svg.axis().scale(x).orient("bottom").tickFormat(d3.time.format(tickFormat)).tickSubdivide(true)
     .tickSize(8).tickPadding(8);
-    yAxis = d3.svg.axis().scale(y).orient("left").tickSize(0);
-  };
+
+  yAxis = d3.svg.axis().scale(y).orient("left").tickSize(0);
+    };
     
     function gantt(tasks) {
   
@@ -83,86 +83,32 @@ d3.gantt = function() {
   .attr("height", height + margin.top + margin.bottom)
   .attr("transform", "translate(" + margin.left + ", " + margin.top + ")");
   
-  var chart = svg.selectAll(".chart")
-   .data(tasks, keyFunction)
-   .enter()
+      svg.selectAll(".chart")
+   .data(tasks, keyFunction).enter()
    .append("rect")
    .attr("rx", 5)
          .attr("ry", 5)
    .attr("class", function(d){ 
        if(taskStatus[d.status] == null){ return "bar";}
-       return taskStatus[d.status]
+       return taskStatus[d.status];
        }) 
    .attr("y", 0)
    .attr("transform", rectTransform)
-   .attr("height", function(d) { return y.rangeBand() })
-   .attr("text", function(d) { return d.taskName + d.startDate + d.endDate })
+   .attr("height", function(d) { return y.rangeBand(); })
    .attr("width", function(d) { 
-       return (x(d.endDate) - x(d.startDate))
+       return (x(d.endDate) - x(d.startDate)); 
        });
    
-   var g = svg.append("g")
+   
+   svg.append("g")
    .attr("class", "x axis")
    .attr("transform", "translate(0, " + (height - margin.top - margin.bottom) + ")")
    .transition()
    .call(xAxis);
    
-   var yAxis = svg.append("g").attr("class", "y axis").transition().call(yAxis);
+   svg.append("g").attr("class", "y axis").transition().call(yAxis);
    
    return gantt;
-
-
-       //////////////////////////////////////////////////////////
-    //// Adding a tooltip to follow the mouse
-    //////////////////////////////////////////////////////////
-    var tooltip = d3.select('body').append('div').attr('class', 'tooltip')
-
-    rect.on('mouseenter', showToolTip)
-              .on('mousemove', moveTooltip)
-              .on('mouseleave', hideToolTip)
-
-   
-    
-    function showToolTip(d,i){
-      tooltip.classed('show', true)
-    }
-
-
-    function moveTooltip(d,i){
-
-      ////Get the mouse X position 
-      var mouseX = d3.event.clientX
-      var mouseY = d3.event.clientY
-      
-      ////Put the state initial and all age group data in the tooltip HTML
-      tooltip.html('').html('<h4>'+d.taskName+'</h4>')
-
-
-      ////Calculate positioning and move tooltip
-      var ttBCR = tooltip.node().getBoundingClientRect()
-      var topPosition = mouseY - ttBCR.height + pageYOffset - 14
-      var leftPosition = ( mouseX - ttBCR.width*0.5 ) + pageXOffset
-      
-    }
-
-    
-    function hideToolTip(d,i){
-      tooltip.classed('show', false)
-    }
-    ///////////////////////////////////////////////////////
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     };
     
@@ -221,6 +167,11 @@ d3.gantt = function() {
   return gantt;
     };
 
+    /**
+     * @param {string}
+     *                vale The value can be "fit" - the domain fits the data or
+     *                "fixed" - fixed domain.
+     */
     gantt.timeDomainMode = function(value) {
   if (!arguments.length)
       return timeDomainMode;
@@ -264,8 +215,7 @@ d3.gantt = function() {
   return gantt;
     };
 
+
+    
     return gantt;
-
 };
-
-console.log('there?');
