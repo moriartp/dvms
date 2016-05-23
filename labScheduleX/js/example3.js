@@ -112,14 +112,26 @@ function changeTimeDomain(timeDomainString) {
   // gantt.timeDomain([ d3.time.day.offset(getEndDate(), -7), getEndDate() ]);
   gantt.timeDomain([ Date.now(), d3.time.day.offset(Date.now(), 7) ]);
   break;
-    default:
-  format = "%m/%d"
 
     case "1month":
   format = "%m/%d";
   // gantt.timeDomain([ d3.time.day.offset(getEndDate(), -30), getEndDate() ]);
   gantt.timeDomain([ Date.now(), d3.time.day.offset(Date.now(), 30) ]);
   break;
+
+    case "3months":
+  format = "%m/%d";
+  // gantt.timeDomain([ d3.time.day.offset(getEndDate(), -30), getEndDate() ]);
+  gantt.timeDomain([ Date.now(), d3.time.day.offset(Date.now(), 90) ]);
+  break;
+
+    case "1year":
+  format = "%m/%d";
+  // gantt.timeDomain([ d3.time.day.offset(getEndDate(), -30), getEndDate() ]);
+  gantt.timeDomain([ Date.now(), d3.time.day.offset(Date.now(), 360) ]);
+  break;
+
+
     }
     gantt.tickFormat(format);
     gantt.redraw(tasks);
