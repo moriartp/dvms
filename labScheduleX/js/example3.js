@@ -85,31 +85,41 @@ function changeTimeDomain(timeDomainString) {
     this.timeDomainString = timeDomainString;
     switch (timeDomainString) {
     case "1hr":
-  format = "%H:%M:%S";
-  gantt.timeDomain([ d3.time.hour.offset(getEndDate(), -1), getEndDate() ]);
+  format = "%H:%M";
+  // gantt.timeDomain([ d3.time.hour.offset(getEndDate(), -1), getEndDate() ]);
+  gantt.timeDomain([ Date.now(), d3.time.hour.offset(Date.now(), 1) ]);
   break;
     case "3hr":
   format = "%H:%M";
-  gantt.timeDomain([ d3.time.hour.offset(getEndDate(), -3), getEndDate() ]);
+  // gantt.timeDomain([ d3.time.hour.offset(getEndDate(), -3), getEndDate() ]);
+  gantt.timeDomain([ Date.now(), d3.time.hour.offset(Date.now(), 3) ]);
   break;
 
     case "6hr":
   format = "%H:%M";
-  gantt.timeDomain([ d3.time.hour.offset(getEndDate(), -6), getEndDate() ]);
+  // gantt.timeDomain([ d3.time.hour.offset(getEndDate(), -6), getEndDate() ]);
+  gantt.timeDomain([ Date.now(), d3.time.hour.offset(Date.now(), 6) ]);
   break;
 
     case "1day":
   format = "%H:%M";
-  gantt.timeDomain([ d3.time.day.offset(getEndDate(), -1), getEndDate() ]);
+  // gantt.timeDomain([ d3.time.day.offset(getEndDate(), -1), getEndDate() ]);
+  gantt.timeDomain([ Date.now(), d3.time.day.offset(Date.now(), 1) ]);
   break;
 
     case "1week":
-  format = "%a %H:%M";
-  gantt.timeDomain([ d3.time.day.offset(getEndDate(), -7), getEndDate() ]);
+  format = "%m/%d";
+  // gantt.timeDomain([ d3.time.day.offset(getEndDate(), -7), getEndDate() ]);
+  gantt.timeDomain([ Date.now(), d3.time.day.offset(Date.now(), 7) ]);
   break;
     default:
-  format = "%H:%M"
+  format = "%m/%d"
 
+    case "1month":
+  format = "%m/%d";
+  // gantt.timeDomain([ d3.time.day.offset(getEndDate(), -30), getEndDate() ]);
+  gantt.timeDomain([ Date.now(), d3.time.day.offset(Date.now(), 30) ]);
+  break;
     }
     gantt.tickFormat(format);
     gantt.redraw(tasks);
