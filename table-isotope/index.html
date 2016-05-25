@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+
+
+
+
+<link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+<body>
+<h1>Isotope - filtering with radio inputs</h1>
+
+<p class="filters">
+  <label>
+    <input type="radio" name="filter" value="*" checked="checked" /> show all
+  </label>
+  <label>
+    <input type="radio" name="filter" value=".metal" /> metal
+  </label>
+  <label>
+    <input type="radio" name="filter" value=".transition" /> transition
+  </label>
+  <label>
+    <input type="radio" name="filter" value=".alkali, .alkaline-earth" /> alkali &amp; alkaline-earth
+  </label>
+  <label>
+    <input type="radio" name="filter" value=":not(.transition)" /> not transition
+  </label>
+  <label>
+    <input type="radio" name="filter" value="numberGreaterThan1" /> number > 1
+  </label>
+  <label>
+    <input type="radio" name="filter" value="ium" /> name ends with &ndash;ium
+  </label>
+</p>
+
+<div class="grid">
+  <div class="element-item transition metal " data-category="transition">
+    <h3 class="name">6 E. 16th St</h3>
+    <p class="symbol">D101</p>
+    <p class="number">MAC</p>
+    Seats: <p class="seats">15</p>
+    <p class="weight">200.59</p>
+  </div>
+  <div class="element-item metalloid " data-category="metalloid">
+    <h3 class="name">6 E. 16th St</h3>
+    <p class="symbol">D707</p>
+    <p class="number">WIN</p>
+    <p class="weight">127.6</p>
+  </div>
+  <div class="element-item post-transition metal " data-category="post-transition">
+    <h3 class="name">6 E. 16th St</h3>
+    <p class="symbol">D702</p>
+    <p class="number">WIN</p>
+    <p class="weight">208.980</p>
+  </div>
+  <div class="element-item post-transition metal " data-category="post-transition">
+    <h3 class="name">6 E. 16th St</h3>
+    <p class="symbol">D701</p>
+    <p class="number">WIN</p>
+    <p class="weight">207.2</p>
+  </div>
+  <div class="element-item transition metal " data-category="transition">
+    <h3 class="name">6 E. 16th St</h3>
+    <p class="symbol">D1001</p>
+    <p class="number">MAC</p>
+    <p class="weight">196.967</p>
+  </div>
+  <div class="element-item alkali metal " data-category="alkali">
+    <h3 class="name">6 E. 16th St</h3>
+    <p class="symbol">D611</p>
+    <p class="number">MAC</p>
+    <p class="weight">39.0983</p>
+  </div>
+  <div class="element-item alkali metal " data-category="alkali">
+    <h3 class="name">6 E. 16th St</h3>
+    <p class="symbol">D602</p>
+    <p class="number">MAC</p>
+    <p class="weight">22.99</p>
+  </div>
+  <div class="element-item transition metal " data-category="transition">
+    <h3 class="name">6 E. 16th St</h3>
+    <p class="symbol">D601</p>
+    <p class="number">MAC</p>
+    <p class="weight">112.411</p>
+  </div>
+  <div class="element-item alkaline-earth metal " data-category="alkaline-earth">
+    <h3 class="name">55 W. 13th St.</h3>
+    <p class="symbol">I166</p>
+    <p class="number">WIN</p>
+    <p class="weight">40.078</p>
+  </div>
+  <div class="element-item transition metal " data-category="transition">
+    <h3 class="name">55 W. 13th St.</h3>
+    <p class="symbol">I333</p>
+    <p class="number">WIN</p>
+    <p class="weight">186.207</p>
+  </div>
+  <div class="element-item post-transition metal " data-category="post-transition">
+    <h3 class="name">55 W. 13th St.</h3>
+    <p class="symbol">I222</p>
+    <p class="number">MAC</p>
+    <p class="weight">204.383</p>
+  </div>
+  <div class="element-item metalloid " data-category="metalloid">
+    <h3 class="name">55 W. 13th St.</h3>
+    <p class="symbol">I342</p>
+    <p class="number">MAC</p>
+    <p class="weight">121.76</p>
+  </div>
+  <div class="element-item transition metal " data-category="transition">
+    <h3 class="name">55 W. 13th St.</h3>
+    <p class="symbol">I432</p>
+    <p class="number">MAC</p>
+    <p class="weight">58.933</p>
+  </div>
+  <div class="element-item lanthanoid metal inner-transition " data-category="lanthanoid">
+    <h3 class="name">55 W. 13th St.</h3>
+    <p class="symbol">I132</p>
+    <p class="number">MAC</p>
+    <p class="weight">173.054</p>
+  </div>
+  <div class="element-item noble-gas nonmetal " data-category="noble-gas">
+    <h3 class="name">55 W. 13th St.</h3>
+    <p class="symbol">I123</p>
+    <p class="number">MAC</p>
+    <p class="weight">39.948</p>
+  </div>
+  <div class="element-item diatomic nonmetal " data-category="diatomic">
+    <h3 class="name">65 Fifth Ave.</h3>
+    <p class="symbol">U455</p>
+    <p class="number">WIN</p>
+    <p class="weight">14.007</p>
+  </div>
+  <div class="element-item actinoid metal inner-transition " data-category="actinoid">
+    <h3 class="name">65 Fifth Ave.</h3>
+    <p class="symbol">U333</p>
+    <p class="number">MAC</p>
+    <p class="weight">238.029</p>
+  </div>
+  <div class="element-item actinoid metal inner-transition " data-category="actinoid">
+    <h3 class="name">65 Fifth Ave.</h3>
+    <p class="symbol">U202</p>
+    <p class="number">MAC</p>
+    <p class="weight">(244)</p>
+  </div>
+</div>
+
+<script type="text/javascript" src="js/script2.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
+
+</body>
