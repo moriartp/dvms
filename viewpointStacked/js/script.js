@@ -37,7 +37,7 @@ var svg = d3.select("body").append("svg")
   .append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-d3.csv("data/agency1.csv", function(error, data) {
+d3.csv("data/student1.csv", function(error, data) {
   color.domain(d3.keys(data[0]).filter(function(key) { return key !== "State"; }));
   
   
@@ -138,7 +138,7 @@ d3.csv("data/agency1.csv", function(error, data) {
 					.attr("x",xPos)
 					.attr("y",yPos +height/2)
 					.attr("class","tooltip")
-					.text(Math.floor(d.y_pct.toFixed(2)*100) + "% " + d.mystate + " Respondents");		
+					.text(Math.floor(d.y_pct.toFixed(2)*1) + "% " + d.mystate + " Respondents");		
 							
 			}
 		})
