@@ -1,0 +1,17 @@
+body {
+	font-family: Arial, sans-serif;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+table, td, th {
+	font-family: Arial, sans-serif;
+	font-size: 10px;
+	border: 1px solid black;
+}
+
+.ui-table th{
+	font-size: 14px;
+}

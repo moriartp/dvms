@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="css/graphic.css"/>
+</head>
+<body>
+<script language="javascript" type="text/javascript">
+  setFilterGrid("table1");
+</script>
+
+<h1>Table</h1>
+<select id="typeSelect">
+  <option value="all">All</option>
+  <option value="class">Classroom</option>
+  <option value="event">Event Space</option>
+  <option value="other">Other</option>
+</select>
+
+<p>see table</p>
+
+<table id="table1">
+  <thead>
+  <tr>
+     <th>Type</th>
+     <th>Code</th>
+     <th>Room#</th>
+     <th>OS</th>
+     <th>#PC</th>
+     <th>#Mac</th>
+     <th>Display</th>
+     <th>X</th>
+     <th>Help</th>
+     <th>hardware</th>
+  </tr>
+  </thead>
+  <tbody>
+
+  </tbody>
+</table>
+
+
+</body>
+</html>
+<script type="text/javascript" src="http://d3js.org/d3.v3.min.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
+<script type="text/javascript" charset="utf8" src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.2.min.js"></script>
+<script type="text/javascript" charset="utf8" src="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/jquery.dataTables.min.js"></script>
+<script>
+  $(function(){
+    $("#example").dataTable();
+  })
+</script>
+
+
+
+</body>
+</html>

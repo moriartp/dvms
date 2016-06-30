@@ -1,7 +1,0 @@
-[
-  {"title":"0N3","subtitle":"Proportion","ranges":[0.33,0.67,1],"measures":[0.5,0.75],"markers":[0.8]},
-  {"title":"TW0","subtitle":"Percent","ranges":[60,80,100],"measures":[68,95],"markers":[50]},
-  {"title":"THR33","subtitle":"Averages","ranges":[33,67,100],"measures":[68,97.5],"markers":[95]},
-  {"title":"F0UR","subtitle":"Count","ranges":[1111,2222,3333],"measures":[1234,2345,2543],"markers":[2323]},
-  {"title":"F1V3","subtitle":"Out of 5","ranges":[3,4,5],"measures":[3.5,4.7,2.99],"markers":[4]}
-]
